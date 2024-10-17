@@ -1062,6 +1062,56 @@ async def cb_handler(client: Client, query: CallbackQuery):
 	)
   
 
+    elif query.data == "rule":
+        buttons = [[
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='help')
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(RULES_PIC))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.RULES_TEXT.format(temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+	)
+    elif query.data == "rules":
+        buttons = [[
+            InlineKeyboardButton('× ᴄʟᴏsᴇ ×', callback_data='close_data')
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(RULES_PIC))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.RULES_TEXT.format(temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+	)
+
+    elif query.data == "earn_cmd":
+            btn = [[
+                     InlineKeyboardButton("ᴄᴏɴᴛᴀᴄᴛ sᴜᴘᴘᴏʀᴛ", url="http://t.me/Vampirexgirl"),
+                 ],[ 
+                     InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='earn_money'),
+                     InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
+                  ]]
+            await client.edit_message_media(
+                query.message.chat.id, 
+                query.message.id, 
+                InputMediaPhoto(random.choice(EARNMONEY_PIC))
+            )
+            reply_markup = InlineKeyboardMarkup(btn)
+            await query.message.edit_text(
+                text=(script.GROUP_TEXT),
+                reply_markup=reply_markup,
+                parse_mode=enums.ParseMode.HTML
+	    )
+	    
     elif query.data == "all_files_delete":
         files = await Media.count_documents()
         await query.answer('Deleting...')
