@@ -803,7 +803,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data.startswith("lang_art"):
         _, lang = query.data.split("#")
         await query.answer(f"ʏᴏᴜ sᴇʟᴇᴄᴛᴇᴅ {lang.title()} ʟᴀɴɢᴜᴀɢᴇ ⚡️", show_alert=True)
-  
+
     elif query.data == "start":
         buttons = [[
                 InlineKeyboardButton('☆ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ☆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
@@ -960,7 +960,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
       )
 	    
     elif query.data == "fsub":
-        #add back button
         buttons = [[
             InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')],
             [InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='features')]]
@@ -972,27 +971,79 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    
+
+
     elif query.data == 'about':
-        await query.message.edit_text(
-	    media=InputMediaPhoto(
-	    media=random.choice(PICS),	    
-            caption=script.ABOUT_TEXT.format(query.from_user.mention(),temp.B_LINK),
-            reply_markup = InlineKeyboardMarkup(
-                [[
-			InlineKeyboardButton('‼️ ᴅɪꜱᴄʟᴀɪᴍᴇʀ ‼️', callback_data='disclaimer')
-		],[
-			InlineKeyboardButton('Sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', callback_data='Source')
-                ],[
-                        InlineKeyboardButton('My Developers 😎',callback_data='mydevelopers')
-		],[
-			InlineKeyboardButton('⋞ ʜᴏᴍᴇ', callback_data='start')]]
-                ),
-            disable_web_page_preview = True
-	)
+        buttons = [[
+            InlineKeyboardButton('‼️ ᴅɪꜱᴄʟᴀɪᴍᴇʀ ‼️', callback_data='disclaimer')
+        ],[
+            InlineKeyboardButton('Sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', callback_data='Source')
+        ],[
+            InlineKeyboardButton('My Developers 😎', callback_data='mydevelopers')
+        ],[
+            InlineKeyboardButton('⋞ ʜᴏᴍᴇ', callback_data='start')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            chat_id=query.message.chat.id,
+            message_id=query.message.id,
+            media=InputMediaPhoto(
+                media=random.choice(PICS),
+                caption=script.ABOUT_TEXT.format(query.from_user.mention(), temp.B_LINK),
+                parse_mode=enums.ParseMode.HTML
+            ),
+            reply_markup=reply_markup
+        )
+    
+    elif query.data == "disclaimer":
+        buttons = [[
+            InlineKeyboardButton("📲 ᴄᴏɴᴛᴀᴄᴛ ᴛᴏ ᴏᴡɴᴇʀ", user_id=ADMINS[0])
+        ],[
+            InlineKeyboardButton("⇋ ʙᴀᴄᴋ ⇋", callback_data="about")
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            chat_id=query.message.chat.id,
+            message_id=query.message.id,
+            media=InputMediaPhoto(
+                media=random.choice(PICS),
+                caption=script.DISCLAIMER_TXT,
+                parse_mode=enums.ParseMode.HTML
+            ),
+            reply_markup=reply_markup
+        )
+    
+    elif query.data == "Source":
+        buttons = [[
+            InlineKeyboardButton('Repo', url='https://github.com/Jisshubot/Jisshu-Filter-Bot')
+        ],[
+            InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='about'),
+            InlineKeyboardButton('• ᴄʟᴏsᴇ •', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            chat_id=query.message.chat.id,
+            message_id=query.message.id,
+            media=InputMediaPhoto(
+                media=random.choice(PICS),
+                caption=script.SOURCE_TXT,
+                parse_mode=enums.ParseMode.HTML
+            ),
+            reply_markup=reply_markup
+        )
+    
     elif query.data == "mydevelopers":
-        await query.answer("Meet the minds behind this bot:\n\n👨‍💻 @JISSHU_BOTS\n👨‍💻 @IM_JISSHU\n👨‍💻 @JOYBOY_ZORO\n👨‍💻 @TG_Anonymous_Official\n\n\n❤️ A big thank you for making this bot awesome!", show_alert=True)
- 
+        await query.answer(
+            "Meet the minds behind this bot:\n\n"
+            "👨‍💻 @JISSHU_BOTS\n"
+            "👨‍💻 @IM_JISSHU\n"
+            "👨‍💻 @JOYBOY_ZORO\n"
+            "👨‍💻 @TG_Anonymous_Official\n\n"
+            "❤️ A big thank you for making this bot awesome!",
+            show_alert=True
+        )
+    
+    
     elif query.data == "Source":
         buttons = [[
             InlineKeyboardButton('Repo', url='https://github.com/Jisshubot/Jisshu-Filter-Bot')
