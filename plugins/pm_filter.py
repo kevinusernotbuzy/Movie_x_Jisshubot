@@ -805,24 +805,30 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer(f"ʏᴏᴜ sᴇʟᴇᴄᴛᴇᴅ {lang.title()} ʟᴀɴɢᴜᴀɢᴇ ⚡️", show_alert=True)
 
     elif query.data == "start":
-        buttons = [[
-                InlineKeyboardButton('☆ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ☆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
-                ],[
-                InlineKeyboardButton("Hᴇʟᴘ ⚙️", callback_data='features'),
-                InlineKeyboardButton('Aʙᴏᴜᴛ 💌', callback_data=f'about')
-                ],[
-                InlineKeyboardButton('Pʀᴇᴍɪᴜᴍ 🎫', callback_data='seeplans'),
-                InlineKeyboardButton('Rᴇғᴇʀ ⚜️', callback_data="reffff")
-                ],[
-                InlineKeyboardButton('Mᴏsᴛ Sᴇᴀʀᴄʜ 🔍', callback_data="mostsearch"),
-                InlineKeyboardButton('Tᴏᴘ Tʀᴇɴᴅɪɴɢ ⚡', callback_data="trending")
-                ]] 
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(	
-            text=script.START_TXT.format(query.from_user.mention, get_status(), query.from_user.id),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )      
+    buttons = [
+        [
+            InlineKeyboardButton('☆ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ☆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
+        ],
+        [
+            InlineKeyboardButton("Hᴇʟᴘ ⚙️", callback_data='features'),
+            InlineKeyboardButton('Aʙᴏᴜᴛ 💌', callback_data='about')
+        ],
+        [
+            InlineKeyboardButton('Pʀᴇᴍɪᴜᴍ 🎫', callback_data='seeplans'),
+            InlineKeyboardButton('Rᴇғᴇʀ ⚜️', callback_data="reffff")
+        ],
+        [
+            InlineKeyboardButton('Mᴏsᴛ Sᴇᴀʀᴄʜ 🔍', callback_data="mostsearch"),
+            InlineKeyboardButton('Tᴏᴘ Tʀᴇɴᴅɪɴɢ ⚡', callback_data="trending")
+        ]
+    ]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    await query.message.edit_text(
+        text=script.START_TXT.format(query.from_user.mention, get_status(), query.from_user.id),
+        reply_markup=reply_markup,
+        parse_mode=enums.ParseMode.HTML
+    )	
+    
     elif query.data == "seeplans":
         btn = [[
             InlineKeyboardButton('🍁 𝗖𝗹𝗶𝗰𝗸 𝗔𝗹𝗹 𝗣𝗹𝗮𝗻𝘀 & 𝗣𝗿𝗶𝗰𝗲𝘀 🍁', callback_data='free')
@@ -899,103 +905,116 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "verifyon":
         await query.answer(f'Only the bot admin can ᴏɴ ✓ or ᴏғғ ✗ this feature.', show_alert=True)
-    
+
     elif query.data == "features":
-        buttons = [[
-              InlineKeyboardButton('Aᴅᴍɪɴ Cᴏᴍᴍᴀɴᴅs', callback_data='admincmd'),
-              InlineKeyboardButton('Iᴍᴀɢᴇ Tᴏ Lɪɴᴋ', callback_data='telegraph'),
-              ], [
-              InlineKeyboardButton('F-Sᴜʙ', callback_data='fsub'),
-              InlineKeyboardButton('Gʀᴏᴜᴘ Sᴇᴛᴜᴘ', callback_data='earn')
-              ], [
-              InlineKeyboardButton('⋞ Back To Home', callback_data='start')
-              ]]
-    
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_media(
-            media=InputMediaPhoto(
+    buttons = [
+        [
+            InlineKeyboardButton('Aᴅᴍɪɴ Cᴏᴍᴍᴀɴᴅs', callback_data='admincmd'),
+            InlineKeyboardButton('Iᴍᴀɢᴇ Tᴏ Lɪɴᴋ', callback_data='telegraph')
+        ],
+        [
+            InlineKeyboardButton('F-Sᴜʙ', callback_data='fsub'),
+            InlineKeyboardButton('Gʀᴏᴜᴘ Sᴇᴛᴜᴘ', callback_data='earn')
+        ],
+        [
+            InlineKeyboardButton('⋞ Back To Home', callback_data='start')
+        ]
+    ]
+
+    reply_markup = InlineKeyboardMarkup(buttons)
+    await query.message.edit_media(
+        media=InputMediaPhoto(
             media=random.choice(PICS),
             caption=script.HELP_TXT.format(query.from_user.mention),
             parse_mode=enums.ParseMode.HTML 
-            ),
-            reply_markup=reply_markup
-	)
-        
+        ),
+        reply_markup=reply_markup
+    )
+    
     elif query.data == "admincmd":
     # If the user isn't an admin, return
-      if query.from_user.id not in ADMINS:
+    if query.from_user.id not in ADMINS:
         return await query.answer('ᴛʜɪꜱ ɪꜱ ɴᴏᴛ ꜰᴏʀ ʏᴏᴜ ʙʀᴏ!', show_alert=True)
     
-      buttons = [[
-	      InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='features'),
-	      InlineKeyboardButton('ɴᴇxᴛ ⪼', callback_data='admincmd2'),
-      ]]
-      reply_markup = InlineKeyboardMarkup(buttons)
+    buttons = [
+        [
+            InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='features'),
+            InlineKeyboardButton('ɴᴇxᴛ ⪼', callback_data='admincmd2'),
+        ]
+    ]
+    reply_markup = InlineKeyboardMarkup(buttons)
     
-      await client.edit_message_media(
-          chat_id=query.message.chat.id,
-          message_id=query.message.id,
-          media=InputMediaPhoto(
+    await client.edit_message_media(
+        chat_id=query.message.chat.id,
+        message_id=query.message.id,
+        media=InputMediaPhoto(
             media=random.choice(PICS),
             caption=script.ADMIN_CMD_TXT,
             parse_mode=enums.ParseMode.HTML
-          ),
-          reply_markup=reply_markup
-          )
+        ),
+        reply_markup=reply_markup
+    )    
 
     elif query.data == "admincmd2":
-       buttons = [[
-	      InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='admincmd')]]
-       reply_markup = InlineKeyboardMarkup(buttons)
-    
-       await client.edit_message_media(
-          chat_id=query.message.chat.id,
-          message_id=query.message.id,
-          media=InputMediaPhoto(
+    buttons = [
+        [InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='admincmd')]
+    ]
+    reply_markup = InlineKeyboardMarkup(buttons)
+
+    await client.edit_message_media(
+        chat_id=query.message.chat.id,
+        message_id=query.message.id,
+        media=InputMediaPhoto(
             media=random.choice(PICS),
             caption=script.ADMIN_CMD_TXT2,
             parse_mode=enums.ParseMode.HTML
-          ),
-          reply_markup=reply_markup
-      )
-	    
+        ),
+        reply_markup=reply_markup
+    )
+    
     elif query.data == "fsub":
-        buttons = [[
-            InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')],
-            [InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='features')]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-	    media=InputMediaPhoto(
-	    media=random.choice(PICS),	    
+    buttons = [
+        [
+            InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
+        ],
+        [InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='features')]
+    ]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    await query.message.edit_media(
+        media=InputMediaPhoto(
+            media=random.choice(PICS),
             caption=script.FSUB_TXT,
-            reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
-        )
-
-
+        ),
+        reply_markup=reply_markup
+    )	    
+    
     elif query.data == "about":
-        buttons = [[
+    buttons = [
+        [
             InlineKeyboardButton('• sᴜᴘᴘᴏʀᴛ •', callback_data='mydevelopers'),
             InlineKeyboardButton('• ʏᴏᴜᴛᴜʙᴇ •', callback_data='Source')
-        ],[
-            InlineKeyboardButton('✘ ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅ ✘', callback_data='features')
-        ],[
-            InlineKeyboardButton('© ᴅɪsᴄʟᴀɪᴍᴇʀ ©', callback_data='disclaimer')
-        ],[
+        ],
+        [InlineKeyboardButton('✘ ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅ ✘', callback_data='features')],
+        [InlineKeyboardButton('© ᴅɪsᴄʟᴀɪᴍᴇʀ ©', callback_data='disclaimer')],
+        [
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='start'),
             InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
-        ]]
-        await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
-        )
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.ABOUT_TXT.format(temp.B_NAME),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-	)		
+        ]
+    ]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    await client.edit_message_media(
+        chat_id=query.message.chat.id, 
+        message_id=query.message.id, 
+        media=InputMediaPhoto(random.choice(PICS)),
+        reply_markup=reply_markup
+    )
+    await query.message.edit_text(
+        text=script.ABOUT_TXT.format(temp.B_NAME),
+        reply_markup=reply_markup,
+        parse_mode=enums.ParseMode.HTML
+    )
+    	
     
     
     elif query.data == "disclaimer":
