@@ -975,10 +975,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('• sᴜᴘᴘᴏʀᴛ •', callback_data='support'),
-            InlineKeyboardButton('• ʏᴏᴜᴛᴜʙᴇ •', callback_data='youtube')
+            InlineKeyboardButton('• sᴜᴘᴘᴏʀᴛ •', callback_data='mydevelopers'),
+            InlineKeyboardButton('• ʏᴏᴜᴛᴜʙᴇ •', callback_data='Source')
         ],[
-            InlineKeyboardButton('✘ ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅ ✘', callback_data='help')
+            InlineKeyboardButton('✘ ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅ ✘', callback_data='features')
         ],[
             InlineKeyboardButton('© ᴅɪsᴄʟᴀɪᴍᴇʀ ©', callback_data='disclaimer')
         ],[
