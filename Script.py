@@ -1,12 +1,20 @@
 import os
 class script(object):
-    START_TXT = """<b>ʜᴇʏ {}, {}\n\nɪ ᴀᴍ ᴀ ᴘᴏᴡᴇʀꜰᴜʟ ᴀᴜᴛᴏꜰɪʟᴛᴇʀ ʙᴏᴛ. ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ɪ ᴡɪʟʟ ɢɪᴠᴇ ᴍᴏᴠɪᴇs ᴏʀ sᴇʀɪᴇs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴘᴍ !! 😍\n<blockquote>🌿 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href="https://t.me/JISSHU_BOTS">Jɪssʜᴜ Bᴏᴛs</a></blockquote></b>"""
-    
-    HELP_TXT = """<b>ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..</b>"""
+    START_TXT =  """<b>Hᴇʏ {} ✨ {}
+
+✦ ɪ ᴀᴍ ⚡️ ᴘᴏᴡᴇʀғᴜʟ ᴀᴜᴛᴏ-ғɪʟᴛᴇʀ ʙᴏᴛ.
+✦ ɪ ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇ ᴀʟʟ ᴍᴏᴠɪᴇs ᴀɴᴅ ᴡᴇʙ sᴇʀɪᴇs ɪɴ sᴏᴍᴇ ʟᴀɴɢᴜᴀɢᴇs. 
+✦ ɪᴛs ᴇᴀsʏ ᴛᴏ ᴜsᴇ ᴍᴇ. ᴊᴜsᴛ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ.
+
+✦ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏ ᴄʜᴇᴄᴋ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ʙᴀʙʏ 💜</b>"""
+
+    HELP_TXT = """<b>Hᴇʏ {}\n
+★ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs.</b>"""
     
     TELE_TXT = """<b>/telegraph - sᴇɴᴅ ᴍᴇ ᴘɪᴄᴛᴜʀᴇ ᴏʀ ᴠɪᴅᴇᴏ ᴜɴᴅᴇʀ (5ᴍʙ)
 
 ɴᴏᴛᴇ - ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴡᴏʀᴋ ɪɴ ʙᴏᴛʜ ɢʀᴏᴜᴘs ᴀɴᴅ ʙᴏᴛ ᴘᴍ</b>"""
+    
     FSUB_TXT = """<b>• ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴍᴇ ᴀɴ ᴀᴅᴍɪɴ 😗
 • ᴍᴀᴋᴇ ᴍᴇ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ᴛᴀʀɢᴇᴛ ғᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ ᴄʜᴀɴɴᴇʟ ᴏʀ Gʀᴏᴜᴘ  😉
 • sᴇɴᴅ /fsub ʏᴏᴜʀ_ᴛᴀʀɢᴇᴛ_ᴄʜᴀᴛ_ɪᴅ
@@ -31,15 +39,18 @@ class script(object):
     TTS_TXT="""
 <b>• sᴇɴᴅ /tts ᴛᴏ ᴜsᴇ ᴛʜɪs ғᴇᴀᴛᴜʀᴇ</b>"""
 
-    DISCLAIMER_TXT = """
-<b>ᴛʜɪꜱ ɪꜱ ᴀɴ ᴏᴘᴇɴ ꜱᴏᴜʀᴄᴇ ᴘʀᴏᴊᴇᴄᴛ.
+    DISCLAIMER_TXT = """<pre>ᴛʜɪꜱ ɪꜱ ᴀɴ ᴏᴘᴇɴ ꜱᴏᴜʀᴄᴇ ᴘʀᴏᴊᴇᴄᴛ.\n
+ᴀʟʟ ᴛʜᴇ ꜰɪʟᴇꜱ ɪɴ ᴛʜɪꜱ ʙᴏᴛ ᴀʀᴇ ꜰʀᴇᴇʟʏ ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛʜᴇ ɪɴᴛᴇʀɴᴇᴛ ᴏʀ ᴘᴏꜱᴛᴇᴅ ʙʏ ꜱᴏᴍᴇʙᴏᴅʏ ᴇʟꜱᴇ. ᴊᴜꜱᴛ ꜰᴏʀ ᴇᴀꜱʏ ꜱᴇᴀʀᴄʜɪɴɢ ᴛʜɪꜱ ʙᴏᴛ ɪꜱ ɪɴᴅᴇxɪɴɢ ꜰɪʟᴇꜱ ᴡʜɪᴄʜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ᴜᴘʟᴏᴀᴅᴇᴅ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ. ᴡᴇ ʀᴇꜱᴘᴇᴄᴛ ᴀʟʟ ᴛʜᴇ ᴄᴏᴘʏʀɪɢʜᴛ ʟᴀᴡꜱ ᴀɴᴅ ᴡᴏʀᴋꜱ ɪɴ ᴄᴏᴍᴘʟɪᴀɴᴄᴇ ᴡɪᴛʜ ᴅᴍᴄᴀ ᴀɴᴅ ᴇᴜᴄᴅ. ɪꜰ ᴀɴʏᴛʜɪɴɢ ɪꜱ ᴀɢᴀɪɴꜱᴛ ʟᴀᴡ ᴘʟᴇᴀꜱᴇ ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ ꜱᴏ ᴛʜᴀᴛ ɪᴛ ᴄᴀɴ ʙᴇ ʀᴇᴍᴏᴠᴇᴅ ᴀꜱᴀᴘ. ɪᴛ ɪꜱ ꜰᴏʀʙɪʙʙᴇɴ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ, ꜱᴛʀᴇᴀᴍ, ʀᴇᴘʀᴏᴅᴜᴄᴇ, ᴏʀ ʙʏ ᴀɴʏ ᴍᴇᴀɴꜱ, ꜱʜᴀʀᴇ, ᴏʀ ᴄᴏɴꜱᴜᴍᴇ, ᴄᴏɴᴛᴇɴᴛ ᴡɪᴛʜᴏᴜᴛ ᴇxᴘʟɪᴄɪᴛ ᴘᴇʀᴍɪꜱꜱɪᴏɴ ꜰʀᴏᴍ ᴛʜᴇ ᴄᴏɴᴛᴇɴᴛ ᴄʀᴇᴀᴛᴏʀ ᴏʀ ʟᴇɢᴀʟ ᴄᴏᴘʏʀɪɢʜᴛ ʜᴏʟᴅᴇʀ. ɪꜰ ʏᴏᴜ ʙᴇʟɪᴇᴠᴇ ᴛʜɪꜱ ʙᴏᴛ ɪꜱ ᴠɪᴏʟᴀᴛɪɴɢ ʏᴏᴜʀ ɪɴᴛᴇʟʟᴇᴄᴛᴜᴀʟ ᴘʀᴏᴘᴇʀᴛʏ, ᴄᴏɴᴛᴀᴄᴛ ᴛʜᴇ ʀᴇꜱᴘᴇᴄᴛɪᴠᴇ ᴄʜᴀɴɴᴇʟꜱ ꜰᴏʀ ʀᴇᴍᴏᴠᴀʟ. ᴛʜᴇ ʙᴏᴛ ᴅᴏᴇꜱ ɴᴏᴛ ᴏᴡɴ ᴀɴʏ ᴏꜰ ᴛʜᴇꜱᴇ ᴄᴏɴᴛᴇɴᴛꜱ, ɪᴛ ᴏɴʟʏ ɪɴᴅᴇx ᴛʜᴇ ꜰɪʟᴇꜱ ꜰʀᴏᴍ ᴛᴇʟᴇɢʀᴀᴍ.\n</pre>
+<b>~ ᴄᴏɴᴛᴀᴄᴛ ᴍʏ ᴏᴡɴᴇʀ ›› <a href=https://t.me/vampirexgirl><b></b>ѵαмριяɛ ɢιяℓ</a></b>"""
 
-ᴀʟʟ ᴛʜᴇ ꜰɪʟᴇꜱ ɪɴ ᴛʜɪꜱ ʙᴏᴛ ᴀʀᴇ ꜰʀᴇᴇʟʏ ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛʜᴇ ɪɴᴛᴇʀɴᴇᴛ ᴏʀ ᴘᴏꜱᴛᴇᴅ ʙʏ ꜱᴏᴍᴇʙᴏᴅʏ ᴇʟꜱᴇ. ᴊᴜꜱᴛ ꜰᴏʀ ᴇᴀꜱʏ ꜱᴇᴀʀᴄʜɪɴɢ ᴛʜɪꜱ ʙᴏᴛ ɪꜱ ɪɴᴅᴇxɪɴɢ ꜰɪʟᴇꜱ ᴡʜɪᴄʜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ᴜᴘʟᴏᴀᴅᴇᴅ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ. ᴡᴇ ʀᴇꜱᴘᴇᴄᴛ ᴀʟʟ ᴛʜᴇ ᴄᴏᴘʏʀɪɢʜᴛ ʟᴀᴡꜱ ᴀɴᴅ ᴡᴏʀᴋꜱ ɪɴ ᴄᴏᴍᴘʟɪᴀɴᴄᴇ ᴡɪᴛʜ ᴅᴍᴄᴀ ᴀɴᴅ ᴇᴜᴄᴅ. ɪꜰ ᴀɴʏᴛʜɪɴɢ ɪꜱ ᴀɢᴀɪɴꜱᴛ ʟᴀᴡ ᴘʟᴇᴀꜱᴇ ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ ꜱᴏ ᴛʜᴀᴛ ɪᴛ ᴄᴀɴ ʙᴇ ʀᴇᴍᴏᴠᴇᴅ ᴀꜱᴀᴘ. ɪᴛ ɪꜱ ꜰᴏʀʙɪʙʙᴇɴ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ, ꜱᴛʀᴇᴀᴍ, ʀᴇᴘʀᴏᴅᴜᴄᴇ, ꜱʜᴀʀᴇ ᴏʀ ᴄᴏɴꜱᴜᴍᴇ ᴄᴏɴᴛᴇɴᴛ ᴡɪᴛʜᴏᴜᴛ ᴇxᴘʟɪᴄɪᴛ ᴘᴇʀᴍɪꜱꜱɪᴏɴ ꜰʀᴏᴍ ᴛʜᴇ ᴄᴏɴᴛᴇɴᴛ ᴄʀᴇᴀᴛᴏʀ ᴏʀ ʟᴇɢᴀʟ ᴄᴏᴘʏʀɪɢʜᴛ ʜᴏʟᴅᴇʀ. ɪꜰ ʏᴏᴜ ʙᴇʟɪᴇᴠᴇ ᴛʜɪꜱ ʙᴏᴛ ɪꜱ ᴠɪᴏʟᴀᴛɪɴɢ ʏᴏᴜʀ ɪɴᴛᴇʟʟᴇᴄᴛᴜᴀʟ ᴘʀᴏᴘᴇʀᴛʏ, ᴄᴏɴᴛᴀᴄᴛ ᴛʜᴇ ʀᴇꜱᴘᴇᴄᴛɪᴠᴇ ᴄʜᴀɴɴᴇʟꜱ ꜰᴏʀ ʀᴇᴍᴏᴠᴀʟ. ᴛʜᴇ ʙᴏᴛ ᴅᴏᴇꜱ ɴᴏᴛ ᴏᴡɴ ᴀɴʏ ᴏꜰ ᴛʜᴇꜱᴇ ᴄᴏɴᴛᴇɴᴛꜱ, ɪᴛ ᴏɴʟʏ ɪɴᴅᴇx ᴛʜᴇ ꜰɪʟᴇꜱ ꜰʀᴏᴍ ᴛᴇʟᴇɢʀᴀᴍ. 
-
-<blockquote>🌿 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://t.me/JISSHU_BOTS'>JISSHU BOTS</a></b></blockquote>"""
+    ABOUT_TXT = """<b><i>🤖 ᴍʏ ɴᴀᴍᴇ : {}
+👨‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ : ᴍᴀʀᴄᴜs
+📝 ʟᴀɴɢᴜᴀɢᴇ : ᴘʏʀᴏɢʀᴀᴍ
+📚 ꜰʀᴀᴍᴇᴡᴏʀᴋ : ᴘʏᴛʜᴏɴ 3
+📡 ʜᴏsᴛᴇᴅ ᴏɴ : ᴠᴘs
+🌟 ᴠᴇʀsɪᴏɴ : ᴠ 13.0 [ ʙᴇᴛᴀ ]\n
+~ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ ›› <a href=https://t.me/Vampirexgirl></b>ѵαмριяɛ ɢιяℓ</a></b>"""
     
-
-    ABOUT_TEXT = """<blockquote><b>‣ ᴍʏ ɴᴀᴍᴇ : JISSHU\n‣ ᴄʀᴇᴀᴛᴏʀ : <a href='https://t.me/MR_JISSHU'>MR.JISSHU</a>\n‣ ʟɪʙʀᴀʀʏ : ᴘʏʀᴏɢʀᴀᴍ\n‣ ʟᴀɴɢᴜᴀɢᴇ : ᴘʏᴛʜᴏɴ\n‣ ᴅᴀᴛᴀ ʙᴀsᴇ : ᴍᴏɴɢᴏ ᴅʙ\n‣ ʜᴏsᴛᴇᴅ ᴏɴ  : ᴀʟʟ ᴡᴇʙ\n‣ ʙᴜɪʟᴅ sᴛᴀᴛᴜs : ᴠ5.2 [sᴛᴀʙʟᴇ]</b></blockquote>"""    
     
     SUPPORT_GRP_MOVIE_TEXT = '''<b>ʜᴇʏ {}
 
@@ -67,7 +78,7 @@ BOT WORKING PROPERLY 🔥"""
 🌐 Tɪᴍᴇᴢᴏɴᴇ : <code>Asia/Kolkata</code>
 🛠️ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: <code>v4.2 [ Sᴛᴀʙʟᴇ ]</code>
 
-Bʏ @JISSHU_BOTS</b>"""
+Bʏ @Noob_X_Marcus</b>"""
         
     
     STATUS_TXT = """<b><u>🗃 ᴅᴀᴛᴀʙᴀsᴇ 1 🗃</u>
@@ -105,37 +116,62 @@ User - {}"""
 📇 ɪᴅ - <code>{}</code>
 
 🎁 ʀᴇǫᴜᴇꜱᴛ ᴍꜱɢ - <code>{}</code></b>"""  
-   
-    IMDB_TEMPLATE_TXT = """
-<b>ʜᴇʏ {message.from_user.mention}, ʜᴇʀᴇ ɪꜱ ᴛʜᴇ ʀᴇꜱᴜʟᴛꜱ ꜰᴏʀ ʏᴏᴜʀ ǫᴜᴇʀʏ {search}.
 
-🍿 Title: {title}
-🎃 Genres: {genres}
-📆 Year: {release_date}
-⭐ Rating: {rating} / 10</b>
+    IMDB_TEMPLATE_TXT = """
+📟 ᴛɪᴛʟᴇ : <a href={url}><b>{title}</b></a>
+🛸 ɪɴғᴏ : <b>{runtime} min</b> | <a href={url}/releaseinfo><b>{year}</b></a>
+🎭 ɢᴇɴʀᴇ : <b>{genres}</b>
+🌟 ʀᴀᴛɪɴɢ : <b><a href={url}/ratings>{rating}</a> / 10</b>
+🔊 ʟᴀɴɢᴜᴀɢᴇ : <b>#{languages}</b>
+👩🏻‍💻 ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ : <b>{message.from_user.mention}</b>
+
+<pre>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 10 ᴍɪɴᴜᴛᴇs.</pre>"""
+    
+    FILE_CAPTION = """
+<b>📂 Fɪʟᴇ ɴᴀᴍᴇ : </b> <code>{file_name}</code>
 """
 
-    FILE_CAPTION = """<b>{file_name}\n\n𝖩𝗈𝗂𝗇➥ 「<a href="https://t.me/Jisshu_Originals">𝙅𝙞𝙨𝙨𝙝𝙪 𝙊𝙧𝙞𝙜𝙞𝙣𝙖𝙡𝙨</a>」</b>"""
-    
 
-    ALRT_TXT = """ᴊᴀʟᴅɪ ʏᴇʜᴀ sᴇ ʜᴀᴛᴏ !"""
+    EARN_TEXT = """
+<b>──────「 <a href='t.me/Vampirexgirl'>ᴇᴀʀɴ ᴍᴏɴᴇʏ</a> 」─────
+
+<b>Now You can start earning 💸 money today with our Simple and easy-to-use bot!\n\n›› Step 1: Add This bot to your group as an admin..\n\n›› Step 2: If you don't Using any shortner website then make account first on <a href='https://mdiskshortner.link/ref/Kimxd'>mdiskshortner.link</a> (You can also use other link shortner website).\n\n›› Step 3: Copy your API from website and then, simply set your website and API Using the\n/set_shortner command\n\n› Like this :  <pre>/set_shortner shorturllink.in 7eddb02ee3a9e5ad7c207aab9cce5b34fadfe22f</pre>\n\n\n★ This bot will automatically converts links with Your Api and will provide your links.\n\n★ Don't wait any longer to start earning money from your telegram group. Add our bot today and start making money 💰!</b>\n"""
+
+
+    EARN_CMD_TEXT = """
+<b>Earn money related my all command</b>
+
+/set_shortner - Set your own api with shortner website.
+/set_tutorial - Set your tutorial video link.
+/del_tutorial - Delete your tutorial video link"""
+
+
+    YT_TEXT = """
+<b>• ɴᴀᴍᴇ ›› ᴛᴏᴘ10ɴᴇʀ</b>
+<b>• ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ ›› <a href='https://youtube.com/@Top10ner'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>
+
+<pre>ᴘʟᴇᴀsᴇ ʟɪᴋᴇ - sʜᴀʀᴇ - sᴜʙsᴄʀɪʙᴇ</pre>"""
+
+    ALRT_TXT = """Hᴇʏ 🙄, Iᴛ's Nᴏᴛ Fᴏʀ Yᴏᴜ ❗"""
 
     OLD_ALRT_TXT = """ʏᴏᴜ ᴀʀᴇ ᴜsɪɴɢ ᴍʏ ᴏʟᴅ ᴍᴇssᴀɢᴇs..sᴇɴᴅ ᴀ ɴᴇᴡ ʀᴇǫᴜᴇsᴛ.."""
 
     NO_RESULT_TXT = """<b>ᴛʜɪs ᴍᴇssᴀɢᴇ ɪs ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ ᴏʀ ᴀᴅᴅᴇᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ 🙄</b>"""
     
-    I_CUDNT = """🤧 𝗛𝗲𝗹𝗹𝗼 {}
+    I_CUDNT = """<b>ʏᴏᴜʀ ᴡᴏʀᴅ 👉🏻 <s>{}</s> 👈🏻 ɪs ɴᴏᴛ ᴍᴀᴄᴛʜ ᴀɴʏ ᴍᴏᴠɪᴇs ᴏʀ ᴡᴇʙsᴇʀɪᴇs 🤯.
 
-𝗜 𝗰𝗼𝘂𝗹𝗱𝗻'𝘁 𝗳𝗶𝗻𝗱 𝗮𝗻𝘆 𝗺𝗼𝘃𝗶𝗲 𝗼𝗿 𝘀𝗲𝗿𝗶𝗲𝘀 𝗶𝗻 𝘁𝗵𝗮𝘁 𝗻𝗮𝗺𝗲.. 😐"""
+✦ ᴘʟᴇᴀsᴇ ᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ ɪɴ ɢᴏᴏɢʟᴇ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ 🤧
 
-    I_CUD_NT = """😑 𝗛𝗲𝗹𝗹𝗼 {}
+➻ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ʜɪᴛ  /rules</b>
+"""
 
-𝗜 𝗰𝗼𝘂𝗹𝗱𝗻'𝘁 𝗳𝗶𝗻𝗱 𝗮𝗻𝘆𝘁𝗵𝗶𝗻𝗴 𝗿𝗲𝗹𝗮𝘁𝗲𝗱 𝘁𝗼 𝘁𝗵𝗮𝘁 😞... 𝗰𝗵𝗲𝗰𝗸 𝘆𝗼𝘂𝗿 𝘀𝗽𝗲𝗹𝗹𝗶𝗻𝗴."""
+    I_CUD_NT = """<b>ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏ ᴍᴏᴠɪᴇ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ {}.
+\nᴘʟᴇᴀꜱᴇ ᴄʜᴇᴄᴋ ᴛʜᴇ ꜱᴘᴇʟʟɪɴɢ ᴏɴ ɢᴏᴏɢʟᴇ ᴏʀ ɪᴍᴅʙ...</b>"""
     
-    CUDNT_FND = """🤧 𝗛𝗲𝗹𝗹𝗼 {}
+    CUDNT_FND = """<b>ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏᴛʜɪɴɢ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ <u>{}</u>
+\n<pre>ᴅɪᴅ ʏᴏᴜ ᴍᴇᴀɴ ᴀɴʏ ᴏɴᴇ ᴏꜰ ᴛʜᴇꜱᴇ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ 👇🏻?</pre>"""
 
-𝗜 𝗰𝗼𝘂𝗹𝗱𝗻'𝘁 𝗳𝗶𝗻𝗱 𝗮𝗻𝘆𝘁𝗵𝗶𝗻𝗴 𝗿𝗲𝗹𝗮𝘁𝗲𝗱 𝘁𝗼 𝘁𝗵𝗮𝘁 𝗱𝗶𝗱 𝘆𝗼𝘂 𝗺𝗲𝗮𝗻 𝗮𝗻𝘆 𝗼𝗻𝗲 𝗼𝗳 𝘁𝗵𝗲𝘀𝗲 ?? 👇"""
-    
+
     FONT_TXT= """<b>ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴍᴏᴅᴇ ᴛᴏ ᴄʜᴀɴɢᴇ ʏᴏᴜʀ ꜰᴏɴᴛs sᴛʏʟᴇ, ᴊᴜsᴛ sᴇɴᴅ ᴍᴇ ʟɪᴋᴇ ᴛʜɪs ꜰᴏʀᴍᴀᴛ
 
 <code>/font hi how are you</code></b>"""
@@ -330,7 +366,7 @@ User - {}"""
 -----------Set Imdb Template-----------
 /set_template - set IMDb template <a href="https://t.me/Jisshu_developer/8">Example</a>
 --------------Set Tutorial-------------
-/set_tutorial - set 1 verification tutorial 
+/set_tutorial - set verification tutorial 
 -------------Set Log Channel-----------
 --> ᴀᴅᴅ ʟᴏɢ ᴄʜᴀɴɴᴇʟ ʙʏ ᴛʜɪs ꜰᴏʀᴍᴀᴛ & ᴍᴀᴋᴇ sᴜʀᴇ ʙᴏᴛ ɪs ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ 👇
 
@@ -341,12 +377,95 @@ User - {}"""
 </blockquote>
 Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ᴀɴᴅ ᴜsᴇ ᴀʟʟ ғᴇᴀᴛᴜʀᴇs😇</b>"""
 
-    SOURCE_TXT = """<b>
-NOTE:
-- ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ʜᴇʀᴇ ◉› :<blockquote><a href="https://t.me/JISSHU_BOTS">𝗝𝗶𝘀𝘀𝗵𝘂-𝗙𝗶𝗹𝘁𝗲𝗿-𝗕𝗼𝘁</a></blockquote>
 
-developer : Mr.Jisshu
-</b>""" 
+
+# Command explanations for Set Verify
+    SET_VERIFY_TEXT = """<b><blockquote>
+--------------Set Verify-------------
+/set_verify {{website link}} {{website api}}
+This command allows you to set up a verification process using a website link and its API. Use this when you want users to verify themselves through a custom website verification.
+
+Example: <code>/set_verify https://example.com API_KEY</code>
+
+/set_verify_2 {{website link}} {{website api}}
+This is a secondary method for verification. Use it if you have an alternative website for verification.
+
+Example: <code>/set_verify_2 https://example2.com API_KEY</code>
+
+/set_verify_3 {{website link}} {{website api}}
+Use this for a third verification option with another website link and API.
+
+Example: <code>/set_verify_3 https://example3.com API_KEY</code>
+---------------------------------------
+"""
+
+# Command explanations for Set Verify Time
+    SET_VERIFY_TIME_TEXT = """<b><blockquote>
+-------------Set Verify Time-----------
+/set_time_2 {{seconds}}
+This command sets the time delay for the second verification process in seconds. Adjust it according to the verification duration required.
+
+Example: <code>/set_time_2 60</code>
+
+/set_time_3 {{seconds}}
+Sets the time delay for the third verification process in seconds.
+
+Example: <code>/set_time_3 120</code>
+---------------------------------------
+"""
+
+# Command explanations for Verify On/Off
+    VERIFY_ON_OFF_TEXT = """<b><blockquote>
+--------------Verify On Off------------
+/verifyoff {{verify.off code}}
+Turns off the verification process using a special verification-off code. Contact the bot admin if you do not have this code.
+
+/verifyon
+Reactivates the verification process.
+---------------------------------------
+"""
+
+# Command explanations for setting file captions
+    SET_CAPTION_TEXT = """<b><blockquote>
+------------Set File Caption-----------
+/set_caption
+This command allows you to customize the caption of files sent by the bot. Use this to make captions more descriptive or user-friendly.
+---------------------------------------
+"""
+
+# Command explanations for setting IMDb templates
+    SET_TEMPLATE_TEXT = """<b><blockquote>
+-----------Set IMDb Template-----------
+/set_template
+This sets a custom template for IMDb information. Use this to format how movie details are displayed.
+
+Example template: <a href="https://t.me/Jisshu_developer/8">Click here for example</a>
+---------------------------------------
+"""
+
+# Command explanations for setting tutorials
+    SET_TUTORIAL_TEXT = """<b><blockquote>
+--------------Set Tutorial-------------
+/set_tutorial
+This command allows you to set a tutorial for the verification process. Share this with new users to help them understand how to get verified.
+---------------------------------------
+"""
+
+# Command explanations for setting a log channel
+    SET_LOG_CHANNEL_TEXT = """<b><blockquote>
+-------------Set Log Channel-----------
+/set_log {{log channel id}}
+Use this command to set a log channel where all bot activities are logged. Make sure the bot is an admin in the log channel for proper functionality.
+---------------------------------------
+"""
+
+# General info and additional details command
+    GENERAL_INFO_TEXT = """<b><blockquote>
+ʏᴏᴜ ᴄᴀɴ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀʟʟ ᴅᴇᴛᴀɪʟs ʙʏ /details ᴄᴏᴍᴍᴀɴᴅ.
+Add the bot to your group and make it an admin to access all features.
+</blockquote></b>
+"""
+    
     GROUP_C_TEXT = """<b><blockquote>
  --------------Set Verify-------------
 /set_verify {website link} {website api}
@@ -363,9 +482,7 @@ developer : Mr.Jisshu
 -----------Set Imdb Template-----------
 /set_template - set IMDb template <a href="https://t.me/Jisshu_developer/8">Example</a>
 --------------Set Tutorial-------------
-/set_tutorial {tutorial link} - set 1 verification tutorial 
-/set_tutorial_2 {tutorial link} - set 2 verification tutorial 
-/set_tutorial_3 {tutorial link} - set 3 verification tutorial 
+/set_tutorial - set verification tutorial 
 -------------Set Log Channel-----------
 --> ᴀᴅᴅ ʟᴏɢ ᴄʜᴀɴɴᴇʟ ʙʏ ᴛʜɪs ꜰᴏʀᴍᴀᴛ & ᴍᴀᴋᴇ sᴜʀᴇ ʙᴏᴛ ɪs ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ 👇
 
@@ -375,3 +492,8 @@ developer : Mr.Jisshu
 ʙʏ /details ᴄᴏᴍᴍᴀɴᴅ
 </blockquote>
 Iғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴅᴏᴜʙᴛs ᴘʟᴇᴀsᴇ <a href="https://t.me/IM_JISSHU">ᴄᴏɴᴛᴀᴄᴛ</a> ᴍʏ <a href="https://t.me/IM_JISSHU">ᴀᴅᴍɪɴ</a></b>"""
+
+
+
+    
+
