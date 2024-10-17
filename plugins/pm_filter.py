@@ -818,7 +818,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('Tᴏᴘ Tʀᴇɴᴅɪɴɢ ⚡', callback_data="trending")
                 ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
+        await query.message.edit_text(	
             text=script.START_TXT.format(query.from_user.mention, get_status(), query.from_user.id),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
@@ -912,20 +912,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
               ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
-    
         await query.message.edit_media(
             media=InputMediaPhoto(
-            media=random.choice(START_IMG),
-            caption=script.HELP_TXT,
+            media=random.choice(PICS),
+            caption=script.HELP_TXT.format(query.from_user.mention),
             parse_mode=enums.ParseMode.HTML 
             ),
             reply_markup=reply_markup
 	)
-      #  await query.message.edit_text(
-      #      text=script.HELP_TXT,
-      #      reply_markup=reply_markup,
-       #     parse_mode=enums.ParseMode.HTML
-       # )   
         
     elif query.data == "admincmd":
     # If the user isn't an admin, return
@@ -941,8 +935,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
       await client.edit_message_media(
           chat_id=query.message.chat.id,
           message_id=query.message.id,
-          media=InputMediaAnimation(
-            media="https://cdn.jsdelivr.net/gh/Jisshubot/JISSHU_BOTS/Video.mp4/Welcome_video_20240921_184741_0001.gif",
+          media=InputMediaPhoto(
+            media=random.choice(PICS),
             caption=script.ADMIN_CMD_TXT,
             parse_mode=enums.ParseMode.HTML
           ),
@@ -957,8 +951,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
        await client.edit_message_media(
           chat_id=query.message.chat.id,
           message_id=query.message.id,
-          media=InputMediaAnimation(
-            media="https://cdn.jsdelivr.net/gh/Jisshubot/JISSHU_BOTS/Video.mp4/Welcome_video_20240921_184741_0001.gif",
+          media=InputMediaPhoto(
+            media=random.choice(PICS),
             caption=script.ADMIN_CMD_TXT2,
             parse_mode=enums.ParseMode.HTML
           ),
@@ -972,14 +966,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
             [InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='features')]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.FSUB_TXT,
+	    media=InputMediaPhoto(
+	    media=random.choice(PICS),	    
+            caption=script.FSUB_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
     
     elif query.data == 'about':
         await query.message.edit_text(
-            script.ABOUT_TEXT.format(query.from_user.mention(),temp.B_LINK),
+	    media=InputMediaPhoto(
+	    media=random.choice(PICS),	    
+            caption=script.ABOUT_TEXT.format(query.from_user.mention(),temp.B_LINK),
             reply_markup = InlineKeyboardMarkup(
                 [[
 			InlineKeyboardButton('‼️ ᴅɪꜱᴄʟᴀɪᴍᴇʀ ‼️', callback_data='disclaimer')
@@ -1004,7 +1002,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.SOURCE_TXT,
+	    media=InputMediaPhoto(
+            media=random.choice(PICS),
+            caption=script.SOURCE_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
 	)
@@ -1017,7 +1017,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                   ]]
             reply_markup = InlineKeyboardMarkup(btn)
             await query.message.edit_text(
-                text=(script.DISCLAIMER_TXT),
+		media=InputMediaPhoto(
+		media=random.choice(PICS),
+                caption=script.DISCLAIMER_TXT,
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML 
 	    )
@@ -1032,8 +1034,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
        await client.edit_message_media(
           chat_id=query.message.chat.id,
           message_id=query.message.id,
-          media=InputMediaAnimation(
-            media="https://cdn.jsdelivr.net/gh/Jisshubot/JISSHU_BOTS/Video.mp4/Group_20240921_202540_0001.gif",
+          media=InputMediaPhoto(
+            media=random.choice(PICS),
             caption=script.GROUP_TEXT.format(temp.B_LINK),
             parse_mode=enums.ParseMode.HTML
         ),
@@ -1046,7 +1048,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)  
         await query.message.edit_text(
-            text=script.TELE_TXT,
+	    media=InputMediaPhoto(
+	    media=random.choice(PICS),
+            caption=script.TELE_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
@@ -1056,7 +1060,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons) 
         await query.message.edit_text(
-            text=script.FONT_TXT,
+	    media=InputMediaPhoto(
+            media=random.choice(PICS),
+            caption=script.FONT_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
 	)
