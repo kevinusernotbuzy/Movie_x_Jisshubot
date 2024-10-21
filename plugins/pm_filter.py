@@ -833,28 +833,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
 	
     	    
-    elif query.data == "support":
-        buttons = [[
-            InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=f'https://t.me/top10ner_0'),
-            InlineKeyboardButton('ɢʀᴏᴜᴘ', url=f'https://t.me/request_movie2')
-        ],[
-            InlineKeyboardButton('ʀᴇᴘᴏʀᴛ ʙᴜɢs ᴀɴᴅ ғᴇᴇᴅʙᴀᴄᴋ', url=f'https://t.me/noob_marcus'),
-        ],[
-            InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='about'),
-            InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
-        ]]
-        
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
-        )
-        await query.message.edit_text(
-            text=f"<b>๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ғᴏʀ ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ, ɢʀᴏᴜᴘ, ʙᴏᴛ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ.\n\n» sᴜᴘᴘᴏʀᴛ ᴍᴇ ɢᴜʏs 💜</b>",
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-	)
+    
     
     elif query.data == "seeplans":
         btn = [[
