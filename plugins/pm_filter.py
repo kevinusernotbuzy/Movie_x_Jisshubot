@@ -808,16 +808,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
 
     elif query.data == "start":
-    buttons = [[
-        InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ʙᴀʙʏ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
-    ],[
-        InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", callback_data='update'),
-        InlineKeyboardButton('✧ ᴀʙᴏᴜᴛ ᴍᴇ ✧', callback_data='about')
-    ],[
-        InlineKeyboardButton('ᴘʀᴇᴍɪᴜᴍ', callback_data='seeplans'),
-        InlineKeyboardButton('✘ ʜᴇʟᴘ & ᴄᴍᴅ ✘', callback_data="features")
-    ],[
-        InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data='earn_money')
+       buttons = [[
+           InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ʙᴀʙʏ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
+       ],[
+           InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", callback_data='update'),
+           InlineKeyboardButton('✧ ᴀʙᴏᴜᴛ ᴍᴇ ✧', callback_data='about')
+       ],[
+           InlineKeyboardButton('ᴘʀᴇᴍɪᴜᴍ', callback_data='seeplans'),
+           InlineKeyboardButton('✘ ʜᴇʟᴘ & ᴄᴍᴅ ✘', callback_data="features")
+       ],[
+           InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data='earn_money')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await client.edit_message_media(
@@ -1026,8 +1026,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ),
         reply_markup=reply_markup
     )	    
-    
-    
+      
     	
     elif query.data == "about":
         buttons = [[
@@ -1069,27 +1068,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 	    reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
 	)
-        
-    
-    elif query.data == "Source":
-        buttons = [[
-            InlineKeyboardButton('Repo', url='https://github.com/Jisshubot/Jisshu-Filter-Bot')
-        ],[
-            InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='about'),
-            InlineKeyboardButton('• ᴄʟᴏsᴇ •', callback_data='close_data')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await client.edit_message_media(
-	query.message.chat.id, 
-        query.message.id, 
-        InputMediaPhoto(random.choice(PICS))
-        )
-        await query.message.edit_text(   
-            text=script.SOURCE_TXT.format(query.from_user.mention),
-	    reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-	)
-        
+            
     
     elif query.data == "mydevelopers":
         await query.answer(
