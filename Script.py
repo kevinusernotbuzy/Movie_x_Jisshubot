@@ -472,34 +472,43 @@ Add the bot to your group and make it an admin to access all features.
 </blockquote></b>
 """
     
-    GROUP_C_TEXT = """<b><blockquote>
- --------------Set Verify-------------
-/set_verify {website link} {website api}
-/set_verify_2 {website link} {website api}
-/set_verify_3 {website link} {website api}
--------------Set Verify Time-----------
-/set_time_2 {seconds} Sᴇᴛ ᴛʜᴇ sᴇᴄᴏɴᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴛɪᴍᴇ
-/set_time_3 {seconds} Sᴇᴛ ᴛʜᴇ ᴛʜɪʀᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴛɪᴍᴇ
---------------Verify On Off------------
-/verifyoff {verify.off code} - off verification <a href="https://t.me/IM_JISSHU">Cᴏɴᴛᴀᴄᴛ</a> ᴛʜᴇ ʙᴏᴛ ᴀᴅᴍɪɴ ғᴏʀ ᴀ ᴠᴇʀɪғʏ.ᴏғғ ᴄᴏᴅᴇ
-/verifyon - on verification 
-------------Set File Caption-----------
-/set_caption - set coustom file caption 
------------Set Imdb Template-----------
-/set_template - set IMDb template <a href="https://t.me/Jisshu_developer/8">Example</a>
---------------Set Tutorial-------------
-/set_tutorial - set verification tutorial 
--------------Set Log Channel-----------
---> ᴀᴅᴅ ʟᴏɢ ᴄʜᴀɴɴᴇʟ ʙʏ ᴛʜɪs ꜰᴏʀᴍᴀᴛ & ᴍᴀᴋᴇ sᴜʀᴇ ʙᴏᴛ ɪs ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ 👇
+    GROUP_TEXT = """
+<b><blockquote>
 
-/set_log {log channel id}
----------------------------------------
-ʏᴏᴜ ᴄᴀɴ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀʟʟ ᴅᴇᴛᴀɪʟs 
-ʙʏ /details ᴄᴏᴍᴍᴀɴᴅ
+🔹 <b>Set Verify Website API</b>:
+  • /set_verify {website link} {website API}
+  • /set_verify_2 {website link} {website API}
+  • /set_verify_3 {website link} {website API}
+
+🔹 <b>Set Verification Time Gap</b>:
+  • /set_time_2 {seconds} – Set time for the second verification
+  • /set_time_3 {seconds} – Set time for the third verification
+
+🔹 <b>Set Verify On/Off</b>:
+  • /verifyoff {verify.off code} – Disable verification
+    (<a href="https://t.me/IM_JISSHU">Contact Admin</a> for the off code)
+  • /verifyon – Enable verification
+
+🔹 <b>Set Custom File Caption</b>:
+  • /set_caption – Set custom caption for files
+
+🔹 <b>Set IMDb Template</b>:
+  • /set_template – Set the IMDb template
+    (<a href="https://t.me/Jisshu_developer/8">Example Template</a>)
+
+🔹 <b>Set Verification Tutorial</b>:
+  • /set_tutorial – Set a tutorial for verification
+
+🔹 <b>Log Channel Setup</b>:
+  • /set_log {log channel ID} – Add a log channel 
+    (Make sure the bot has admin privileges)
+
+🔹 <b>Check Details</b>:
+  • /details – View all your bot configuration details
+
 </blockquote>
-Iғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴅᴏᴜʙᴛs ᴘʟᴇᴀsᴇ <a href="https://t.me/IM_JISSHU">ᴄᴏɴᴛᴀᴄᴛ</a> ᴍʏ <a href="https://t.me/IM_JISSHU">ᴀᴅᴍɪɴ</a></b>"""
 
-
-
+<i>🔸 Add the bot to your group and make it an admin to enable all these features.</i>
+</b>
+"""
     
-
