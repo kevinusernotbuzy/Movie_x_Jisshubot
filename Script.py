@@ -438,7 +438,7 @@ Files will only be provided once users have joined your target channel.</b>
   • /set_Shortner3 - {website link} {website API}
 
 <u>Sᥱt Vᥱrιfιᥴᥲtιon Tᥙtorιᥲᥣ</u>:
-  • /set_tutorial – sᴇᴛ ʏᴏᴜʀ ᴛᴜᴛᴏʀɪᴀʟᴠɪᴅᴇᴏ ʟɪɴᴋ ғᴏʀ sʜᴏʀᴛɴᴇʀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
+  • /set_tutorial – sᴇᴛ ʏᴏᴜʀ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ ʟɪɴᴋ ғᴏʀ sʜᴏʀᴛɴᴇʀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
 
 <u>Sᥱt Vᥱrιfιᥴᥲtιon Tιmᥱ Gᥲρ</u>:
   • /set_time2 {seconds} – sᴇᴛ ᴛɪᴍᴇ ғᴏʀ ᴛʜᴇ sᴇᴄᴏɴᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
@@ -467,7 +467,7 @@ Files will only be provided once users have joined your target channel.</b>
   • /set_Shortner3 - {website link} {website API}
 
 <u>Sᥱt Vᥱrιfιᥴᥲtιon Tᥙtorιᥲᥣ</u>:
-  • /set_tutorial – sᴇᴛ ʏᴏᴜʀ ᴛᴜᴛᴏʀɪᴀʟᴠɪᴅᴇᴏ ʟɪɴᴋ ғᴏʀ sʜᴏʀᴛɴᴇʀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
+  • /set_tutorial – sᴇᴛ ʏᴏᴜʀ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ ʟɪɴᴋ ғᴏʀ sʜᴏʀᴛɴᴇʀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
 
 <u>Sᥱt Vᥱrιfιᥴᥲtιon Tιmᥱ Gᥲρ</u>:
   • /set_time2 {seconds} – sᴇᴛ ᴛɪᴍᴇ ғᴏʀ ᴛʜᴇ sᴇᴄᴏɴᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
