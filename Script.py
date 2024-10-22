@@ -398,38 +398,38 @@ Files will only be provided once users have joined your target channel.</b>
     SET_CAPTION_TEXT = """<b><u>Set File Caption</u></b>
 
 <b>/set_caption</b>
-<i>Customize the caption for files sent by the bot.</i>
-<i>Example:</i> <code>/set_caption Here is your requested file!</code>"""
+<i>ᴄᴜsᴛᴏᴍɪᴢᴇ ᴛʜᴇ ᴄᴀᴘᴛɪᴏɴ ғᴏʀ ғɪʟᴇs sᴇɴᴛ ʙʏ ᴛʜᴇ ʙᴏᴛ.</i>
+<i>ᴇxᴀᴍᴘʟᴇ:</i> <code>/set_caption ʜᴇʀᴇ ɪs ʏᴏᴜʀ ʀᴇǫᴜᴇsᴛᴇᴅ ғɪʟᴇ!</code>"""
 
 # Command explanations for setting IMDb templates
     SET_TEMPLATE_TEXT = """<b><u>Set IMDb Template</u></b>
 
 <b>/set_template</b>
-<i>Sets a custom template for IMDb information.</i>
-<i>Example template:</i> 
+<i>sᴇᴛs ᴀ ᴄᴏᴜsᴛᴏᴍ ᴛᴇᴍᴘʟᴀᴛᴇ ғᴏʀ ɪᴍᴅʙ ɪɴғᴏ.</i>
+<i>ᴇxᴀᴍᴘʟᴇ ᴛᴇᴍᴘʟᴀᴛᴇ:</i> 
 <a href="https://telegra.ph/Set-IMDb-Template-Caption-10-22">Click here for an example</a>"""
 
 # Command explanations for setting tutorials
     SET_TUTORIAL_TEXT = """<b><u>Set Tutorial</u></b>
 
 <b>/set_tutorial</b>
-<i>Set a tutorial for new users on the verification process.</i>
-<i>Example:</i> <code>/set_tutorial https://t.me/how_to_download_movi/5</code>"""
+<i> sᴇᴛ ʏᴏᴜʀ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ ʟɪɴᴋ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀs.</i>
+<i>ᴇxᴀᴍᴘʟᴇ:</i> <code>/set_tutorial https://t.me/how_to_download_movi/5</code>"""
 
 # Command explanations for setting a log channel
     SET_LOG_CHANNEL_TEXT = """<b><u>Set Log Channel</u></b>
 
 <b>/set_log <i>{log channel id}</i></b>
-<i>Set a log channel for all bot activities. Ensure the bot is an admin.</i>
-<i>Example:</i> <code>/set_log -1878998680</code>"""
+<i>sᴇᴛ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴜsᴇʀs ᴀᴄᴛɪᴠɪᴛɪᴇs. ᴇɴsᴜʀᴇ ᴛʜᴇ ʙᴏᴛ ɪs ᴀɴ ᴀᴅᴍɪɴ.</i>
+<i>ᴇxᴀᴍᴘʟᴇ:</i> <code>/set_log -1878998680</code>"""
     
 
 # General info and additional details command
-    GENERAL_INFO_TEXT = """<b><u>Coutimize Your Group</u></b>
+    GENERAL_INFO_TEXT = """<b><u>ᴄᴏᴜᴛɪᴍɪᴢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ</u></b>
 
-<i>Check all your group settings details using the /details command.</i>
+<i>ᴄʜᴇᴄᴋ ᴀʟʟ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs ᴅᴇᴛᴀɪʟs ᴜsɪɴɢ ᴛʜᴇ /details ᴄᴏᴍᴍᴀɴᴅ.</i>
 
-<i>Add the bot to your group and make it an admin to access all features.</i>"""
+<i>ᴀᴅᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ɪᴛ ᴀɴᴅ ᴀᴅᴍɪɴ ᴛᴏ ᴀᴄᴄᴇss ᴀʟʟ ғᴇᴀᴛᴜʀᴇs.</i>"""
 
     GROUP_C_TEXT = """
 <u>Sᥱt Shortnᥱr Wᥱbsιtᥱ API</u>:
@@ -451,11 +451,10 @@ Files will only be provided once users have joined your target channel.</b>
   • /set_template – sᴇᴛ ᴛʜᴇ ɪᴍᴅʙ ᴛᴇᴍᴘʟᴀᴛᴇ.
 
 <u>Log Chᥲnnᥱᥣ Sᥱtᥙρ</u>:
-  • /set_log – {log channel ID} ᴀᴅᴅ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ.
-    (ᴍᴀᴋᴇ sᴜʀᴇ ʙᴏᴛ ʜᴀs ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ)
+  • /set_log – {log channel ID} ᴀᴅᴅ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ.(ᴍᴀᴋᴇ sᴜʀᴇ ʙᴏᴛ ʜᴀs ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ)
 
 <u>Chᥱᥴk Groᥙρ Dᥱtᥲιᥣs</u>:
-  • /details – ᴠɪᴇᴡ ᴀʟᴋ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs ᴅᴇᴀᴛᴀɪʟs.
+  • /details – ᴠɪᴇᴡ ᴀʟʟ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs ᴅᴇᴛᴀɪʟs.
 
 <i>◍ ᴀᴅᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ʏᴏᴜʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ɪᴛ ᴀᴅᴍɪɴ ᴛᴏ ᴇɴʙʟᴇᴀʟʟ ᴛʜᴇsᴇ ғᴇᴀᴛᴜʀᴇs.</i>
 """
@@ -480,11 +479,10 @@ Files will only be provided once users have joined your target channel.</b>
   • /set_template – sᴇᴛ ᴛʜᴇ ɪᴍᴅʙ ᴛᴇᴍᴘʟᴀᴛᴇ.
 
 <u>Log Chᥲnnᥱᥣ Sᥱtᥙρ</u>:
-  • /set_log – {log channel ID} ᴀᴅᴅ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ.
-    (ᴍᴀᴋᴇ sᴜʀᴇ ʙᴏᴛ ʜᴀs ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ)
+  • /set_log – {log channel ID} ᴀᴅᴅ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ.(ᴍᴀᴋᴇ sᴜʀᴇ ʙᴏᴛ ʜᴀs ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ)
 
 <u>Chᥱᥴk Groᥙρ Dᥱtᥲιᥣs</u>:
-  • /details – ᴠɪᴇᴡ ᴀʟᴋ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs ᴅᴇᴀᴛᴀɪʟs.
+  • /details – ᴠɪᴇᴡ ᴀʟʟ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs ᴅᴇᴛᴀɪʟs.
 
 <i>◍ ᴀᴅᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ʏᴏᴜʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ɪᴛ ᴀᴅᴍɪɴ ᴛᴏ ᴇɴʙʟᴇᴀʟʟ ᴛʜᴇsᴇ ғᴇᴀᴛᴜʀᴇs.</i>
 """
