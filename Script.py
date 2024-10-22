@@ -343,85 +343,77 @@ User - {}"""
 </blockquote></b>"""
     
     
-    FSUB_TXT = """<u>Add Force Subscriber Channel</u>
+    FSUB_TXT = """
+<u>noтe</u>
+1. ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴍᴇ ᴀɴ ᴀᴅᴍɪɴ.
+2. ᴀꜱꜱɪɢɴ ᴍᴇ ᴀꜱ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ᴛᴀʀɢᴇᴛ ᴄʜᴀɴɴᴇʟ ᴏʀ ɢʀᴏᴜᴘ.
 
-<b>1. Add me to your group and make me an admin.</b>
+<u>coммand and υѕeѕ</u>
+• /fsub your_target_chat_id</b>
+ᴇxᴀᴍᴘʟᴇ: <code>/fsub -100xxxxxx</code>
 
-<b>2. Assign me as an admin in your target channel or group.</b>
+•  /del_fsub - ᴛᴏ ᴅɪꜱᴀʙʟᴇ ᴛʜᴇ ꜰꜱᴜʙ ꜰᴇᴀᴛᴜʀᴇ.
+• /show_fsub - ᴛᴏ ᴄʜᴇᴄᴋ ɪꜰ ꜰꜱᴜʙ ɪꜱ ᴀᴄᴛɪᴠᴇ.
 
-<b>3. Send <code>/fsub your_target_chat_id</code></b>
-<i>Example:</i> <code>/fsub -100xxxxxx</code>
-
-<b>That's it! I will encourage your users to join your channel/group. 
-Files will only be provided once users have joined your target channel.</b>
-
-<b>To disable the fsub feature, send /del_fsub</b>
-
-<b>To check if fsub is active, use /show_fsub</b>"""
+<b>ᴛʜᴀᴛ'ꜱ ɪᴛ! ɪ ᴡɪʟʟ ᴇɴᴄᴏᴜʀᴀɢᴇ ʏᴏᴜʀ ᴜꜱᴇʀꜱ ᴛᴏ ᴊᴏɪɴ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ/ɢʀᴏᴜᴘ. 
+ғɪʟᴇꜱ ᴡɪʟʟ ᴏɴʟʏ ʙᴇ ᴘʀᴏᴠɪᴅᴇᴅ ᴏɴᴄᴇ ᴜꜱᴇʀꜱ ʜᴀᴠᴇ ᴊᴏɪɴᴇᴅ ʏᴏᴜʀ ᴛᴀʀɢᴇᴛ ᴄʜᴀɴɴᴇʟ.</b>
+"""
 
 # Command explanations for Set Verify
-    SET_VERIFY_TEXT = """<b><u>Set Verify</u></b>
+    SET_VERIFY_TEXT = """<b><u>Sᥱt Shortnᥱr Wᥱbsιtᥱ API</u></b>
 
-<b>/set_verify <i>{website link}</i> <i>{website api}</i></b>
-<i>This command sets up user verification through a website link and its API.</i>
-<i>Example:</i> <code>/set_verify https://example.com API_KEY</code>
+• /Set_Shortner - ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ꜱᴇᴛꜱ ᴜᴘ ᴜꜱᴇʀ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴛʜʀᴏᴜɢʜ ᴀ ᴡᴇʙꜱɪᴛᴇ ʟɪɴᴋ ᴀɴᴅ ɪᴛꜱ ᴀᴘɪ.
+ᴇxᴀᴍᴘʟᴇ: <code>/set_verify https://example.com API_KEY</code>
 
-<b>/set_verify_2 <i>{website link}</i> <i>{website api}</i></b>
-<i>Use this for an alternative verification website.</i>
-<i>Example:</i> <code>/set_verify_2 https://example2.com API_KEY</code>
+• /Set_Shortner2 - ᴜꜱᴇ ᴛʜɪꜱ ꜰᴏʀ ᴀɴ ꜱᴇᴄᴏɴᴅ sʜᴏʀᴛɴᴇʀ ᴡᴇʙꜱɪᴛᴇ.
+ᴇxᴀᴍᴘʟᴇ: <code>/set_verify_2 https://example2.com API_KEY</code>
 
-<b>/set_verify_3 <i>{website link}</i> <i>{website api}</i></b>
-<i>Use this for a third verification option.</i>
-<i>Example:</i> <code>/set_verify_3 https://example3.com API_KEY</code>
+• /Set_Shortner3 - ᴜꜱᴇ ᴛʜɪꜱ ꜰᴏʀ ᴀ ᴛʜɪʀᴅ sʜᴏʀᴛɴᴇʀ ᴡᴇʙꜱɪᴛᴇ ᴏᴘᴛɪᴏɴ.
+ᴇxᴀᴍᴘʟᴇ: <code>/set_verify_3 https://example3.com API_KEY</code>
 
 
-<b><u>Set Verify Time</u></b>
+<b><u>Sᥱt Vᥱrιfιᥴᥲtιon Tιmᥱ Gᥲρ</u></b>
 
-<b>/set_time_2 <i>{seconds}</i></b>
-<i>Sets the delay for the second verification process in seconds.</i>
-<i>Example:</i> <code>/set_time_2 60</code>
+• /set_time2 - {seconds} sᴇᴛꜱ ᴛʜᴇ ᴅᴇʟᴀʏ ꜰᴏʀ ᴛʜᴇ ꜱᴇᴄᴏɴᴅ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴘʀᴏᴄᴇꜱꜱ ɪɴ ꜱᴇᴄᴏɴᴅꜱ.
+ᴇxᴀᴍᴘʟᴇ: <code>/set_time_2 60</code>
 
-<b>/set_time_3 <i>{seconds}</i></b>
-<i>Sets the delay for the third verification process.</i>
-<i>Example:</i> <code>/set_time_3 120</code>"""
+• /set_time3 - {seconds} sᴇᴛꜱ ᴛʜᴇ ᴅᴇʟᴀʏ ꜰᴏʀ ᴛʜᴇ ᴛʜɪʀᴅ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴘʀᴏᴄᴇꜱꜱ.
+ᴇxᴀᴍᴘʟᴇ: <code>/set_time_3 120</code>"""
 
 
     VERIFY_ON_OFF_TEXT = """<b><u>Verify On/Off</u></b>
 
-<b>/verifyoff <i>{verify.off code}</i></b>
-<i>Turns off the verification process. Contact the admin for this code.</i> (<a href="https://t.me/vampirexgirl">Contact Admin</a>
+• /verifyoff - {verify.off code}</b> Turns off the verification process. Contact the admin for this code.</i> (<a href="https://t.me/vampirexgirl">Contact Admin</a>
 
-<b>/verifyon</b>
-<i>Reactivates the verification process.</i>"""
+• /verifyon - Reactivates the verification process."""
 
 # Command explanations for setting file captions
-    SET_CAPTION_TEXT = """<b><u>Set File Caption</u></b>
+    SET_CAPTION_TEXT = """<b><u>Sᥱt Cᥙstom Fιᥣᥱ Cᥲρtιon</u></b>
 
-<b>/set_caption</b>
-<i>ᴄᴜsᴛᴏᴍɪᴢᴇ ᴛʜᴇ ᴄᴀᴘᴛɪᴏɴ ғᴏʀ ғɪʟᴇs sᴇɴᴛ ʙʏ ᴛʜᴇ ʙᴏᴛ.</i>
-<i>ᴇxᴀᴍᴘʟᴇ:</i> <code>/set_caption ʜᴇʀᴇ ɪs ʏᴏᴜʀ ʀᴇǫᴜᴇsᴛᴇᴅ ғɪʟᴇ!</code>"""
+• /set_caption - ᴄᴜsᴛᴏᴍɪᴢᴇ ᴛʜᴇ ᴄᴀᴘᴛɪᴏɴ ғᴏʀ ғɪʟᴇs sᴇɴᴛ ʙʏ ᴛʜᴇ ʙᴏᴛ.
+
+ᴇxᴀᴍᴘʟᴇ: <code>/set_caption ʜᴇʀᴇ ɪs ʏᴏᴜʀ ʀᴇǫᴜᴇsᴛᴇᴅ ғɪʟᴇ!</code>"""
 
 # Command explanations for setting IMDb templates
-    SET_TEMPLATE_TEXT = """<b><u>Set IMDb Template</u></b>
+    SET_TEMPLATE_TEXT = """<b><u>Sᥱt IMDb Tᥱmρᥣᥲtᥱ</u></b>
 
-<b>/set_template</b>
-<i>sᴇᴛs ᴀ ᴄᴏᴜsᴛᴏᴍ ᴛᴇᴍᴘʟᴀᴛᴇ ғᴏʀ ɪᴍᴅʙ ɪɴғᴏ.</i>
-<i>ᴇxᴀᴍᴘʟᴇ ᴛᴇᴍᴘʟᴀᴛᴇ:</i> 
-<a href="https://telegra.ph/Set-IMDb-Template-Caption-10-22">Click here for an example</a>"""
+• /set_template - sᴇᴛs ᴀ ᴄᴏᴜsᴛᴏᴍ ᴛᴇᴍᴘʟᴀᴛᴇ ғᴏʀ ɪᴍᴅʙ ɪɴғᴏ.
+
+ᴇxᴀᴍᴘʟᴇ ᴛᴇᴍᴘʟᴀᴛᴇ: <a href="https://telegra.ph/Set-IMDb-Template-Caption-10-22">ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>"""
 
 # Command explanations for setting tutorials
-    SET_TUTORIAL_TEXT = """<b><u>Set Tutorial</u></b>
+    SET_TUTORIAL_TEXT = """<b><u>Sᥱt Vᥱrιfιᥴᥲtιon Tᥙtorιᥲᥣ</u></b>
 
-<b>/set_tutorial</b>
-<i> sᴇᴛ ʏᴏᴜʀ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ ʟɪɴᴋ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀs.</i>
-<i>ᴇxᴀᴍᴘʟᴇ:</i> <code>/set_tutorial https://t.me/how_to_download_movi/5</code>"""
+• /set_tutorial - sᴇᴛ ʏᴏᴜʀ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ ʟɪɴᴋ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀs.
+
+ᴇxᴀᴍᴘʟᴇ: <code>/set_tutorial https://t.me/how_to_download_movi/5</code>"""
 
 # Command explanations for setting a log channel
-    SET_LOG_CHANNEL_TEXT = """<b><u>Set Log Channel</u></b>
+    SET_LOG_CHANNEL_TEXT = """<b><u>Log Chᥲnnᥱᥣ Sᥱtᥙρ</u></b>
 
-<b>/set_log <i>{log channel id}</i></b>
-<i>sᴇᴛ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴜsᴇʀs ᴀᴄᴛɪᴠɪᴛɪᴇs. ᴇɴsᴜʀᴇ ᴛʜᴇ ʙᴏᴛ ɪs ᴀɴ ᴀᴅᴍɪɴ.</i>
-<i>ᴇxᴀᴍᴘʟᴇ:</i> <code>/set_log -1878998680</code>"""
+• /set_log - {log channel id} sᴇᴛ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴜsᴇʀs ᴀᴄᴛɪᴠɪᴛɪᴇs. ᴇɴsᴜʀᴇ ᴛʜᴇ ʙᴏᴛ ɪs ᴀɴ ᴀᴅᴍɪɴ.
+
+ᴇxᴀᴍᴘʟᴇ: <code>/set_log -1878998680</code>"""
     
 
 # General info and additional details command
@@ -429,7 +421,7 @@ Files will only be provided once users have joined your target channel.</b>
 
 <i>ᴄʜᴇᴄᴋ ᴀʟʟ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs ᴅᴇᴛᴀɪʟs ᴜsɪɴɢ ᴛʜᴇ /details ᴄᴏᴍᴍᴀɴᴅ.</i>
 
-<i>ᴀᴅᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ɪᴛ ᴀɴᴅ ᴀᴅᴍɪɴ ᴛᴏ ᴀᴄᴄᴇss ᴀʟʟ ғᴇᴀᴛᴜʀᴇs.</i>"""
+<b>ᴀᴅᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ɪᴛ ᴀɴᴅ ᴀᴅᴍɪɴ ᴛᴏ ᴀᴄᴄᴇss ᴀʟʟ ғᴇᴀᴛᴜʀᴇs.</b>"""
 
     GROUP_C_TEXT = """
 <u>Sᥱt Shortnᥱr Wᥱbsιtᥱ API</u>:
