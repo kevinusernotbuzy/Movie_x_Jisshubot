@@ -389,7 +389,7 @@ Files will only be provided once users have joined your target channel.</b>
     VERIFY_ON_OFF_TEXT = """<b><u>Verify On/Off</u></b>
 
 <b>/verifyoff <i>{verify.off code}</i></b>
-<i>Turns off the verification process. Contact the admin for this code.</i>
+<i>Turns off the verification process. Contact the admin for this code.</i> (<a href="https://t.me/vampirexgirl">Contact Admin</a>
 
 <b>/verifyon</b>
 <i>Reactivates the verification process.</i>"""
@@ -432,71 +432,59 @@ Files will only be provided once users have joined your target channel.</b>
 <i>Add the bot to your group and make it an admin to access all features.</i>"""
 
     GROUP_C_TEXT = """
- ◇ <b>Set Verify Website API</b>:
-  • <code>/set_verify {website link} {website API}</code>
-  • <code>/set_verify_2 {website link} {website API}</code>
-  • <code>/set_verify_3 {website link} {website API}</code>
+<u>Sᥱt Shortnᥱr Wᥱbsιtᥱ API</u>:
+  • /set_Shortner - {website link} {website API}
+  • /set_Shortner2 - {website link} {website API}
+  • /set_Shortner3 - {website link} {website API}
 
-◇ <b>Set Verification Time Gap</b>:
-  • <code>/set_time_2 {seconds}</code> – Set time for the second verification
-  • <code>/set_time_3 {seconds}</code> – Set time for the third verification
+<u>Sᥱt Vᥱrιfιᥴᥲtιon Tᥙtorιᥲᥣ</u>:
+  • /set_tutorial – sᴇᴛ ʏᴏᴜʀ ᴛᴜᴛᴏʀɪᴀʟᴠɪᴅᴇᴏ ʟɪɴᴋ ғᴏʀ sʜᴏʀᴛɴᴇʀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
 
-◇ <b>Set Verify On/Off</b>:
-  • <code>/verifyoff {verify.off code}</code> – Disable verification
-    (<a href="https://t.me/IM_JISSHU">Contact Admin</a> for the off code)
-  • <code>/verifyon</code> – Enable verification
+<u>Sᥱt Vᥱrιfιᥴᥲtιon Tιmᥱ Gᥲρ</u>:
+  • /set_time_2 {seconds} – sᴇᴛ ᴛɪᴍᴇ ғᴏʀ ᴛʜᴇ sᴇᴄᴏɴᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
+  • /set_time_3 {seconds} – sᴇᴛ ᴛɪᴍᴇ ғᴏʀ ᴛʜᴇ ᴛʜɪʀᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
 
-◇ <b>Set Custom File Caption</b>:
-  • <code>/set_caption</code> – Set a custom caption for files
+<u>Sᥱt Cᥙstom Fιᥣᥱ Cᥲρtιon</u>:
+  • /set_caption – sᴇᴛ ʏᴏᴜʀ ᴄᴜsᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ ғᴏʀ ғɪʟᴇs.
 
-◇ <b>Set IMDb Template</b>:
-  • <code>/set_template</code> – Set the IMDb template
-    (<a href="https://t.me/Jisshu_developer/8">Example Template</a>)
+<u>Sᥱt IMDb Tᥱmρᥣᥲtᥱ</ᥙ></u>:
+  • /set_template – sᴇᴛ ᴛʜᴇ ɪᴍᴅʙ ᴛᴇᴍᴘʟᴀᴛᴇ.
 
-◇ <b>Set Verification Tutorial</b>:
-  • <code>/set_tutorial</code> – Set a tutorial for verification
+<u>Log Chᥲnnᥱᥣ Sᥱtᥙρ</u>:
+  • /set_log – {log channel ID} ᴀᴅᴅ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ.
+    (ᴍᴀᴋᴇ sᴜʀᴇ ʙᴏᴛ ʜᴀs ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ)
 
-◇ <b>Log Channel Setup</b>:
-  • <code>/set_log {log channel ID}</code> – Add a log channel 
-    (Make sure the bot has admin privileges)
+<u>Chᥱᥴk Groᥙρ Dᥱtᥲιᥣs</u>:
+  • /details – ᴠɪᴇᴡ ᴀʟᴋ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs ᴅᴇᴀᴛᴀɪʟs.
 
-◇ <b>Check Details</b>:
-  • <code>/details</code> – View all your bot configuration details
-
-<i>◍ Add the bot to your group and make it an admin to enable all these features.</i>
+<i>◍ ᴀᴅᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ʏᴏᴜʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ɪᴛ ᴀᴅᴍɪɴ ᴛᴏ ᴇɴʙʟᴇᴀʟʟ ᴛʜᴇsᴇ ғᴇᴀᴛᴜʀᴇs.</i>
 """
-
+    
     GROUP_TEXT = """
- ◇ <u>Set Verify Website API</u>:
-  • /set_verify {website link} {website API}
-  • /set_verify_2 {website link} {website API}
-  • /set_verify_3 {website link} {website API}
+<u>Sᥱt Shortnᥱr Wᥱbsιtᥱ API</u>:
+  • /set_Shortner - {website link} {website API}
+  • /set_Shortner2 - {website link} {website API}
+  • /set_Shortner3 - {website link} {website API}
 
-◇ <u>Set Verification Time Gap</u>:
-  • /set_time_2 {seconds} – Set time for the second verification
-  • /set_time_3 {seconds} – Set time for the third verification
+<u>Sᥱt Vᥱrιfιᥴᥲtιon Tᥙtorιᥲᥣ</u>:
+  • /set_tutorial – sᴇᴛ ʏᴏᴜʀ ᴛᴜᴛᴏʀɪᴀʟᴠɪᴅᴇᴏ ʟɪɴᴋ ғᴏʀ sʜᴏʀᴛɴᴇʀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
 
-◇ <u>Set Verify On/Off</u>:
-  • /verifyoff {verify.off code} – Disable verification\n
-    (<a href="https://t.me/vampirexgirl">Contact Admin</a> for the off code)
-  • /verifyon – Enable verification
+<u>Sᥱt Vᥱrιfιᥴᥲtιon Tιmᥱ Gᥲρ</u>:
+  • /set_time_2 {seconds} – sᴇᴛ ᴛɪᴍᴇ ғᴏʀ ᴛʜᴇ sᴇᴄᴏɴᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
+  • /set_time_3 {seconds} – sᴇᴛ ᴛɪᴍᴇ ғᴏʀ ᴛʜᴇ ᴛʜɪʀᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
 
-◇ <u>Set Custom File Caption</u>:
-  • /set_caption – Set a custom caption for files
+<u>Sᥱt Cᥙstom Fιᥣᥱ Cᥲρtιon</u>:
+  • /set_caption – sᴇᴛ ʏᴏᴜʀ ᴄᴜsᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ ғᴏʀ ғɪʟᴇs.
 
-◇ <u>Set IMDb Template</u>:
-  • /set_template – Set the IMDb template
-    (<a href="https://t.me/Jisshu_developer/8">Example Template</a>)
+<u>Sᥱt IMDb Tᥱmρᥣᥲtᥱ</ᥙ></u>:
+  • /set_template – sᴇᴛ ᴛʜᴇ ɪᴍᴅʙ ᴛᴇᴍᴘʟᴀᴛᴇ.
 
-◇ <u>Set Verification Tutorial</u>:
-  • /set_tutorial – Set a tutorial for verification
+<u>Log Chᥲnnᥱᥣ Sᥱtᥙρ</u>:
+  • /set_log – {log channel ID} ᴀᴅᴅ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ.
+    (ᴍᴀᴋᴇ sᴜʀᴇ ʙᴏᴛ ʜᴀs ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ)
 
-◇ <u>Log Channel Setup</u>:
-  • /set_log {log channel ID} – Add a log channel 
-    (Make sure the bot has admin privileges)
+<u>Chᥱᥴk Groᥙρ Dᥱtᥲιᥣs</u>:
+  • /details – ᴠɪᴇᴡ ᴀʟᴋ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs ᴅᴇᴀᴛᴀɪʟs.
 
-◇ <u>Check Details</u>:
-  • /details – View all your group settings details
-
-<i>◍ Add the bot to your group and make it an admin to enable all these features.</i>
+<i>◍ ᴀᴅᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ʏᴏᴜʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ɪᴛ ᴀᴅᴍɪɴ ᴛᴏ ᴇɴʙʟᴇᴀʟʟ ᴛʜᴇsᴇ ғᴇᴀᴛᴜʀᴇs.</i>
 """
