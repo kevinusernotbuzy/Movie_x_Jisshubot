@@ -1011,39 +1011,63 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
 	)
+
+    elif query.data == "youtube":
+        buttons = [[
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='about'),
+            InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
+        ]]
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(YT_PIC))
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.YT_TEXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+	)
 	
     elif query.data == "disclaimer":
+        buttons = [[
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='about')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.DISCLAIMER_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+	)
+    
+
+    elif query.data == "earn":
             btn = [[
-                    InlineKeyboardButton("• ᴄᴏɴᴛᴀᴄᴛ ᴛᴏ ᴏᴡɴᴇʀ •", user_id = ADMINS[0])
-               ],[
-                    InlineKeyboardButton("⇋ ʙᴀᴄᴋ", callback_data="about")
+                     InlineKeyboardButton('• ᴀʟʟ ᴅᴇᴛᴀɪʟs ᴄᴏᴍᴍᴀɴᴅs •', callback_data='helpx')
+                 ],[ 
+                     InlineKeyboardButton('• ᴄᴏɴᴛᴀᴄᴛ sᴜᴘᴘᴏʀᴛ •', url=f'http://t.me/Vampirexgirl')
+                 ],[
+		     InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data="start"),
+	             InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
                   ]]
+            await client.edit_message_media(
+                query.message.chat.id, 
+                query.message.id, 
+                InputMediaPhoto(random.choice(EARNMONEY_PIC))
+            )
             reply_markup = InlineKeyboardMarkup(btn)
             await query.message.edit_text(
-                text=(script.DISCLAIMER_TXT),
+                text=script.GROUP_TEXT.format(temp.B_LINK),
                 reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML 
+                parse_mode=enums.ParseMode.HTML
 	    )
 	    
-    elif query.data == "earn":
-       buttons = [[
-	      InlineKeyboardButton('• ᴀʟʟ ᴅᴇᴛᴀɪʟs ᴄᴏᴍᴍᴀɴᴅs •', callback_data="helpx")
-       ],[
-              InlineKeyboardButton('• ᴄᴏɴᴛᴀᴄᴛ sᴜᴘᴘᴏʀᴛ •', url=f'http://t.me/Vampirexgirl'),
-              InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data="start")
-       ]]
-       reply_markup = InlineKeyboardMarkup(buttons)
-       await client.edit_message_media(
-          chat_id=query.message.chat.id,
-          message_id=query.message.id,
-          media=InputMediaAnimation(
-            media="https://cdn.jsdelivr.net/gh/Jisshubot/JISSHU_BOTS/Video.mp4/Group_20240921_202540_0001.gif",
-            caption=script.GROUP_TEXT.format(temp.B_LINK),
-            parse_mode=enums.ParseMode.HTML
-        ),
-        reply_markup=reply_markup
-    )
-   
+    
     elif query.data == "telegraph":
         buttons = [[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='features')
@@ -1174,18 +1198,19 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
 	)    
-        
+
     elif query.data == "fsub":
-        #add back button
         buttons = [[
-            InlineKeyboardButton('⇋ ʙᴀᴄᴋ', url=f'helpx')],
-            [InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')]]
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='helpx'),
+            InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
+        ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.FSUB_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
 	)	
+    	
 	
     elif query.data == "all_files_delete":
         files = await Media.count_documents()
