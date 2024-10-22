@@ -193,10 +193,7 @@ async def start(client:Client, message):
                             InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="earn")
                         ]]     
                         reply_markup = InlineKeyboardMarkup(buttons)
-                        m=await message.reply_sticker("CAACAgQAAxkBAAEn9_ZmGp1uf1a38UrDhitnjOOqL1oG3gAC9hAAAlC74FPEm2DxqNeOmB4E") 
-                        await asyncio.sleep(1)
-                        await m.delete()
-                        await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
+                        await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(get_status(), message.from_user.mention, message.from_user.id),
                             reply_markup=reply_markup,
                             parse_mode=enums.ParseMode.HTML)
           #      try: 
@@ -221,12 +218,9 @@ async def start(client:Client, message):
                             InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="earn")
                         ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await message.reply_sticker("CAACAgQAAxkBAAEn9_ZmGp1uf1a38UrDhitnjOOqL1oG3gAC9hAAAlC74FPEm2DxqNeOmB4E") 
-        await asyncio.sleep(1)
-        await m.delete()
-        await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
+        await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(get_status(), message.from_user.mention, message.from_user.id),
+                            reply_markup=reply_markup,
+                            parse_mode=enums.ParseMode.HTML
         )
         return
     if AUTH_CHANNEL and not await is_req_subscribed(client, message):
@@ -282,10 +276,9 @@ async def start(client:Client, message):
                             InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="earn")
                         ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
-        return await message.reply_photo(photo=PICS, caption=script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
+        return await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(get_status(), message.from_user.mention, message.from_user.id),
+                            reply_markup=reply_markup,
+                            parse_mode=enums.ParseMode.HTML)
         
     if data.startswith('pm_mode_'):
         pm_mode = True
@@ -685,7 +678,7 @@ async def save_tutorial(client, message):
     await save_group_settings(grp_id, 'tutorial', tutorial)
     await message.reply_text(f"<b>Successfully Changed 1st Verification Tutorial For {title} To</b>\n\n{tutorial}", disable_web_page_preview=True)
 
-@Client.on_message(filters.command('set_tutorial_2'))
+@Client.on_message(filters.command('set_tutorial2'))
 async def set_tutorial_2(client, message):
     grp_id = message.chat.id
     title = message.chat.title
@@ -702,7 +695,7 @@ async def set_tutorial_2(client, message):
     await save_group_settings(grp_id, 'tutorial_2', tutorial)
     await message.reply_text(f"<b>Successfully Changed 2nd Verification Tutorial For {title} To</b>\n\n{tutorial}", disable_web_page_preview=True)
     
-@Client.on_message(filters.command('set_tutorial_3'))
+@Client.on_message(filters.command('set_tutorial3'))
 async def set_tutorial_3(client, message):
     grp_id = message.chat.id
     title = message.chat.title
@@ -719,7 +712,7 @@ async def set_tutorial_3(client, message):
     await save_group_settings(grp_id, 'tutorial_3', tutorial)
     await message.reply_text(f"<b>Successfully Changed 3rd Verification Tutorial For {title} To</b>\n\n{tutorial}", disable_web_page_preview=True)
 
-@Client.on_message(filters.command('set_verify'))
+@Client.on_message(filters.command('set_shortner'))
 async def set_shortner(c, m):
     grp_id = m.chat.id
     chat_type = m.chat.type
@@ -753,7 +746,7 @@ async def set_shortner(c, m):
         await save_group_settings(grp_id, 'api', SHORTENER_API)
         await m.reply_text(f"<b><u>💢 ᴇʀʀᴏʀ ᴏᴄᴄᴏᴜʀᴇᴅ!!</u>\n\nᴀᴜᴛᴏ ᴀᴅᴅᴇᴅ ʙᴏᴛ ᴏᴡɴᴇʀ ᴅᴇꜰᴜʟᴛ sʜᴏʀᴛɴᴇʀ\n\nɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴄʜᴀɴɢᴇ ᴛʜᴇɴ ᴜsᴇ ᴄᴏʀʀᴇᴄᴛ ꜰᴏʀᴍᴀᴛ ᴏʀ ᴀᴅᴅ ᴠᴀʟɪᴅ sʜᴏʀᴛʟɪɴᴋ ᴅᴏᴍᴀɪɴ ɴᴀᴍᴇ & ᴀᴘɪ\n\nʏᴏᴜ ᴄᴀɴ ᴀʟsᴏ ᴄᴏɴᴛᴀᴄᴛ ᴏᴜʀ <a href=https://t.me/Jisshu_support>sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ</a> ꜰᴏʀ sᴏʟᴠᴇ ᴛʜɪs ɪssᴜᴇ...\n\nʟɪᴋᴇ -\n\n`/set_shortner mdiskshortner.link e7beb3c8f756dfa15d0bec495abc65f58c0dfa95`\n\n💔 ᴇʀʀᴏʀ - <code>{e}</code></b>", quote=True)
 
-@Client.on_message(filters.command('set_verify_2'))
+@Client.on_message(filters.command('set_shortner2'))
 async def set_shortner_2(c, m):
     grp_id = m.chat.id
     chat_type = m.chat.type
@@ -787,7 +780,7 @@ async def set_shortner_2(c, m):
         await save_group_settings(grp_id, 'api_two', SHORTENER_API2)
         await m.reply_text(f"<b><u>💢 ᴇʀʀᴏʀ ᴏᴄᴄᴏᴜʀᴇᴅ!!</u>\n\nᴀᴜᴛᴏ ᴀᴅᴅᴇᴅ ʙᴏᴛ ᴏᴡɴᴇʀ ᴅᴇꜰᴜʟᴛ sʜᴏʀᴛɴᴇʀ\n\nɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴄʜᴀɴɢᴇ ᴛʜᴇɴ ᴜsᴇ ᴄᴏʀʀᴇᴄᴛ ꜰᴏʀᴍᴀᴛ ᴏʀ ᴀᴅᴅ ᴠᴀʟɪᴅ sʜᴏʀᴛʟɪɴᴋ ᴅᴏᴍᴀɪɴ ɴᴀᴍᴇ & ᴀᴘɪ\n\nʏᴏᴜ ᴄᴀɴ ᴀʟsᴏ ᴄᴏɴᴛᴀᴄᴛ ᴏᴜʀ <a href=https://t.me/Jisshu_support>sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ</a> ꜰᴏʀ sᴏʟᴠᴇ ᴛʜɪs ɪssᴜᴇ...\n\nʟɪᴋᴇ -\n\n`/set_shortner_2 mdiskshortner.link e7beb3c8f756dfa15d0bec495abc65f58c0dfa95`\n\n💔 ᴇʀʀᴏʀ - <code>{e}</code></b>", quote=True)
 
-@Client.on_message(filters.command('set_verify_3'))
+@Client.on_message(filters.command('set_shortner3'))
 async def set_shortner_3(c, m):
     chat_type = m.chat.type
     if chat_type == enums.ChatType.PRIVATE:
@@ -920,7 +913,7 @@ async def all_settings(client, message):
     await dlt.delete()
 
 
-@Client.on_message(filters.command('set_time_2'))
+@Client.on_message(filters.command('set_time2'))
 async def set_time_2(client, message):
     userid = message.from_user.id if message.from_user else None
     chat_type = message.chat.type
@@ -939,7 +932,7 @@ async def set_time_2(client, message):
     await save_group_settings(grp_id, 'verify_time', time)
     await message.reply_text(f"Successfully set 1st verify time for {title}\n\nTime is - <code>{time}</code>")
 
-@Client.on_message(filters.command('set_time_3'))
+@Client.on_message(filters.command('set_time3'))
 async def set_time_3(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
@@ -959,7 +952,7 @@ async def set_time_3(client, message):
     await message.reply_text(f"Successfully set 1st verify time for {title}\n\nTime is - <code>{time}</code>")
 
 
-@Client.on_callback_query(filters.regex("mostsearch"))
+@Client.on_callback_query(filters.regex("mostsearchx"))
 async def most(client, callback_query):
     def is_alphanumeric(string):
         return bool(re.match('^[a-zA-Z0-9 ]*$', string))
