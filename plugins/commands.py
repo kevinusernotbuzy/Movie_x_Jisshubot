@@ -199,7 +199,7 @@ async def start(client:Client, message):
                             InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="earn")
                         ]]     
                         reply_markup = InlineKeyboardMarkup(buttons)
-                        await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(get_status(), message.from_user.id, message.from_user.mention),
+                        await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(get_status(), message.from_user.mention),
                             reply_markup=reply_markup,
                             parse_mode=enums.ParseMode.HTML)
           #      try: 
@@ -224,7 +224,7 @@ async def start(client:Client, message):
                             InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="earn")
                         ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(get_status(), message.from_user.id, message.from_user.mention),
+        await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(get_status(), message.from_user.mention),
                             reply_markup=reply_markup,
                             parse_mode=enums.ParseMode.HTML
         )
@@ -282,7 +282,7 @@ async def start(client:Client, message):
                             InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="earn")
                         ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
-        return await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(get_status(), message.from_user.id, message.from_user.mention),
+        return await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(get_status(), message.from_user.mention),
                             reply_markup=reply_markup,
                             parse_mode=enums.ParseMode.HTML)
         
