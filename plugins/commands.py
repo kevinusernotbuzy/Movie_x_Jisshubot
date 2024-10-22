@@ -78,7 +78,7 @@ async def start(client:Client, message):
             msg = script.SECOND_VERIFY_COMPLETE_TEXT if key == "second_time_verified" else script.VERIFY_COMPLETE_TEXT
         await client.send_message(settings['log'], script.VERIFIED_LOG_TEXT.format(m.from_user.mention, user_id, dt.now(pytz.timezone('Asia/Kolkata')).strftime('%d %B %Y'), num))
         btn = [[
-            InlineKeyboardButton("‼️ ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ɢᴇᴛ ꜰɪʟᴇ ‼️", url=f"https://telegram.me/{temp.U_NAME}?start=file_{grp_id}_{file_id}"),
+            InlineKeyboardButton("• ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ɢᴇᴛ ꜰɪʟᴇ •", url=f"https://telegram.me/{temp.U_NAME}?start=file_{grp_id}_{file_id}"),
         ]]
         reply_markup=InlineKeyboardMarkup(btn)
         await m.reply_photo(
@@ -193,7 +193,7 @@ async def start(client:Client, message):
                             InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="earn")
                         ]]     
                         reply_markup = InlineKeyboardMarkup(buttons)
-                        await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(get_status(), message.from_user.mention, message.from_user.id),
+                        await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(query.from_user.mention, get_status(), query.from_user.id),
                             reply_markup=reply_markup,
                             parse_mode=enums.ParseMode.HTML)
           #      try: 
@@ -218,7 +218,7 @@ async def start(client:Client, message):
                             InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="earn")
                         ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(get_status(), message.from_user.mention, message.from_user.id),
+        await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(query.from_user.mention, get_status(), query.from_user.id),
                             reply_markup=reply_markup,
                             parse_mode=enums.ParseMode.HTML
         )
@@ -230,7 +230,7 @@ async def start(client:Client, message):
             logger.error("Make Sure Bot Is Admin In Forcesub Channel")
             return
         btn = [[
-            InlineKeyboardButton("🎗️ ᴊᴏɪɴ ɴᴏᴡ 🎗️", url=invite_link.invite_link)
+            InlineKeyboardButton("• ᴊᴏɪɴ ɴᴏᴡ •", url=invite_link.invite_link)
         ]]
 
         if message.command[1] != "subscribe":
@@ -240,12 +240,12 @@ async def start(client:Client, message):
                 kk, grp_id, file_id = chksub_data.split('_', 2)
                 pre = 'checksubp' if kk == 'filep' else 'checksub'
                 btn.append(
-                    [InlineKeyboardButton("♻️ ᴛʀʏ ᴀɢᴀɪɴ ♻️", callback_data=f"checksub#{file_id}#{int(grp_id)}")]
+                    [InlineKeyboardButton("•ᴛʀʏ ᴀɢᴀɪɴ •", callback_data=f"checksub#{file_id}#{int(grp_id)}")]
                 )
             except (IndexError, ValueError):
                 print('IndexError: ', IndexError)
                 btn.append(
-                    [InlineKeyboardButton("♻️ ᴛʀʏ ᴀɢᴀɪɴ ♻️", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")]
+                    [InlineKeyboardButton("• ᴛʀʏ ᴀɢᴀɪɴ •", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")]
                 )
         reply_markup=InlineKeyboardMarkup(btn)
         await client.send_photo(
@@ -276,7 +276,7 @@ async def start(client:Client, message):
                             InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="earn")
                         ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
-        return await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(get_status(), message.from_user.mention, message.from_user.id),
+        return await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(query.from_user.mention, get_status(), query.from_user.id),
                             reply_markup=reply_markup,
                             parse_mode=enums.ParseMode.HTML)
         
@@ -305,10 +305,9 @@ async def start(client:Client, message):
             else:
                 howtodownload = settings.get('tutorial_2', TUTORIAL_2) if is_second_shortener else settings.get('tutorial', TUTORIAL)
             buttons = [[
-                InlineKeyboardButton(text="✅ ᴠᴇʀɪғʏ ✅", url=verify),
-                InlineKeyboardButton(text="ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ❓", url=howtodownload)
+                InlineKeyboardButton(text="⚡ 𝗖𝗟𝗜𝗖𝗞 𝗧𝗢 𝗩𝗘𝗥𝗜𝗙𝗬 ⚡", url=verify),
                 ],[
-                InlineKeyboardButton(text="😁 ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ - ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴠᴇʀɪғʏ 😁", callback_data='seeplans'),
+                InlineKeyboardButton(text="❗𝗛𝗼𝘄 𝗧𝗼 𝗢𝗽𝗲𝗻 𝗩𝗲𝗿𝗶𝗳𝘆 𝗟𝗶𝗻𝗸❗", url=howtodownload)
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             if await db.user_verified(user_id): 
@@ -330,7 +329,7 @@ async def start(client:Client, message):
         _, key = data.split("_", 1)
         files = temp.FILES_ID.get(key)
         if not files:
-            await message.reply_text("<b>⚠️ ᴀʟʟ ꜰɪʟᴇs ɴᴏᴛ ꜰᴏᴜɴᴅ ⚠️</b>")
+            await message.reply_text("<b>⚠️ ᴀʟʟ ꜰɪʟᴇs ɴᴏᴛ ꜰᴏᴜɴᴅ!</b>")
             return
         files_to_delete = []
         for file in files:
@@ -374,7 +373,7 @@ async def start(client:Client, message):
     files_ = await get_file_details(file_id)           
     if not files_:
         pre, file_id = ((base64.urlsafe_b64decode(data + "=" * (-len(data) % 4))).decode("ascii")).split("_", 1)
-        return await message.reply('<b>⚠️ ᴀʟʟ ꜰɪʟᴇs ɴᴏᴛ ꜰᴏᴜɴᴅ ⚠️</b>')
+        return await message.reply('<b>⚠️ ᴀʟʟ ꜰɪʟᴇs ɴᴏᴛ ꜰᴏᴜɴᴅ!</b>')
     files = files_[0]
     settings = await get_settings(grp_id , pm_mode=pm_mode)
     CAPTION = settings['caption']
@@ -392,7 +391,7 @@ async def start(client:Client, message):
         caption=f_caption,
         reply_markup=InlineKeyboardMarkup(btn)
     )
-    delCap = "<b>ʏᴏᴜʀ ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ {} ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ᴠɪᴏʟᴀᴛɪᴏɴs!</b>".format(f'{FILE_AUTO_DEL_TIMER / 60} ᴍɪɴᴜᴛᴇs' if FILE_AUTO_DEL_TIMER >= 60 else f'{FILE_AUTO_DEL_TIMER} sᴇᴄᴏɴᴅs')
+    delCap = "<b>⚠️ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ғɪʟᴇ ᴛᴏ ᴀɴʏᴡʜᴇʀᴇ!\n\n ᴅᴜᴇ ᴛᴏ ᴄᴏᴘʏʀɪɢʜᴛ ʏᴏᴜʀ ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ {} ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ᴠɪᴏʟᴀᴛɪᴏɴs!</b>".format(f'{FILE_AUTO_DEL_TIMER / 60} ᴍɪɴᴜᴛᴇs' if FILE_AUTO_DEL_TIMER >= 60 else f'{FILE_AUTO_DEL_TIMER} sᴇᴄᴏɴᴅs')
     afterDelCap = "<b>ʏᴏᴜʀ ғɪʟᴇ ɪs ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ {} ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ᴠɪᴏʟᴀᴛɪᴏɴs!</b>".format(f'{FILE_AUTO_DEL_TIMER / 60} ᴍɪɴᴜᴛᴇs' if FILE_AUTO_DEL_TIMER >= 60 else f'{FILE_AUTO_DEL_TIMER} sᴇᴄᴏɴᴅs') 
     replyed = await message.reply(
         delCap,
