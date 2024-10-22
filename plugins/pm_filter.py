@@ -975,7 +975,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('• sᴜᴘᴘᴏʀᴛ •', callback_data='support'),
             InlineKeyboardButton('• ʏᴏᴜᴛᴜʙᴇ •', callback_data='youtube')
         ],[
-            InlineKeyboardButton('✘ ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅ ✘', callback_data='helpx')
+            InlineKeyboardButton('✘ ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅ ✘', callback_data='features')
         ],[
             InlineKeyboardButton('© ᴅɪsᴄʟᴀɪᴍᴇʀ ©', callback_data='disclaimer')
         ],[
@@ -1095,7 +1095,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('• sᴇᴛ ᴠᴇʀɪғʏ •', callback_data='set_verifyx'),
 	    InlineKeyboardButton('• sᴇᴛ ᴛᴜᴛᴏʀɪᴀʟ •', callback_data='set_tutorialx')
 	],[ 	
-	    InlineKeyboardButton('• sᴇᴛ ғᴏʀᴄᴇ ᴄʜᴀɴɴᴇʟ •', callback_data='source'),
+	    InlineKeyboardButton('• sᴇᴛ ғᴏʀᴄᴇ ᴄʜᴀɴɴᴇʟ •', callback_data='fsub'),
             InlineKeyboardButton('• sᴇᴛ ᴄᴀᴘᴛɪᴏɴ •', callback_data='set_captionx')
 	],[ 	
             InlineKeyboardButton('•sᴇᴛ ᴛᴇᴍᴘʟᴀᴛᴇ •', callback_data='set_templatex'),
