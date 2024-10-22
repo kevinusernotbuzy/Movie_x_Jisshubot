@@ -15,17 +15,7 @@ class script(object):
 
 ɴᴏᴛᴇ - ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴡᴏʀᴋ ɪɴ ʙᴏᴛʜ ɢʀᴏᴜᴘs ᴀɴᴅ ʙᴏᴛ ᴘᴍ</b>"""
     
-    FSUB_TXT = """<b>• ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴍᴇ ᴀɴ ᴀᴅᴍɪɴ 😗
-• ᴍᴀᴋᴇ ᴍᴇ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ᴛᴀʀɢᴇᴛ ғᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ ᴄʜᴀɴɴᴇʟ ᴏʀ Gʀᴏᴜᴘ  😉
-• sᴇɴᴅ /fsub ʏᴏᴜʀ_ᴛᴀʀɢᴇᴛ_ᴄʜᴀᴛ_ɪᴅ
-ᴇx: <code>/fsub -100xxxxxx</code>
-
-ɴᴏᴡ ɪᴛ's ᴅᴏɴᴇ.ɪ ᴡɪʟʟ ᴄᴏᴍᴘᴇʟ ʏᴏᴜʀ ᴜsᴇʀs ᴛᴏ ᴊᴏɪɴ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ/ɢʀᴏᴜᴘ, ᴀɴᴅ I ᴡɪʟʟ ɴᴏᴛ ᴘʀᴏᴠɪᴅᴇ ᴀɴʏ ғɪʟᴇs ᴜɴᴛɪʟ ʏᴏᴜʀ ᴜsᴇʀs ᴊᴏɪɴ ʏᴏᴜʀ ᴛᴀʀɢᴇᴛ ᴄʜᴀɴɴᴇʟ.
-
-ᴛᴏ ᴅɪsᴀʙʟᴇ ғsᴜʙ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ, sɪᴍᴘʟʏ sᴇɴᴅ <code>/del_fsub</code>
-
-ᴛᴏ ᴄʜᴇᴄᴋ ɪғ ғsᴜʙ ɪs ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴏʀ ɴᴏᴛ, ᴜsᴇ <code>/show_fsub</code></b>"""
-
+    
     FORCESUB_TEXT="""<b>
 ɪɴ ᴏʀᴅᴇʀ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ᴍᴏᴠɪᴇ ʀᴇᴏ̨ᴜᴇsᴛᴇᴅ ʙʏ ʏᴏᴜ.
 
@@ -356,7 +346,7 @@ User - {}"""
 
 </blockquote></b>"""
     
-    GROUP_TEXT = """<b><blockquote>
+    GRP_TEXT = """<b><blockquote>
  --------------Set Verify-------------
 /set_verify {{website link}} {{website api}}
 /set_verify_2 {{website link}} {{website api}}
@@ -383,132 +373,122 @@ User - {}"""
 </blockquote>
 Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ᴀɴᴅ ᴜsᴇ ᴀʟʟ ғᴇᴀᴛᴜʀᴇs😇</b>"""
 
+    FSUB_TXT = """<b>**Getting Started with the Bot**</b>
 
+<b>1. Add me to your group and make me an admin.</b>
+
+<b>2. Assign me as an admin in your target channel or group.</b>
+
+<b>3. Send <code>/fsub your_target_chat_id</code></b>
+<i>Example:</i> <code>/fsub -100xxxxxx</code>
+
+<b>That's it! I will encourage your users to join your channel/group. 
+Files will only be provided once users have joined your target channel.</b>
+
+<b>To disable the fsub feature, send <code>/del_fsub</code>.</b>
+
+<b>To check if fsub is active, use <code>/show_fsub</code>.</b>"""
 
 # Command explanations for Set Verify
-    SET_VERIFY_TEXT = """<b><blockquote>
---------------Set Verify-------------
-/set_verify {{website link}} {{website api}}
-This command allows you to set up a verification process using a website link and its API. Use this when you want users to verify themselves through a custom website verification.
+    SET_VERIFY_TEXT = """<b><u>Set Verify</u></b>
 
-Example: <code>/set_verify https://example.com API_KEY</code>
+<b>/set_verify <i>{website link}</i> <i>{website api}</i></b>
+<i>This command sets up user verification through a website link and its API.</i>
+<i>Example:</i> <code>/set_verify https://example.com API_KEY</code>
 
-/set_verify_2 {{website link}} {{website api}}
-This is a secondary method for verification. Use it if you have an alternative website for verification.
+<b>/set_verify_2 <i>{website link}</i> <i>{website api}</i></b>
+<i>Use this for an alternative verification website.</i>
+<i>Example:</i> <code>/set_verify_2 https://example2.com API_KEY</code>
 
-Example: <code>/set_verify_2 https://example2.com API_KEY</code>
-
-/set_verify_3 {{website link}} {{website api}}
-Use this for a third verification option with another website link and API.
-
-Example: <code>/set_verify_3 https://example3.com API_KEY</code>
----------------------------------------
-"""
+<b>/set_verify_3 <i>{website link}</i> <i>{website api}</i></b>
+<i>Use this for a third verification option.</i>
+<i>Example:</i> <code>/set_verify_3 https://example3.com API_KEY</code>"""
 
 # Command explanations for Set Verify Time
-    SET_VERIFY_TIME_TEXT = """<b><blockquote>
--------------Set Verify Time-----------
-/set_time_2 {{seconds}}
-This command sets the time delay for the second verification process in seconds. Adjust it according to the verification duration required.
+    SET_VERIFY_TIME_TEXT = """<b><u>Set Verify Time</u></b>
 
-Example: <code>/set_time_2 60</code>
+<b>/set_time_2 <i>{seconds}</i></b>
+<i>Sets the delay for the second verification process in seconds.</i>
+<i>Example:</i> <code>/set_time_2 60</code>
 
-/set_time_3 {{seconds}}
-Sets the time delay for the third verification process in seconds.
-
-Example: <code>/set_time_3 120</code>
----------------------------------------
-"""
+<b>/set_time_3 <i>{seconds}</i></b>
+<i>Sets the delay for the third verification process.</i>
+<i>Example:</i> <code>/set_time_3 120</code>"""
 
 # Command explanations for Verify On/Off
-    VERIFY_ON_OFF_TEXT = """<b><blockquote>
---------------Verify On Off------------
-/verifyoff {{verify.off code}}
-Turns off the verification process using a special verification-off code. Contact the bot admin if you do not have this code.
+    VERIFY_ON_OFF_TEXT = """<b><u>Verify On/Off</u></b>
 
-/verifyon
-Reactivates the verification process.
----------------------------------------
-"""
+<b>/verifyoff <i>{verify.off code}</i></b>
+<i>Turns off the verification process. Contact the admin for this code.</i>
+
+<b>/verifyon</b>
+<i>Reactivates the verification process.</i>"""
 
 # Command explanations for setting file captions
-    SET_CAPTION_TEXT = """<b><blockquote>
-------------Set File Caption-----------
-/set_caption
-This command allows you to customize the caption of files sent by the bot. Use this to make captions more descriptive or user-friendly.
----------------------------------------
-"""
+    SET_CAPTION_TEXT = """<b><u>Set File Caption</u></b>
+
+<b>/set_caption</b>
+<i>Customize the caption for files sent by the bot.</i>
+<i>Example:</i> <code>/set_caption Here is your requested file!</code>"""
 
 # Command explanations for setting IMDb templates
-    SET_TEMPLATE_TEXT = """<b><blockquote>
------------Set IMDb Template-----------
-/set_template
-This sets a custom template for IMDb information. Use this to format how movie details are displayed.
+    SET_TEMPLATE_TEXT = """<b><u>Set IMDb Template</u></b>
 
-Example template: <a href="https://t.me/Jisshu_developer/8">Click here for example</a>
----------------------------------------
-"""
+<b>/set_template</b>
+<i>Sets a custom template for IMDb information.</i>
+<i>Example template:</i> 
+<a href="https://t.me/Jisshu_developer/8">Click here for an example</a>"""
 
 # Command explanations for setting tutorials
-    SET_TUTORIAL_TEXT = """<b><blockquote>
---------------Set Tutorial-------------
-/set_tutorial
-This command allows you to set a tutorial for the verification process. Share this with new users to help them understand how to get verified.
----------------------------------------
-"""
+    SET_TUTORIAL_TEXT = """<b><u>Set Tutorial</u></b>
+
+<b>/set_tutorial</b>
+<i>Set a tutorial for new users on the verification process.</i>
+<i>Example:</i> <code>/set_tutorial Check this link to learn how to verify!</code>"""
 
 # Command explanations for setting a log channel
-    SET_LOG_CHANNEL_TEXT = """<b><blockquote>
--------------Set Log Channel-----------
-/set_log {{log channel id}}
-Use this command to set a log channel where all bot activities are logged. Make sure the bot is an admin in the log channel for proper functionality.
----------------------------------------
-"""
+    SET_LOG_CHANNEL_TEXT = """<b><u>Set Log Channel</u></b>
+
+<b>/set_log <i>{log channel id}</i></b>
+<i>Set a log channel for all bot activities. Ensure the bot is an admin.</i>"""
 
 # General info and additional details command
-    GENERAL_INFO_TEXT = """<b><blockquote>
-ʏᴏᴜ ᴄᴀɴ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀʟʟ ᴅᴇᴛᴀɪʟs ʙʏ /details ᴄᴏᴍᴍᴀɴᴅ.
-Add the bot to your group and make it an admin to access all features.
-</blockquote></b>
-"""
-    
-    GROUP_TEXT = """
-<b><blockquote>
+    GENERAL_INFO_TEXT = """<b><u>General Info</u></b>
 
+
+
+    GROUP_TEXT = """
 🔹 <b>Set Verify Website API</b>:
-  • /set_verify {website link} {website API}
-  • /set_verify_2 {website link} {website API}
-  • /set_verify_3 {website link} {website API}
+  • <code>/set_verify {website link} {website API}</code>
+  • <code>/set_verify_2 {website link} {website API}</code>
+  • <code>/set_verify_3 {website link} {website API}</code>
 
 🔹 <b>Set Verification Time Gap</b>:
-  • /set_time_2 {seconds} – Set time for the second verification
-  • /set_time_3 {seconds} – Set time for the third verification
+  • <code>/set_time_2 {seconds}</code> – Set time for the second verification
+  • <code>/set_time_3 {seconds}</code> – Set time for the third verification
 
 🔹 <b>Set Verify On/Off</b>:
-  • /verifyoff {verify.off code} – Disable verification
+  • <code>/verifyoff {verify.off code}</code> – Disable verification
     (<a href="https://t.me/IM_JISSHU">Contact Admin</a> for the off code)
-  • /verifyon – Enable verification
+  • <code>/verifyon</code> – Enable verification
 
 🔹 <b>Set Custom File Caption</b>:
-  • /set_caption – Set custom caption for files
+  • <code>/set_caption</code> – Set a custom caption for files
 
 🔹 <b>Set IMDb Template</b>:
-  • /set_template – Set the IMDb template
+  • <code>/set_template</code> – Set the IMDb template
     (<a href="https://t.me/Jisshu_developer/8">Example Template</a>)
 
 🔹 <b>Set Verification Tutorial</b>:
-  • /set_tutorial – Set a tutorial for verification
+  • <code>/set_tutorial</code> – Set a tutorial for verification
 
 🔹 <b>Log Channel Setup</b>:
-  • /set_log {log channel ID} – Add a log channel 
+  • <code>/set_log {log channel ID}</code> – Add a log channel 
     (Make sure the bot has admin privileges)
 
 🔹 <b>Check Details</b>:
-  • /details – View all your bot configuration details
-
-</blockquote>
+  • <code>/details</code> – View all your bot configuration details
 
 <i>🔸 Add the bot to your group and make it an admin to enable all these features.</i>
-</b>
 """
     
