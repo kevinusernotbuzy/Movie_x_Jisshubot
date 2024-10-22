@@ -411,7 +411,7 @@ Files will only be provided once users have joined your target channel.</b>
 <b>/set_template</b>
 <i>Sets a custom template for IMDb information.</i>
 <i>Example template:</i> 
-<a href="https://t.me/Jisshu_developer/8">Click here for an example</a>"""
+<a href="https://telegra.ph/Set-IMDb-Template-Caption-10-22">Click here for an example</a>"""
 
 # Command explanations for setting tutorials
     SET_TUTORIAL_TEXT = """<b><u>Set Tutorial</u></b>
