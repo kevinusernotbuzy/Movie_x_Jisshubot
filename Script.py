@@ -441,8 +441,8 @@ Files will only be provided once users have joined your target channel.</b>
   • /set_tutorial – sᴇᴛ ʏᴏᴜʀ ᴛᴜᴛᴏʀɪᴀʟᴠɪᴅᴇᴏ ʟɪɴᴋ ғᴏʀ sʜᴏʀᴛɴᴇʀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
 
 <u>Sᥱt Vᥱrιfιᥴᥲtιon Tιmᥱ Gᥲρ</u>:
-  • /set_time_2 {seconds} – sᴇᴛ ᴛɪᴍᴇ ғᴏʀ ᴛʜᴇ sᴇᴄᴏɴᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
-  • /set_time_3 {seconds} – sᴇᴛ ᴛɪᴍᴇ ғᴏʀ ᴛʜᴇ ᴛʜɪʀᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
+  • /set_time2 {seconds} – sᴇᴛ ᴛɪᴍᴇ ғᴏʀ ᴛʜᴇ sᴇᴄᴏɴᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
+  • /set_time3 {seconds} – sᴇᴛ ᴛɪᴍᴇ ғᴏʀ ᴛʜᴇ ᴛʜɪʀᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
 
 <u>Sᥱt Cᥙstom Fιᥣᥱ Cᥲρtιon</u>:
   • /set_caption – sᴇᴛ ʏᴏᴜʀ ᴄᴜsᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ ғᴏʀ ғɪʟᴇs.
@@ -470,8 +470,8 @@ Files will only be provided once users have joined your target channel.</b>
   • /set_tutorial – sᴇᴛ ʏᴏᴜʀ ᴛᴜᴛᴏʀɪᴀʟᴠɪᴅᴇᴏ ʟɪɴᴋ ғᴏʀ sʜᴏʀᴛɴᴇʀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
 
 <u>Sᥱt Vᥱrιfιᥴᥲtιon Tιmᥱ Gᥲρ</u>:
-  • /set_time_2 {seconds} – sᴇᴛ ᴛɪᴍᴇ ғᴏʀ ᴛʜᴇ sᴇᴄᴏɴᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
-  • /set_time_3 {seconds} – sᴇᴛ ᴛɪᴍᴇ ғᴏʀ ᴛʜᴇ ᴛʜɪʀᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
+  • /set_time2 {seconds} – sᴇᴛ ᴛɪᴍᴇ ғᴏʀ ᴛʜᴇ sᴇᴄᴏɴᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
+  • /set_time3 {seconds} – sᴇᴛ ᴛɪᴍᴇ ғᴏʀ ᴛʜᴇ ᴛʜɪʀᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ.
 
 <u>Sᥱt Cᥙstom Fιᥣᥱ Cᥲρtιon</u>:
   • /set_caption – sᴇᴛ ʏᴏᴜʀ ᴄᴜsᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ ғᴏʀ ғɪʟᴇs.
