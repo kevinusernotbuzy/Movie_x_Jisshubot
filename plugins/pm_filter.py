@@ -1106,7 +1106,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=GENERAL_INFO_TEXT,
+            text=script.GENERAL_INFO_TEXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
 	)
@@ -1116,14 +1116,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='helpx'),
             InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_media(
-            media=InputMediaPhoto(
-                media=random.choice(PICS),
-                caption=SET_VERIFY_TIME_TEXT,
-		reply_markup=reply_markup,    
-                parse_mode=enums.ParseMode.HTML
-            )
+	reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.SET_VERIFY_TIME_TEXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+	)    
+        
 
 
     elif query.data == "set_caption":
@@ -1131,56 +1135,72 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='helpx'),
             InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_media(
-            media=InputMediaPhoto(
-                media=random.choice(PICS),
-                caption=SET_CAPTION_TEXT,
-		reply_markup=reply_markup,    
-                parse_mode=enums.ParseMode.HTML
-            )
+	reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.SET_CAPTION_TEXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+	)    
+        
 
     elif query.data == "set_template":
         buttons = [[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='helpx'),
             InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_media(
-            media=InputMediaPhoto(
-                media=random.choice(PICS),
-                caption=SET_TEMPLATE_TEXT,
-		reply_markup=reply_markup,    
-                parse_mode=enums.ParseMode.HTML
-            )
+	reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.SET_TEMPLATE_TEXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+	)    
+        
 
     elif query.data == "set_tutorial":
         buttons = [[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='helpx'),
             InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_media(
-            media=InputMediaPhoto(
-                media=random.choice(PICS),
-                caption=SET_TUTORIAL_TEXT,
-		reply_markup=reply_markup,    
-                parse_mode=enums.ParseMode.HTML
-            )
+	reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.SET_TUTORIAL_TEXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+	)    
+        
 
     elif query.data == "set_log_channel":
         buttons = [[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='helpx'),
             InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_media(
-            media=InputMediaPhoto(
-                media=random.choice(PICS),
-                caption=SET_LOG_CHANNEL_TEXT,
-		reply_markup=reply_markup,    
-                parse_mode=enums.ParseMode.HTML
-	    )	
+	reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.SET_LOG_CHANNEL_TEXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+	)    
+        
 	
 	
     elif query.data == "all_files_delete":
