@@ -907,7 +907,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "features":
         buttons = [[
               InlineKeyboardButton('• ᴛᴇʟᴇɢʀᴀᴘʜ •', callback_data='telegraph'),
-              InlineKeyboardButton('• ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs •', callback_data='earn'),
+              InlineKeyboardButton('• ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs •', callback_data='helpx'),
               ], [
               InlineKeyboardButton('• ɪᴍᴅʙ sᴇᴀʀᴄʜ •', callback_data='fsub'),
               InlineKeyboardButton('• xᴛʀᴀ ᴄᴍᴅs •', callback_data='admincmd')
@@ -1029,7 +1029,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
        buttons = [[
 	      InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
        ],[
-              InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='features'),
+              InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='start'),
               InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url=f'https://t.me/Jisshu_support'),
        ]]
        reply_markup = InlineKeyboardMarkup(buttons)
@@ -1088,7 +1088,101 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
 	)
-	    
+
+	
+    elif query.data == "helpx":
+        buttons = [[
+            InlineKeyboardButton('Set Verify', callback_data='set_verify'),
+	    InlineKeyboardButton('Set Tutorial', callback_data='set_tutorial')
+	],[ 	
+	    InlineKeyboardButton('Set Verify Time', callback_data='source'),
+            InlineKeyboardButton('Set Caption', callback_data='set_caption')
+	],[ 	
+            InlineKeyboardButton('Set Template', callback_data='set_template'),
+            InlineKeyboardButton('Set Log Channel', callback_data='set_log_channel')
+	],[      
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='start'),
+	    InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=GENERAL_INFO_TEXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+	)
+
+    elif query.data == "set_verify":
+        buttons = [[
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='helpx'),
+            InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_media(
+            media=InputMediaPhoto(
+                media=random.choice(PICS),
+                caption=SET_VERIFY_TIME_TEXT,
+		reply_markup=reply_markup,    
+                parse_mode=enums.ParseMode.HTML
+            )
+
+
+    elif query.data == "set_caption":
+        buttons = [[
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='helpx'),
+            InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_media(
+            media=InputMediaPhoto(
+                media=random.choice(PICS),
+                caption=SET_CAPTION_TEXT,
+		reply_markup=reply_markup,    
+                parse_mode=enums.ParseMode.HTML
+            )
+
+    elif query.data == "set_template":
+        buttons = [[
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='helpx'),
+            InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_media(
+            media=InputMediaPhoto(
+                media=random.choice(PICS),
+                caption=SET_TEMPLATE_TEXT,
+		reply_markup=reply_markup,    
+                parse_mode=enums.ParseMode.HTML
+            )
+
+    elif query.data == "set_tutorial":
+        buttons = [[
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='helpx'),
+            InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_media(
+            media=InputMediaPhoto(
+                media=random.choice(PICS),
+                caption=SET_TUTORIAL_TEXT,
+		reply_markup=reply_markup,    
+                parse_mode=enums.ParseMode.HTML
+            )
+
+    elif query.data == "set_log_channel":
+        buttons = [[
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='helpx'),
+            InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_media(
+            media=InputMediaPhoto(
+                media=random.choice(PICS),
+                caption=SET_LOG_CHANNEL_TEXT,
+		reply_markup=reply_markup,    
+                parse_mode=enums.ParseMode.HTML
+	    )	
+	
+	
     elif query.data == "all_files_delete":
         files = await Media.count_documents()
         await query.answer('Deleting...')
