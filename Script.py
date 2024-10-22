@@ -455,40 +455,42 @@ Files will only be provided once users have joined your target channel.</b>
 # General info and additional details command
     GENERAL_INFO_TEXT = """<b><u>General Info</u></b>
 
+<i>Check all your details using the <code>/details</code> command.</i>
 
+<i>Add the bot to your group and make it an admin to access all features.</i>"""
 
     GROUP_TEXT = """
-🔹 <b>Set Verify Website API</b>:
+ ◇ <b>Set Verify Website API</b>:
   • <code>/set_verify {website link} {website API}</code>
   • <code>/set_verify_2 {website link} {website API}</code>
   • <code>/set_verify_3 {website link} {website API}</code>
 
-🔹 <b>Set Verification Time Gap</b>:
+◇ <b>Set Verification Time Gap</b>:
   • <code>/set_time_2 {seconds}</code> – Set time for the second verification
   • <code>/set_time_3 {seconds}</code> – Set time for the third verification
 
-🔹 <b>Set Verify On/Off</b>:
+◇ <b>Set Verify On/Off</b>:
   • <code>/verifyoff {verify.off code}</code> – Disable verification
     (<a href="https://t.me/IM_JISSHU">Contact Admin</a> for the off code)
   • <code>/verifyon</code> – Enable verification
 
-🔹 <b>Set Custom File Caption</b>:
+◇ <b>Set Custom File Caption</b>:
   • <code>/set_caption</code> – Set a custom caption for files
 
-🔹 <b>Set IMDb Template</b>:
+◇ <b>Set IMDb Template</b>:
   • <code>/set_template</code> – Set the IMDb template
     (<a href="https://t.me/Jisshu_developer/8">Example Template</a>)
 
-🔹 <b>Set Verification Tutorial</b>:
+◇ <b>Set Verification Tutorial</b>:
   • <code>/set_tutorial</code> – Set a tutorial for verification
 
-🔹 <b>Log Channel Setup</b>:
+◇ <b>Log Channel Setup</b>:
   • <code>/set_log {log channel ID}</code> – Add a log channel 
     (Make sure the bot has admin privileges)
 
-🔹 <b>Check Details</b>:
+◇ <b>Check Details</b>:
   • <code>/details</code> – View all your bot configuration details
 
-<i>🔸 Add the bot to your group and make it an admin to enable all these features.</i>
+<i>◍ Add the bot to your group and make it an admin to enable all these features.</i>
 """
     
