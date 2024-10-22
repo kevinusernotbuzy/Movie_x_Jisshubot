@@ -347,7 +347,7 @@ User - {}"""
 </blockquote></b>"""
     
     
-    FSUB_TXT = """<b>**Getting Started with the Bot**</b>
+    FSUB_TXT = """<u>Add Force Subscriber Channel</u>
 
 <b>1. Add me to your group and make me an admin.</b>
 
@@ -359,9 +359,9 @@ User - {}"""
 <b>That's it! I will encourage your users to join your channel/group. 
 Files will only be provided once users have joined your target channel.</b>
 
-<b>To disable the fsub feature, send <code>/del_fsub</code>.</b>
+<b>To disable the fsub feature, send /del_fsub</b>
 
-<b>To check if fsub is active, use <code>/show_fsub</code>.</b>"""
+<b>To check if fsub is active, use /show_fsub</b>"""
 
 # Command explanations for Set Verify
     SET_VERIFY_TEXT = """<b><u>Set Verify</u></b>
@@ -376,10 +376,10 @@ Files will only be provided once users have joined your target channel.</b>
 
 <b>/set_verify_3 <i>{website link}</i> <i>{website api}</i></b>
 <i>Use this for a third verification option.</i>
-<i>Example:</i> <code>/set_verify_3 https://example3.com API_KEY</code>"""
+<i>Example:</i> <code>/set_verify_3 https://example3.com API_KEY</code>
 
-# Command explanations for Set Verify Time
-    SET_VERIFY_TIME_TEXT = """<b><u>Set Verify Time</u></b>
+
+<b><u>Set Verify Time</u></b>
 
 <b>/set_time_2 <i>{seconds}</i></b>
 <i>Sets the delay for the second verification process in seconds.</i>
@@ -389,7 +389,7 @@ Files will only be provided once users have joined your target channel.</b>
 <i>Sets the delay for the third verification process.</i>
 <i>Example:</i> <code>/set_time_3 120</code>"""
 
-# Command explanations for Verify On/Off
+
     VERIFY_ON_OFF_TEXT = """<b><u>Verify On/Off</u></b>
 
 <b>/verifyoff <i>{verify.off code}</i></b>
@@ -418,18 +418,20 @@ Files will only be provided once users have joined your target channel.</b>
 
 <b>/set_tutorial</b>
 <i>Set a tutorial for new users on the verification process.</i>
-<i>Example:</i> <code>/set_tutorial Check this link to learn how to verify!</code>"""
+<i>Example:</i> <code>/set_tutorial https://t.me/how_to_download_movi/5</code>"""
 
 # Command explanations for setting a log channel
     SET_LOG_CHANNEL_TEXT = """<b><u>Set Log Channel</u></b>
 
 <b>/set_log <i>{log channel id}</i></b>
-<i>Set a log channel for all bot activities. Ensure the bot is an admin.</i>"""
+<i>Set a log channel for all bot activities. Ensure the bot is an admin.</i>
+<i>Example:</i> <code>/set_log -1878998680</code>"""
+    
 
 # General info and additional details command
-    GENERAL_INFO_TEXT = """<b><u>General Info</u></b>
+    GENERAL_INFO_TEXT = """<b><u>Coutimize Your Group</u></b>
 
-<i>Check all your details using the <code>/details</code> command.</i>
+<i>Check all your group settings details using the /details command.</i>
 
 <i>Add the bot to your group and make it an admin to access all features.</i>"""
 
@@ -469,36 +471,36 @@ Files will only be provided once users have joined your target channel.</b>
 """
 
     GROUP_TEXT = """
- ◇ <b>Set Verify Website API</b>:
-  • <code>/set_verify {website link} {website API}</code>
-  • <code>/set_verify_2 {website link} {website API}</code>
-  • <code>/set_verify_3 {website link} {website API}</code>
+ ◇ <u>Set Verify Website API</u>:
+  • /set_verify {website link} {website API}
+  • /set_verify_2 {website link} {website API}
+  • /set_verify_3 {website link} {website API}
 
-◇ <b>Set Verification Time Gap</b>:
-  • <code>/set_time_2 {seconds}</code> – Set time for the second verification
-  • <code>/set_time_3 {seconds}</code> – Set time for the third verification
+◇ <u>Set Verification Time Gap</u>:
+  • /set_time_2 {seconds} – Set time for the second verification
+  • /set_time_3 {seconds} – Set time for the third verification
 
-◇ <b>Set Verify On/Off</b>:
-  • <code>/verifyoff {verify.off code}</code> – Disable verification
-    (<a href="https://t.me/IM_JISSHU">Contact Admin</a> for the off code)
-  • <code>/verifyon</code> – Enable verification
+◇ <u>Set Verify On/Off</u>:
+  • /verifyoff {verify.off code} – Disable verification\n
+    (<a href="https://t.me/vampirexgirl">Contact Admin</a> for the off code)
+  • /verifyon – Enable verification
 
-◇ <b>Set Custom File Caption</b>:
-  • <code>/set_caption</code> – Set a custom caption for files
+◇ <u>Set Custom File Caption</u>:
+  • /set_caption – Set a custom caption for files
 
-◇ <b>Set IMDb Template</b>:
-  • <code>/set_template</code> – Set the IMDb template
+◇ <u>Set IMDb Template</u>:
+  • /set_template – Set the IMDb template
     (<a href="https://t.me/Jisshu_developer/8">Example Template</a>)
 
-◇ <b>Set Verification Tutorial</b>:
-  • <code>/set_tutorial</code> – Set a tutorial for verification
+◇ <u>Set Verification Tutorial</u>:
+  • /set_tutorial – Set a tutorial for verification
 
-◇ <b>Log Channel Setup</b>:
-  • <code>/set_log {log channel ID}</code> – Add a log channel 
+◇ <u>Log Channel Setup</u>:
+  • /set_log {log channel ID} – Add a log channel 
     (Make sure the bot has admin privileges)
 
-◇ <b>Check Details</b>:
-  • <code>/details</code> – View all your bot configuration details
+◇ <u>Check Details</u>:
+  • /details – View all your group settings details
 
 <i>◍ Add the bot to your group and make it an admin to enable all these features.</i>
 """
