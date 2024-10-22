@@ -980,22 +980,32 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    
-    elif query.data == 'about':
+
+    elif query.data == "about":
+        buttons = [[
+            InlineKeyboardButton('• sᴜᴘᴘᴏʀᴛ •', callback_data='support'),
+            InlineKeyboardButton('• ʏᴏᴜᴛᴜʙᴇ •', callback_data='youtube')
+        ],[
+            InlineKeyboardButton('✘ ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅ ✘', callback_data='helpx')
+        ],[
+            InlineKeyboardButton('© ᴅɪsᴄʟᴀɪᴍᴇʀ ©', callback_data='disclaimer')
+        ],[
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='start'),
+            InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
+        ]]
+	reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
         await query.message.edit_text(
-            script.ABOUT_TEXT.format(query.from_user.mention(),temp.B_LINK),
-            reply_markup = InlineKeyboardMarkup(
-                [[
-			InlineKeyboardButton('‼️ ᴅɪꜱᴄʟᴀɪᴍᴇʀ ‼️', callback_data='disclaimer')
-		],[
-			InlineKeyboardButton('Sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', callback_data='Source')
-                ],[
-                        InlineKeyboardButton('My Developers 😎',callback_data='mydevelopers')
-		],[
-			InlineKeyboardButton('⋞ ʜᴏᴍᴇ', callback_data='start')]]
-                ),
-            disable_web_page_preview = True
-	)
+            text=script.ABOUT_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+	)    
+        	
+    
     elif query.data == "mydevelopers":
         await query.answer("Meet the minds behind this bot:\n\n👨‍💻 @JISSHU_BOTS\n👨‍💻 @IM_JISSHU\n👨‍💻 @JOYBOY_ZORO\n👨‍💻 @TG_Anonymous_Official\n\n\n❤️ A big thank you for making this bot awesome!", show_alert=True)
  
@@ -1092,14 +1102,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
 	
     elif query.data == "helpx":
         buttons = [[
-            InlineKeyboardButton('Set Verify', callback_data='set_verify'),
-	    InlineKeyboardButton('Set Tutorial', callback_data='set_tutorial')
+            InlineKeyboardButton('Set Verify', callback_data='set_verifyx'),
+	    InlineKeyboardButton('Set Tutorial', callback_data='set_tutorialx')
 	],[ 	
 	    InlineKeyboardButton('Set Verify Time', callback_data='source'),
-            InlineKeyboardButton('Set Caption', callback_data='set_caption')
+            InlineKeyboardButton('Set Caption', callback_data='set_captionx')
 	],[ 	
-            InlineKeyboardButton('Set Template', callback_data='set_template'),
-            InlineKeyboardButton('Set Log Channel', callback_data='set_log_channel')
+            InlineKeyboardButton('Set Template', callback_data='set_templatex'),
+            InlineKeyboardButton('Set Log Channel', callback_data='set_log_channelx')
 	],[      
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='start'),
 	    InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
@@ -1111,7 +1121,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
 	)
 
-    elif query.data == "set_verify":
+    elif query.data == "set_verifyx":
         buttons = [[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='helpx'),
             InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
@@ -1130,7 +1140,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
 
 
-    elif query.data == "set_caption":
+    elif query.data == "set_captionx":
         buttons = [[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='helpx'),
             InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
@@ -1148,7 +1158,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 	)    
         
 
-    elif query.data == "set_template":
+    elif query.data == "set_templatex":
         buttons = [[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='helpx'),
             InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
@@ -1166,7 +1176,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 	)    
         
 
-    elif query.data == "set_tutorial":
+    elif query.data == "set_tutorialx":
         buttons = [[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='helpx'),
             InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
@@ -1184,7 +1194,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 	)    
         
 
-    elif query.data == "set_log_channel":
+    elif query.data == "set_log_channelx":
         buttons = [[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='helpx'),
             InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
