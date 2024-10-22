@@ -1,6 +1,6 @@
 import os
 class script(object):
-    START_TXT =  """<b>Hᴇʏ {} ✨ {}
+    START_TXT =  """<b>ʜʏ {}, ✨ {}
 
 ✦ ɪ ᴀᴍ ⚡️ ᴘᴏᴡᴇʀғᴜʟ ᴀᴜᴛᴏ-ғɪʟᴛᴇʀ ʙᴏᴛ.
 ✦ ɪ ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇ ᴀʟʟ ᴍᴏᴠɪᴇs ᴀɴᴅ ᴡᴇʙ sᴇʀɪᴇs ɪɴ sᴏᴍᴇ ʟᴀɴɢᴜᴀɢᴇs. 
@@ -239,6 +239,12 @@ User - {}"""
 #verified_{}_completed"""
 
 
+    YT_TEXT = """
+<b>• ɴᴀᴍᴇ ›› ᴛᴏᴘ10ɴᴇʀ</b>
+<b>• ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ ›› <a href='https://youtube.com/@Top10ner'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>
+
+<pre>ᴘʟᴇᴀsᴇ ʟɪᴋᴇ - sʜᴀʀᴇ - sᴜʙsᴄʀɪʙᴇ</pre>"""
+    
     MOVIES_UPDATE_TXT = """<b>#𝑵𝒆𝒘_𝑭𝒊𝒍𝒆_𝑨𝒅𝒅𝒆𝒅 ✅
 **🍿 Title:** {title}
 **🎃 Genres:** {genres}
