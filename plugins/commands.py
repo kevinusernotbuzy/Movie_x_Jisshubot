@@ -156,13 +156,19 @@ async def start(client:Client, message):
         if msg is None and seen_ads:
             await db.update_value(message.from_user.id, "seen_ads", False)
         return
-    
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        status = get_status()
-        aks=await message.reply_text(f"<b>🔥 ʏᴇs {status},\nʜᴏᴡ ᴄᴀɴ ɪ ʜᴇʟᴘ ʏᴏᴜ??</b>")
-        await asyncio.sleep(600)
-        await aks.delete()
-        await m.delete()
+        buttons = [[
+            InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ!', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url='https://t.me/request_movie2'),
+            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇ', url='https://t.me/noob_marcus')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        kd = await message.reply_photo(photo=random.choice(PICS2),
+        caption=script.START2.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
+        await asyncio.sleep(60) # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
+        await kd.delete()
+        await message.delete()    
         if (str(message.chat.id)).startswith("-100") and not await db.get_chat(message.chat.id):
             total=await client.get_chat_members_count(message.chat.id)
             group_link = await message.chat.export_invite_link()
@@ -193,7 +199,7 @@ async def start(client:Client, message):
                             InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="earn")
                         ]]     
                         reply_markup = InlineKeyboardMarkup(buttons)
-                        await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(query.from_user.mention, get_status(), query.from_user.id),
+                        await message.reply_photo(photo=random.choice(PICS), caption = script.START_TXT.format(get_status(), message.from_user.id, message.from_user.mention),
                             reply_markup=reply_markup,
                             parse_mode=enums.ParseMode.HTML)
           #      try: 
@@ -218,7 +224,7 @@ async def start(client:Client, message):
                             InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="earn")
                         ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(query.from_user.mention, get_status(), query.from_user.id),
+        await message.reply_photo(photo=random.choice(PICS), caption = script.START_TXT.format(get_status(), message.from_user.id, message.from_user.mention),
                             reply_markup=reply_markup,
                             parse_mode=enums.ParseMode.HTML
         )
@@ -276,7 +282,7 @@ async def start(client:Client, message):
                             InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="earn")
                         ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
-        return await message.reply_photo(photo=random.choice(PICS), caption=script.START_TXT.format(query.from_user.mention, get_status(), query.from_user.id),
+        return await message.reply_photo(photo=random.choice(PICS), caption = script.START_TXT.format(get_status(), message.from_user.id, message.from_user.mention),
                             reply_markup=reply_markup,
                             parse_mode=enums.ParseMode.HTML)
         
