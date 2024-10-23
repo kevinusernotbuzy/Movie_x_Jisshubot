@@ -84,7 +84,7 @@ ADDGRP_PIC = environ.get("ADDGRP_PIC", "https://graph.org/file/0b975358e5f72b16c
 PICS = (environ.get('PICS', 'https://envs.sh/pfy.jpg https://envs.sh/pf6.jpg https://envs.sh/pfV.jpg https://envs.sh/pfx.jpg https://envs.sh/pf-.jpg https://envs.sh/paD.jpg https://envs.sh/paE.jpg https://envs.sh/paQ.jpg https://envs.sh/pah.jpg https://envs.sh/pad.jpg https://envs.sh/pa2.jpg https://envs.sh/pau.jpg https://envs.sh/pat.jpg https://envs.sh/pae.jpg https://envs.sh/pai.jpg')).split()
 FORCESUB_IMG = environ.get('FORCESUB_IMG', 'https://i.ibb.co/ZNC1Hnb/ad3f2c88a8f2.jpg')
 REFER_PICS = (environ.get("REFER_PICS", "https://envs.sh/PSI.jpg")).split() 
-PAYPICS = (environ.get('PAYPICS', 'https://envs.sh/pgZ.jpg')).split()
+PAYPICS = (environ.get('PAYPICS', 'https://envs.sh/p-t.jpg')).split()
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/9f3f47c690bbcc67633c2.jpg'))
 REACTIONS = ["👀", "😱", "🔥", "😍", "🎉", "🥰", "😇", "⚡"]
 #---------------------------------------------------------------
