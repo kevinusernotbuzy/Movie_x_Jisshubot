@@ -7,7 +7,7 @@ from Jisshu.util.human_readable import humanbytes
 import humanize
 import random
 
-@Client.on_message(filters.private & filters.command("streams"))
+@Client.on_message(filters.private & filters.command("stream"))
 async def stream_start(client, message):
     msg = await client.ask(message.chat.id, "**Now send me your file/video to get stream and download link**")
     if not msg.media:
