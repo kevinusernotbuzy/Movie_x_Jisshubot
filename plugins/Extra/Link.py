@@ -8,7 +8,7 @@ async def generate_link(client, message):
     
     # Check if movie name is provided
     if len(command_text) < 2:
-        await message.reply("Please provide the name for the movie!\nExample: `/link game of thrones`")
+        await message.reply("ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴛʜᴇ ɴᴀᴍᴇ ғᴏʀ ᴛʜᴇ ᴛᴇxᴛ!\n\nᴇxᴀᴍᴘʟᴇ: `/link game of thrones`")
         return
     
     # Replace spaces with hyphens for URL formatting
@@ -22,11 +22,11 @@ async def generate_link(client, message):
     
     # Send the reply with the generated link and share button
     await message.reply(
-        text=f"🎬 Here is your link for *{command_text[1]}*:\n\n🔗 `{link}`\n\n*Powered by @{bot_username}*",
+        text=f"🎬 ʜᴇʀᴇ ɪs ʏᴏᴜʀ ʟɪɴᴋ ғᴏʀ, {command_text[1]}*:\n\n🔗 `{link}`\n\nᴘᴏᴡᴇʀᴇᴅ ʙʏ @{bot_username}",
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton(text="🔗 Share Link", url=f"https://telegram.me/share/url?url={link}")],
-                [InlineKeyboardButton(text="× Close", callback_data="close_data")]  # Use existing callback data
+                [InlineKeyboardButton(text="• sʜᴀʀᴇ ʟɪɴᴋ •", url=f"https://telegram.me/share/url?url={link}")],
+                [InlineKeyboardButton(text="× ᴄʟᴏsᴇ ×", callback_data="close_data")]  # Use existing callback data
             ]
         )
     )
