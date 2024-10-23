@@ -835,7 +835,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         m=await query.message.reply_sticker("CAACAgQAAxkBAAEiLZ9l7VMuTY7QHn4edR6ouHUosQQ9gwACFxIAArzT-FOmYU0gLeJu7x4E") 
         await m.delete()
         await query.message.reply_photo(
-            photo=(SUBSCRIPTION),
+            photo=random.choice(PREMIUM_PIC),
             caption=script.PREPLANS_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
@@ -843,8 +843,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "free":
         buttons = [[
             InlineKeyboardButton('📸 sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ʜᴇʀᴇ •', url=f'https://t.me/vampirexgirl')
-        ],[
-            InlineKeyboardButton('• ᴄᴏᴜsᴛᴏᴍɪᴢᴇ •', callback_data='other')
         ],[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='broze'),
             InlineKeyboardButton('ᴄʟᴏsᴇ ↺', callback_data='close_data')
@@ -873,7 +871,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
   
        await query.message.edit_media(
          media=InputMediaPhoto(
-            media=SUBSCRIPTION, 
+            media=random.choice(PREMIUM_PIC),
             caption=script.PREPLANSS_TXT.format(query.from_user.mention()),
             parse_mode=enums.ParseMode.HTML
          ),
