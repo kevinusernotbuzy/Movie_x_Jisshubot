@@ -68,7 +68,7 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 REQUEST_CHANNEL = int(request_channel) if request_channel and id_pattern.search(request_channel) else None
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-PREMIUM_PIC = (environ.get('PREMIUM_PIC', 'https://envs.sh/pVp.jpg https://envs.sh/pVT.jpg https://envs.sh/pVn.jpg https://envs.sh/pVI.jpg https://envs.sh/pVB.jpg https://envs.sh/pVW.jpg https://envs.sh/pVS.jpg')).split()
+PREMIUM_PIC = (environ.get('PREMIUM_PIC', 'https://envs.sh/AQy.jpg https://envs.sh/AQ6.jpg https://envs.sh/AQV.jpg https://envs.sh/AQx.jpg https://envs.sh/AQ-.jpg https://envs.sh/AhD.jpg https://envs.sh/AhE.jpg')).split()
 EARNMONEY_PIC = (environ.get('EARNMONEY_PIC', 'https://graph.org/file/5197a7eef9ff83262e6ad.jpg https://graph.org/file/831f3a58f1eb8362827d5.jpg https://graph.org/file/bf8f0d9edf14829e2eb06.jpg https://graph.org/file/7914023396c3e6d6b0ab4.jpg https://graph.org/file/518531963faadd2c0c20f.jpg https://graph.org/file/9e433f29684134f0dceb3.jpg https://graph.org/file/aed0ccf00ff8acc1afee4.jpg')).split()
 SPELL_IMG = (environ.get('SPELL_IMG', 'https://graph.org/file/ee0b06fbf1e0f79122532.jpg https://graph.org/file/4cd26f2e3599ddf7b346b.jpg https://graph.org/file/a31e2169da3210e7f4ce6.jpg https://graph.org/file/9b4f26839abb96432bfb1.jpg https://graph.org/file/9436f9cbbad83ba552f2e.jpg https://graph.org/file/e99a245a20f1892fbc92a.jpg https://graph.org/file/458ff80ce537b50fad45e.jpg')).split()
 YT_PIC = (environ.get('YT_PIC', 'https://graph.org/file/ccdcebbdb2d9e99f57aa1.jpg https://graph.org/file/7aae08fd87fa189d94481.jpg')).split()
