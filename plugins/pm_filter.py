@@ -878,23 +878,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
          reply_markup=reply_markup
        )
         
-    elif query.data == "other":
-        buttons = [[
-            InlineKeyboardButton('• ᴄᴏɴᴛᴀᴄᴛ ғᴏʀ ᴄᴏᴜsᴛᴏᴍɪᴢᴇ •', user_id = ADMINS[0])
-        ],[
-            InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='free')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto(random.choice(PAYPICS))
-        )
-        await query.message.edit_text(
-            caption=script.OTHER_TXT.format(temp.B_NAME),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-	)
 
     elif query.data == "ref_point":
         await query.answer(f'You Have: {referdb.get_refer_points(query.from_user.id)} Refferal points.', show_alert=True)
@@ -904,11 +887,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "features":
         buttons = [[
-              InlineKeyboardButton('• ᴛᴇʟᴇɢʀᴀᴘʜ •', callback_data='telegraph'),
+              InlineKeyboardButton('• sᴇᴛᴛɪɴɢs •', callback_data='settings_lol'),
               InlineKeyboardButton('• ɢʀᴏᴜᴘ sᴇᴛᴜᴘs •', callback_data='helpx'),
               ], [
-              InlineKeyboardButton('• ᴀᴅᴍɪɴ ᴄᴍᴅs •', callback_data='admincmd'),
-              InlineKeyboardButton('• sᴇᴛᴛɪɴɢs •', callback_data='settings_lol')
+              InlineKeyboardButton('• ᴏᴡɴᴇʀ ᴄᴍᴅs •', callback_data='admincmd'),
+              InlineKeyboardButton('• ᴇxᴛʀᴀ ᴄᴍᴅs •', callback_data='extra_cmds')
               ], [
               InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='start')
               ]]
@@ -1054,27 +1037,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
 	    )
 	    
     
-    elif query.data == "telegraph":
+    elif query.data == "extra_cmds":
         buttons = [[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='features')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)  
         await query.message.edit_text(
-            text=script.TELE_TXT,
+            text=script.EXTRA_CMDS_TEXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif query.data == "font":
-        buttons = [[
-            InlineKeyboardButton('⇋ ʙᴀᴄᴋ', callback_data='features')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons) 
-        await query.message.edit_text(
-            text=script.FONT_TXT,
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-	)
-
+    
 	
     elif query.data == "support":
         buttons = [[
