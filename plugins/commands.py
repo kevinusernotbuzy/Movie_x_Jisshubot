@@ -25,6 +25,10 @@ logger = logging.getLogger(__name__)
 movie_series_db = JsTopDB(DATABASE_URI)
 verification_ids = {}
 
+
+# URL pattern to validate any valid URL, including Telegram links (t.me/ or https://t.me/)
+url_pattern = re.compile(r"(https?://)?(www\.)?t\.me/[^\s]+|https?://[^\s]+")
+
 # CHECK COMPONENTS FOLDER FOR MORE COMMANDS
 @Client.on_message(filters.command("invite") & filters.private & filters.user(ADMINS))
 async def invite(client, message):
@@ -666,7 +670,10 @@ async def save_caption(client, message):
         return await message.reply_text("Command Incomplete!")
     await save_group_settings(grp_id, 'caption', caption)
     await message.reply_text(f"Successfully changed caption for {title} to\n\n{caption}", disable_web_page_preview=True) 
+
+
     
+
 @Client.on_message(filters.command('set_tutorial'))
 async def save_tutorial(client, message):
     grp_id = message.chat.id
@@ -678,10 +685,16 @@ async def save_tutorial(client, message):
         return await message.reply_text('<b>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ</b>')
     try:
         tutorial = message.text.split(" ", 1)[1]
-    except:
-        return await message.reply_text("<b>Command Incomplete!!\n\nuse like this -</b>\n\n<code>set_tutorial https://t.me/Noob_Marcus</code>")    
+    except IndexError:
+        return await message.reply_text("<b>Command Incomplete!!\n\nuse like this -</b>\n\n<code>/set_tutorial https://t.me/Noob_Marcus</code>")
+    
+    # Check if the provided text is a valid URL
+    if not re.match(url_pattern, tutorial):
+        return await message.reply_text("<b>Please provide a valid URL!</b>\n\nExample:\n<code>/set_tutorial https://t.me/Noob_Marcus</code>")
+    
     await save_group_settings(grp_id, 'tutorial', tutorial)
     await message.reply_text(f"<b>Successfully Changed 1st Verification Tutorial For {title} To</b>\n\n{tutorial}", disable_web_page_preview=True)
+
 
 @Client.on_message(filters.command('set_tutorial2'))
 async def set_tutorial_2(client, message):
@@ -695,11 +708,17 @@ async def set_tutorial_2(client, message):
         return await message.reply_text(f"<b>ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...\n\nGroup Name: {title}\nGroup ID: {grp_id}\nGroup Invite Link: {invite_link}</b>")
     try:
         tutorial = message.text.split(" ", 1)[1]
-    except:
-        return await message.reply_text("<b>ᴄᴏᴍᴍᴀɴᴅ ɪɴᴄᴏᴍᴘʟᴇᴛᴇ !!\n\nᴜꜱᴇ ʟɪᴋᴇ ᴛʜɪꜱ -</b>\n\n<code>/set_tutorial2 https://t.me/Noob_Marcus</code>")
+    except IndexError:
+        return await message.reply_text("<b>Command Incomplete!!\n\nuse like this -</b>\n\n<code>/set_tutorial2 https://t.me/Noob_Marcus</code>")
+    
+    # Check if the provided text is a valid URL
+    if not re.match(url_pattern, tutorial):
+        return await message.reply_text("<b>Please provide a valid URL!</b>\n\nExample:\n<code>/set_tutorial2 https://t.me/Noob_Marcus</code>")
+    
     await save_group_settings(grp_id, 'tutorial_2', tutorial)
     await message.reply_text(f"<b>Successfully Changed 2nd Verification Tutorial For {title} To</b>\n\n{tutorial}", disable_web_page_preview=True)
-    
+
+
 @Client.on_message(filters.command('set_tutorial3'))
 async def set_tutorial_3(client, message):
     grp_id = message.chat.id
@@ -712,10 +731,16 @@ async def set_tutorial_3(client, message):
         return await message.reply_text(f"<b>ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...\n\nGroup Name: {title}\nGroup ID: {grp_id}\nGroup Invite Link: {invite_link}</b>")
     try:
         tutorial = message.text.split(" ", 1)[1]
-    except:
+    except IndexError:
         return await message.reply_text("<b>Command Incomplete!!\n\nuse like this -</b>\n\n<code>/set_tutorial3 https://t.me/Noob_Marcus</code>")
+    
+    # Check if the provided text is a valid URL
+    if not re.match(url_pattern, tutorial):
+        return await message.reply_text("<b>Please provide a valid URL!</b>\n\nExample:\n<code>/set_tutorial3 https://t.me/Noob_Marcus</code>")
+    
     await save_group_settings(grp_id, 'tutorial_3', tutorial)
     await message.reply_text(f"<b>Successfully Changed 3rd Verification Tutorial For {title} To</b>\n\n{tutorial}", disable_web_page_preview=True)
+
 
 @Client.on_message(filters.command('set_shortner'))
 async def set_shortner(c, m):
