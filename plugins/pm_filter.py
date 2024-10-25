@@ -36,9 +36,26 @@ async def pm_search(client, message):
     await mdb.update_top_messages(message.from_user.id, message.text)
     bot_id = client.me.id
     user_id = message.from_user.id    
- #   if user_id in ADMINS: return
+
+    # Set the maximum allowed message length (e.g., 500 characters)
+    max_length = 60
+
+    # If the message starts with '/', ignore the message
     if str(message.text).startswith('/'):
         return
+
+    # URL pattern to detect links
+    url_pattern = re.compile(r"https?://[^\s]+|t\.me/[^\s]+|www\.[^\s]+")
+    
+    # If the message contains a URL, ignore the message
+    if url_pattern.search(message.text):
+        return
+
+    # If the message is too long, ignore the message
+    if len(message.text) > max_length:
+        return
+    
+    # Check if bot is enabled for search functionality
     if await db.get_pm_search_status(bot_id):
         if 'hindi' in message.text.lower() or 'tamil' in message.text.lower() or 'telugu' in message.text.lower() or 'malayalam' in message.text.lower() or 'kannada' in message.text.lower() or 'english' in message.text.lower() or 'gujarati' in message.text.lower(): 
             return await auto_filter(client, message)
@@ -46,7 +63,8 @@ async def pm_search(client, message):
     else:
         await message.reply_text("<b><i>ɪ ᴀᴍ ɴᴏᴛ ᴡᴏʀᴋɪɴɢ ʜᴇʀᴇ. ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ ɪɴ ᴏᴜʀ ᴍᴏᴠɪᴇ ꜱᴇᴀʀᴄʜ ɢʀᴏᴜᴘ.</i></b>",
                                  reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("• ᴍᴏᴠɪᴇ ꜱᴇᴀʀᴄʜ ɢʀᴏᴜᴘ •", url=f'https://t.me/request_movie2')]]))
-        
+
+
     
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def group_search(client, message):
@@ -241,7 +259,7 @@ async def seasons_cb_handler(client: Client, query: CallbackQuery):
     if int(req) != query.from_user.id:
         return await query.answer(script.ALRT_TXT, show_alert=True) 
     btn= []
-    for i in range(0, len(SEASONS)-1, 3):
+    for i in range(0, len(SEASONS)-1, 2):
         btn.append([
             InlineKeyboardButton(
                 text=SEASONS[i].title(),
@@ -250,14 +268,10 @@ async def seasons_cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton(
                 text=SEASONS[i+1].title(),
                 callback_data=f"season_search#{SEASONS[i+1].lower()}#{key}#0#{offset}#{req}"
-            ),
-            InlineKeyboardButton(
-                text=SEASONS[i+2].title(),
-                callback_data=f"season_search#{SEASONS[i+2].lower()}#{key}#0#{offset}#{req}"
-            ),
+            ),     
         ])
 
-    btn.append([InlineKeyboardButton(text="⪻ ʙᴀᴄᴋ ᴛᴏ ᴍᴀɪɴ ᴘᴀɢᴇ", callback_data=f"next_{req}_{key}_{offset}")])
+    btn.append([InlineKeyboardButton(text="‹ ʙᴀᴄᴋ ᴛᴏ ᴍᴀɪɴ ᴘᴀɢᴇ", callback_data=f"next_{req}_{key}_{offset}")])
     await query.message.edit_text("<b>ɪɴ ᴡʜɪᴄʜ sᴇᴀsᴏɴ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ, ᴄʜᴏᴏsᴇ ғʀᴏᴍ ʜᴇʀᴇ ↓↓</b>", reply_markup=InlineKeyboardMarkup(btn))
     return
 
@@ -349,7 +363,7 @@ async def season_search(client: Client, query: CallbackQuery):
              InlineKeyboardButton("ɴᴇxᴛ ›", callback_data=f"season_search#{season}#{key}#{n_offset}#{orginal_offset}#{req}"),])
 
     btn.append([
-        InlineKeyboardButton(text="⪻ ʙᴀᴄᴋ ᴛᴏ ᴍᴀɪɴ ᴘᴀɢᴇ", callback_data=f"next_{req}_{key}_{orginal_offset}"),])
+        InlineKeyboardButton(text="‹ ʙᴀᴄᴋ ᴛᴏ ᴍᴀɪɴ ᴘᴀɢᴇ", callback_data=f"next_{req}_{key}_{orginal_offset}"),])
     await query.message.edit_text(cap + links + js_ads, disable_web_page_preview=True, parse_mode=enums.ParseMode.HTML, reply_markup=InlineKeyboardMarkup(btn))
     return
 
@@ -480,7 +494,7 @@ async def quality_cb_handler(client: Client, query: CallbackQuery):
                 callback_data=f"quality_search#{QUALITIES[i+2].lower()}#{key}#0#{offset}#{req}"
             ),
         ])
-    btn.append([InlineKeyboardButton(text="⪻ ʙᴀᴄᴋ ᴛᴏ ᴍᴀɪɴ ᴘᴀɢᴇ", callback_data=f"next_{req}_{key}_{offset}")])
+    btn.append([InlineKeyboardButton(text="‹ ʙᴀᴄᴋ ᴛᴏ ᴍᴀɪɴ ᴘᴀɢᴇ", callback_data=f"next_{req}_{key}_{offset}")])
     await query.message.edit_text("<b>ɪɴ ᴡʜɪᴄʜ ǫᴜᴀʟɪᴛʏ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ, ᴄʜᴏᴏsᴇ ғʀᴏᴍ ʜᴇʀᴇ!</b>", reply_markup=InlineKeyboardMarkup(btn))
     return
 
