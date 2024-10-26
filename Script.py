@@ -362,15 +362,15 @@ ____________________________
     
     FSUB_TXT = """
 <u>noтe</u>
-1. ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴍᴇ ᴀɴ ᴀᴅᴍɪɴ.
-2. ᴀꜱꜱɪɢɴ ᴍᴇ ᴀꜱ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ᴛᴀʀɢᴇᴛ ᴄʜᴀɴɴᴇʟ ᴏʀ ɢʀᴏᴜᴘ.
+<b>1. ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴍᴇ ᴀɴ ᴀᴅᴍɪɴ.
+2. ᴀꜱꜱɪɢɴ ᴍᴇ ᴀꜱ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ᴛᴀʀɢᴇᴛ ᴄʜᴀɴɴᴇʟ ᴏʀ ɢʀᴏᴜᴘ.</b>
 
 <u>coммand and υѕeѕ</u>
-• /fsub your_target_chat_id</b>
+<b>• /fsub your_target_chat_id</b>
 ᴇxᴀᴍᴘʟᴇ: <code>/fsub -100xxxxxx</code>
 
-•  /del_fsub - ᴛᴏ ᴅɪꜱᴀʙʟᴇ ᴛʜᴇ ꜰꜱᴜʙ ꜰᴇᴀᴛᴜʀᴇ.
-• /show_fsub - ᴛᴏ ᴄʜᴇᴄᴋ ɪꜰ ꜰꜱᴜʙ ɪꜱ ᴀᴄᴛɪᴠᴇ.
+<b>•  /del_fsub - ᴛᴏ ᴅɪꜱᴀʙʟᴇ ᴛʜᴇ ꜰꜱᴜʙ ꜰᴇᴀᴛᴜʀᴇ.
+• /show_fsub - ᴛᴏ ᴄʜᴇᴄᴋ ɪꜰ ꜰꜱᴜʙ ɪꜱ ᴀᴄᴛɪᴠᴇ.</b>
 
 <b>ᴛʜᴀᴛ'ꜱ ɪᴛ! ɪ ᴡɪʟʟ ᴇɴᴄᴏᴜʀᴀɢᴇ ʏᴏᴜʀ ᴜꜱᴇʀꜱ ᴛᴏ ᴊᴏɪɴ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ/ɢʀᴏᴜᴘ. 
 ғɪʟᴇꜱ ᴡɪʟʟ ᴏɴʟʏ ʙᴇ ᴘʀᴏᴠɪᴅᴇᴅ ᴏɴᴄᴇ ᴜꜱᴇʀꜱ ʜᴀᴠᴇ ᴊᴏɪɴᴇᴅ ʏᴏᴜʀ ᴛᴀʀɢᴇᴛ ᴄʜᴀɴɴᴇʟ.</b>
@@ -379,23 +379,29 @@ ____________________________
 # Command explanations for Set Verify
     SET_VERIFY_TEXT = """<b><u>Sᥱt Shortnᥱr Wᥱbsιtᥱ API</u></b>
 
-• /Set_Shortner - ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ꜱᴇᴛꜱ ᴜᴘ ᴜꜱᴇʀ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴛʜʀᴏᴜɢʜ ᴀ ᴡᴇʙꜱɪᴛᴇ ʟɪɴᴋ ᴀɴᴅ ɪᴛꜱ ᴀᴘɪ.
-ᴇxᴀᴍᴘʟᴇ: <code>/set_verify https://example.com API_KEY</code>
+<b>• /Set_Shortner - ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ꜱᴇᴛꜱ ᴜᴘ ᴜꜱᴇʀ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴛʜʀᴏᴜɢʜ ᴀ ᴡᴇʙꜱɪᴛᴇ ʟɪɴᴋ ᴀɴᴅ ɪᴛꜱ ᴀᴘɪ.</b>
+ᴇxᴀᴍᴘʟᴇ: <code>/set_shortner publicearn.com 73864ab32816f09a175150af803b888652d28dbd</code>
 
-• /Set_Shortner2 - ᴜꜱᴇ ᴛʜɪꜱ ꜰᴏʀ ᴀɴ ꜱᴇᴄᴏɴᴅ sʜᴏʀᴛɴᴇʀ ᴡᴇʙꜱɪᴛᴇ.
-ᴇxᴀᴍᴘʟᴇ: <code>/set_verify_2 https://example2.com API_KEY</code>
+<b>• /Set_Shortner2 - ᴜꜱᴇ ᴛʜɪꜱ ꜰᴏʀ ᴀɴ ꜱᴇᴄᴏɴᴅ sʜᴏʀᴛɴᴇʀ ᴡᴇʙꜱɪᴛᴇ.</b>
+ᴇxᴀᴍᴘʟᴇ: <code>/set_shortner2 publicearn.com 73864ab32816f09a175150af803b888652d28dbd</code>
 
-• /Set_Shortner3 - ᴜꜱᴇ ᴛʜɪꜱ ꜰᴏʀ ᴀ ᴛʜɪʀᴅ sʜᴏʀᴛɴᴇʀ ᴡᴇʙꜱɪᴛᴇ ᴏᴘᴛɪᴏɴ.
-ᴇxᴀᴍᴘʟᴇ: <code>/set_verify_3 https://example3.com API_KEY</code>
+<b>• /Set_Shortner3 - ᴜꜱᴇ ᴛʜɪꜱ ꜰᴏʀ ᴀ ᴛʜɪʀᴅ sʜᴏʀᴛɴᴇʀ ᴡᴇʙꜱɪᴛᴇ ᴏᴘᴛɪᴏɴ.</b>
+ᴇxᴀᴍᴘʟᴇ: <code>/set_shortner3 publicearn.com 73864ab32816f09a175150af803b888652d28dbd</code>
 
 
 <b><u>Sᥱt Vᥱrιfιᥴᥲtιon Tιmᥱ Gᥲρ</u></b>
 
-• /set_time2 - {seconds} sᴇᴛꜱ ᴛʜᴇ ᴅᴇʟᴀʏ ꜰᴏʀ ᴛʜᴇ ꜱᴇᴄᴏɴᴅ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴘʀᴏᴄᴇꜱꜱ ɪɴ ꜱᴇᴄᴏɴᴅꜱ.
-ᴇxᴀᴍᴘʟᴇ: <code>/set_time_2 60</code>
+<u>noтe</u>
+<b>1. ɪғ ʏᴏᴜ ᴡᴀɴᴛ 1 ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ɪɴ ᴀ ᴅᴀʏ ᴛʜᴇɴ /set_time2 - 40000 ᴏʀ ᴀʙᴏᴠᴇ ɪɴ sᴇᴄᴏɴᴅ
+2. ɪғ ʏᴏᴜ ᴡᴀɴᴛ 2 ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ɪɴ ᴀ ᴅᴀʏ ᴛʜᴇɴ /set_time3 - 20000 ᴏʀ ᴀʙᴏᴠᴇ ɪɴ sᴇᴄᴏɴᴅ 
+3. ɪғ ʏᴏᴜ ᴡᴀɴᴛ 1 ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ɪɴ ᴀ ᴅᴀʏ ᴛʜᴇɴ ʙᴏᴛʜ ᴏғ ᴇǫᴜᴀʟ /set_time3 & /set_time2 - 14000</b>
 
-• /set_time3 - {seconds} sᴇᴛꜱ ᴛʜᴇ ᴅᴇʟᴀʏ ꜰᴏʀ ᴛʜᴇ ᴛʜɪʀᴅ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴘʀᴏᴄᴇꜱꜱ.
-ᴇxᴀᴍᴘʟᴇ: <code>/set_time_3 120</code>"""
+<u>coммand and υѕeѕ</u>
+<b>• /set_time2 - {seconds} sᴇᴛꜱ ᴛʜᴇ ᴅᴇʟᴀʏ ꜰᴏʀ ᴛʜᴇ ꜱᴇᴄᴏɴᴅ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴘʀᴏᴄᴇꜱꜱ ɪɴ ꜱᴇᴄᴏɴᴅꜱ.</b>
+ᴇxᴀᴍᴘʟᴇ: <code>/set_time2 20000</code>
+
+<b>• /set_time3 - {seconds} sᴇᴛꜱ ᴛʜᴇ ᴅᴇʟᴀʏ ꜰᴏʀ ᴛʜᴇ ᴛʜɪʀᴅ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴘʀᴏᴄᴇꜱꜱ.</b>
+ᴇxᴀᴍᴘʟᴇ: <code>/set_time3 16000</code>"""
 
 
     VERIFY_ON_OFF_TEXT = """<b><u>Verify On/Off</u></b>
@@ -407,28 +413,28 @@ ____________________________
 # Command explanations for setting file captions
     SET_CAPTION_TEXT = """<b><u>Sᥱt Cᥙstom Fιᥣᥱ Cᥲρtιon</u></b>
 
-• /set_caption - ᴄᴜsᴛᴏᴍɪᴢᴇ ᴛʜᴇ ᴄᴀᴘᴛɪᴏɴ ғᴏʀ ғɪʟᴇs sᴇɴᴛ ʙʏ ᴛʜᴇ ʙᴏᴛ.
+<b>• /set_caption - ᴄᴜsᴛᴏᴍɪᴢᴇ ᴛʜᴇ ᴄᴀᴘᴛɪᴏɴ ғᴏʀ ғɪʟᴇs sᴇɴᴛ ʙʏ ᴛʜᴇ ʙᴏᴛ.</b>
 
-ᴇxᴀᴍᴘʟᴇ: <code>/set_caption ʜᴇʀᴇ ɪs ʏᴏᴜʀ ʀᴇǫᴜᴇsᴛᴇᴅ ғɪʟᴇ!</code>"""
+ᴇxᴀᴍᴘʟᴇ: <code>/set_caption <b><i>{file_name} » {file_size} › [Top10ner movie](https://t.me/top10ner_0)</i></b></code>"""
 
 # Command explanations for setting IMDb templates
     SET_TEMPLATE_TEXT = """<b><u>Sᥱt IMDb Tᥱmρᥣᥲtᥱ</u></b>
 
-• /set_template - sᴇᴛs ᴀ ᴄᴏᴜsᴛᴏᴍ ᴛᴇᴍᴘʟᴀᴛᴇ ғᴏʀ ɪᴍᴅʙ ɪɴғᴏ.
+<b>• /set_template - sᴇᴛs ᴀ ᴄᴏᴜsᴛᴏᴍ ᴛᴇᴍᴘʟᴀᴛᴇ ғᴏʀ ɪᴍᴅʙ ɪɴғᴏ.</b>
 
 ᴇxᴀᴍᴘʟᴇ ᴛᴇᴍᴘʟᴀᴛᴇ: <a href="https://telegra.ph/Set-IMDb-Template-Caption-10-22">ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>"""
 
 # Command explanations for setting tutorials
     SET_TUTORIAL_TEXT = """<b><u>Sᥱt Vᥱrιfιᥴᥲtιon Tᥙtorιᥲᥣ</u></b>
 
-• /set_tutorial - sᴇᴛ ʏᴏᴜʀ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ ʟɪɴᴋ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀs.
+<b>• /set_tutorial - sᴇᴛ ʏᴏᴜʀ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ ʟɪɴᴋ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀs.</b>
 
 ᴇxᴀᴍᴘʟᴇ: <code>/set_tutorial https://t.me/how_to_download_movi/5</code>"""
 
 # Command explanations for setting a log channel
     SET_LOG_CHANNEL_TEXT = """<b><u>Log Chᥲnnᥱᥣ Sᥱtᥙρ</u></b>
 
-• /set_log - {log channel id} sᴇᴛ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴜsᴇʀs ᴀᴄᴛɪᴠɪᴛɪᴇs. ᴇɴsᴜʀᴇ ᴛʜᴇ ʙᴏᴛ ɪs ᴀɴ ᴀᴅᴍɪɴ.
+<b>• /set_log - {log channel id} sᴇᴛ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴜsᴇʀs ᴀᴄᴛɪᴠɪᴛɪᴇs. ᴇɴsᴜʀᴇ ᴛʜᴇ ʙᴏᴛ ɪs ᴀɴ ᴀᴅᴍɪɴ.</b>
 
 ᴇxᴀᴍᴘʟᴇ: <code>/set_log -1878998680</code>"""
     
