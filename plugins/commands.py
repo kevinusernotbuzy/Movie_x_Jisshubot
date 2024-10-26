@@ -305,6 +305,9 @@ async def start(client:Client, message):
         is_second_shortener = await db.use_second_shortener(user_id, settings.get('verify_time', TWO_VERIFY_GAP)) 
         is_third_shortener = await db.use_third_shortener(user_id, settings.get('third_verify_time', THREE_VERIFY_GAP))
         if settings.get("is_verify", IS_VERIFY) and not user_verified or is_second_shortener or is_third_shortener:
+            # Show "Searching" message
+            searching_msg = await m.reply_text("<code>ʟᴏᴀᴅɪɴɢ....</code>", parse_mode=enums.ParseMode.HTML)
+            await asyncio.sleep(2)  # Add a short delay for better user experience
             verify_id = ''.join(random.choices(string.ascii_uppercase + string.digits, k=7))
             await db.create_verify_id(user_id, verify_id)
             temp.CHAT[user_id] = grp_id
@@ -323,6 +326,8 @@ async def start(client:Client, message):
                 msg = script.THIRDT_VERIFICATION_TEXT
             else:            
                 msg = script.SECOND_VERIFICATION_TEXT if is_second_shortener else script.VERIFICATION_TEXT
+            # Delete "Searching" message and send main verification message
+            await searching_msg.delete()    
             d = await m.reply_text(
                 text=msg.format(message.from_user.mention, get_status()),
                 protect_content = False,
