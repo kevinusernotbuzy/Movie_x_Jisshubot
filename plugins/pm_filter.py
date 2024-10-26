@@ -1589,27 +1589,37 @@ async def ai_spell_check(wrong_name):
             return movie
         movie_list.remove(movie)
     return
-
+	
 async def auto_filter(client, msg, spoll=False, pm_mode=False):
     if not spoll:
         message = msg
         search = message.text
         chat_id = message.chat.id
         settings = await get_settings(chat_id, pm_mode=pm_mode)
+        
+        searching_msg = await msg.reply_text(f'🔍')   
         files, offset, total_results = await get_search_results(search)
+        # Introduce a slight delay before deleting the searching messages 
+        await asyncio.sleep(1)  # Adding a slight delay for a natural feel
+        await searching_msg.delete()            
+        
         if not files:
             if settings["spell_check"]:
-                ai_sts = await msg.reply_text('<b>spelling checking.....</b>')
+                ai_sts = await msg.reply_text('<code><b>ᴄʜᴇᴄᴋɪɴɢ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ....</b></code>')
+                    
                 is_misspelled = await ai_spell_check(search)
+                
                 if is_misspelled:
-                    await ai_sts.edit(f'<b>Ai Suggested <code>{is_misspelled}</code></b>\nSo I\'m searching for <code>{is_misspelled}</code>.')
+                    await ai_sts.edit(f'<b>⚡ ᴀɪ sᴜɢɢᴇsᴛᴇᴅ <code>{is_misspelled}</code></b>\nɴᴏᴡ sᴇᴀʀᴄʜɪɴɢ ғᴏʀ <code>{is_misspelled}</code>.')
                     await asyncio.sleep(2)
                     msg.text = is_misspelled
                     await ai_sts.delete()
                     return await auto_filter(client, msg)
+                
                 await ai_sts.delete()
                 return await advantage_spell_chok(msg)
-            return        
+            return
+        
     else:
         settings = await get_settings(msg.message.chat.id , pm_mode=pm_mode)
         message = msg.message.reply_to_message  # msg will be callback query
