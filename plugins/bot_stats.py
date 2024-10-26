@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors.exceptions.bad_request_400 import MessageTooLong
-from info import ADMINS, LOG_CHANNEL, USERNAME, ADDGRP_PIC
+from info import ADMINS, LOG_CHANNEL, USERNAME
 from database.users_chats_db import db
 from database.ia_filterdb import Media, get_files_db_size
 from utils import get_size, temp
@@ -21,15 +21,14 @@ async def save_group(bot, message):
             await bot.send_message(LOG_CHANNEL, script.NEW_GROUP_TXT.format(temp.B_LINK, message.chat.title, message.chat.id, message.chat.username, group_link, total, user), disable_web_page_preview=True)  
             await db.add_chat(message.chat.id, message.chat.title)
             btn = [[
-                InlineKeyboardButton('• sᴜᴘᴘᴏʀᴛ •', url="https://t.me/vampirexgirl"),
-                InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇ •', url="https://t.me/noob_marcus")
+                InlineKeyboardButton('• sᴜᴘᴘᴏʀᴛ •', url=USERNAME)
             ]]
             reply_markup=InlineKeyboardMarkup(btn)
             await bot.send_message(
                 chat_id=message.chat.id,
-                text=f"<b>ᴛʜᴀɴᴋʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ɪɴ {message.chat.title} ♥️\n\n★ ᴅᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ⚠️\n★ ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴅᴏᴜʙᴛ ʏᴏᴜ ᴄʟᴇᴀʀ ɪᴛ ᴜsɪɴɢ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴs.</b>",
+                text=f"<b>ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ɪɴ {message.chat.title} ♥️\n\n★ ᴅᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ⚠️\n★ ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴅᴏᴜʙᴛ ʏᴏᴜ ᴄʟᴇᴀʀ ɪᴛ ᴜsɪɴɢ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴs.</b>",
                 reply_markup=reply_markup
-            )                      
+            )
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
