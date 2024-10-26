@@ -15,35 +15,21 @@ async def save_group(bot, message):
     check = [u.id for u in message.new_chat_members]
     if temp.ME in check:
         if (str(message.chat.id)).startswith("-100") and not await db.get_chat(message.chat.id):
-            total = await bot.get_chat_members_count(message.chat.id)
-            user = message.from_user.mention if message.from_user else "Dear"
+            total=await bot.get_chat_members_count(message.chat.id)
+            user = message.from_user.mention if message.from_user else "Dear" 
             group_link = await message.chat.export_invite_link()
-            await bot.send_message(
-                LOG_CHANNEL, 
-                script.NEW_GROUP_TXT.format(
-                    temp.B_LINK, message.chat.title, 
-                    message.chat.id, message.chat.username, 
-                    group_link, total, user
-                ), 
-                disable_web_page_preview=True
-            )
+            await bot.send_message(LOG_CHANNEL, script.NEW_GROUP_TXT.format(temp.B_LINK, message.chat.title, message.chat.id, message.chat.username, group_link, total, user), disable_web_page_preview=True)  
             await db.add_chat(message.chat.id, message.chat.title)
-            
-            btn = [
-                [
-                    InlineKeyboardButton('• sᴜᴘᴘᴏʀᴛ •', url="https://t.me/vampirexgirl"),
-                    InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇ •', url="https://t.me/noob_marcus")
-                ]
-            ]
-            reply_markup = InlineKeyboardMarkup(btn)
-            
-            await bot.send_photo(
+            btn = [[
+                InlineKeyboardButton('• sᴜᴘᴘᴏʀᴛ •', url="https://t.me/vampirexgirl"),
+                InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇ •', url="https://t.me/noob_marcus")
+            ]]
+            reply_markup=InlineKeyboardMarkup(btn)
+            await bot.send_message(
                 chat_id=message.chat.id,
-                photo=ADDGRP_PIC, 
-                caption=f"<b>ᴛʜᴀɴᴋʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ɪɴ {message.chat.title} ♥️\n\n★ ᴅᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ⚠️\n★ ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴅᴏᴜʙᴛ ʏᴏᴜ ᴄʟᴇᴀʀ ɪᴛ ᴜsɪɴɢ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴs.</b>",
+                text=f"<b>ᴛʜᴀɴᴋʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ɪɴ {message.chat.title} ♥️\n\n★ ᴅᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ⚠️\n★ ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴅᴏᴜʙᴛ ʏᴏᴜ ᴄʟᴇᴀʀ ɪᴛ ᴜsɪɴɢ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴs.</b>",
                 reply_markup=reply_markup
-            )
-                            
+            )                      
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
