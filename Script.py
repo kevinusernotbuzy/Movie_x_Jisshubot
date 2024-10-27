@@ -21,11 +21,11 @@ class script(object):
 """
     
     EXTRA_CMDS_TEXT = """<b>
-「 <u>ᴄᴏᴍᴍᴀɴᴅs ғᴏʀ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴs</u> 」
+    <u>ᴄᴏᴍᴍᴀɴᴅs ғᴏʀ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴs</u>
 • /ban - ʙᴀɴ ᴀ ᴜsᴇʀ ғʀᴏᴍ ᴛʜᴇ ɢʀᴏᴜᴘ.
 • /unban - uɴʙᴀɴ ᴀ ᴜsᴇʀ ғʀᴏᴍ ᴛʜᴇ ɢʀᴏᴜᴘ.
 
-「 <u>ᴏᴛʜᴇʀ ᴜsᴇғᴜʟ ᴄᴏᴍᴍᴀɴᴅs</u> 」
+<u>ᴏᴛʜᴇʀ ᴜsᴇғᴜʟ ᴄᴏᴍᴍᴀɴᴅs</u>
 • /telegraph - sᴇɴᴅ ᴍᴇ ᴀ ᴘɪᴄᴛᴜʀᴇ ᴏʀ ᴠɪᴅᴇᴏ (ᴜᴘ ᴛᴏ 5ᴍʙ).
 • /stream - sᴇɴᴅ ᴍᴏᴠɪᴇ ᴏʀ sᴇʀɪᴇs ғɪʟᴇs ғᴏʀ ᴏɴʟɪɴᴇ sᴛʀᴇᴀᴍɪɴɢ ᴏʀ ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ.
 • /font - cʜᴀɴɢᴇ ᴛᴇxᴛ ᴛᴏ sᴛʏʟɪsʜ ғᴏʀᴍᴀᴛs.
@@ -362,15 +362,15 @@ ____________________________
     
     FSUB_TXT = """
 <u>noтe</u>
-<b>1. ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴍᴇ ᴀɴ ᴀᴅᴍɪɴ.
-2. ᴀꜱꜱɪɢɴ ᴍᴇ ᴀꜱ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ᴛᴀʀɢᴇᴛ ᴄʜᴀɴɴᴇʟ ᴏʀ ɢʀᴏᴜᴘ.</b>
+1. ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴍᴇ ᴀɴ ᴀᴅᴍɪɴ.
+2. ᴀꜱꜱɪɢɴ ᴍᴇ ᴀꜱ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ᴛᴀʀɢᴇᴛ ᴄʜᴀɴɴᴇʟ ᴏʀ ɢʀᴏᴜᴘ.
 
 <u>coммand and υѕeѕ</u>
 <b>• /fsub your_target_chat_id</b>
 ᴇxᴀᴍᴘʟᴇ: <code>/fsub -100xxxxxx</code>
 
-<b>•  /del_fsub - ᴛᴏ ᴅɪꜱᴀʙʟᴇ ᴛʜᴇ ꜰꜱᴜʙ ꜰᴇᴀᴛᴜʀᴇ.
-• /show_fsub - ᴛᴏ ᴄʜᴇᴄᴋ ɪꜰ ꜰꜱᴜʙ ɪꜱ ᴀᴄᴛɪᴠᴇ.</b>
+• /del_fsub - ᴛᴏ ᴅɪꜱᴀʙʟᴇ ᴛʜᴇ ꜰꜱᴜʙ ꜰᴇᴀᴛᴜʀᴇ.
+• /show_fsub - ᴛᴏ ᴄʜᴇᴄᴋ ɪꜰ ꜰꜱᴜʙ ɪꜱ ᴀᴄᴛɪᴠᴇ.
 
 <b>ᴛʜᴀᴛ'ꜱ ɪᴛ! ɪ ᴡɪʟʟ ᴇɴᴄᴏᴜʀᴀɢᴇ ʏᴏᴜʀ ᴜꜱᴇʀꜱ ᴛᴏ ᴊᴏɪɴ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ/ɢʀᴏᴜᴘ. 
 ғɪʟᴇꜱ ᴡɪʟʟ ᴏɴʟʏ ʙᴇ ᴘʀᴏᴠɪᴅᴇᴅ ᴏɴᴄᴇ ᴜꜱᴇʀꜱ ʜᴀᴠᴇ ᴊᴏɪɴᴇᴅ ʏᴏᴜʀ ᴛᴀʀɢᴇᴛ ᴄʜᴀɴɴᴇʟ.</b>
@@ -379,29 +379,29 @@ ____________________________
 # Command explanations for Set Verify
     SET_VERIFY_TEXT = """<b><u>Sᥱt Shortnᥱr Wᥱbsιtᥱ API</u></b>
 
-<b>• /Set_Shortner - ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ꜱᴇᴛꜱ ᴜᴘ ᴜꜱᴇʀ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴛʜʀᴏᴜɢʜ ᴀ ᴡᴇʙꜱɪᴛᴇ ʟɪɴᴋ ᴀɴᴅ ɪᴛꜱ ᴀᴘɪ.</b>
-ᴇxᴀᴍᴘʟᴇ: <code>/set_shortner publicearn.com 73864ab32816f09a175150af803b888652d28dbd</code>
+• /Set_Shortner - ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ꜱᴇᴛꜱ ᴜᴘ ᴜꜱᴇʀ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴛʜʀᴏᴜɢʜ ᴀ ᴡᴇʙꜱɪᴛᴇ ʟɪɴᴋ ᴀɴᴅ ɪᴛꜱ ᴀᴘɪ.
+<b>ᴇxᴀᴍᴘʟᴇ:</b> <code>/set_shortner publicearn.com 73864ab32816f09a175150af803b888652d28dbd</code>
 
-<b>• /Set_Shortner2 - ᴜꜱᴇ ᴛʜɪꜱ ꜰᴏʀ ᴀɴ ꜱᴇᴄᴏɴᴅ sʜᴏʀᴛɴᴇʀ ᴡᴇʙꜱɪᴛᴇ.</b>
-ᴇxᴀᴍᴘʟᴇ: <code>/set_shortner2 publicearn.com 73864ab32816f09a175150af803b888652d28dbd</code>
+• /Set_Shortner2 - ᴜꜱᴇ ᴛʜɪꜱ ꜰᴏʀ ᴀɴ ꜱᴇᴄᴏɴᴅ sʜᴏʀᴛɴᴇʀ ᴡᴇʙꜱɪᴛᴇ.
+<b>ᴇxᴀᴍᴘʟᴇ:</b> <code>/set_shortner2 publicearn.com 73864ab32816f09a175150af803b888652d28dbd</code>
 
-<b>• /Set_Shortner3 - ᴜꜱᴇ ᴛʜɪꜱ ꜰᴏʀ ᴀ ᴛʜɪʀᴅ sʜᴏʀᴛɴᴇʀ ᴡᴇʙꜱɪᴛᴇ ᴏᴘᴛɪᴏɴ.</b>
-ᴇxᴀᴍᴘʟᴇ: <code>/set_shortner3 publicearn.com 73864ab32816f09a175150af803b888652d28dbd</code>
+• /Set_Shortner3 - ᴜꜱᴇ ᴛʜɪꜱ ꜰᴏʀ ᴀ ᴛʜɪʀᴅ sʜᴏʀᴛɴᴇʀ ᴡᴇʙꜱɪᴛᴇ ᴏᴘᴛɪᴏɴ.
+<b>ᴇxᴀᴍᴘʟᴇ:</b> <code>/set_shortner3 publicearn.com 73864ab32816f09a175150af803b888652d28dbd</code>
 
 
 <b><u>Sᥱt Vᥱrιfιᥴᥲtιon Tιmᥱ Gᥲρ</u></b>
 
 <u>noтe</u>
-<b>1. ɪғ ʏᴏᴜ ᴡᴀɴᴛ 1 ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ɪɴ ᴀ ᴅᴀʏ ᴛʜᴇɴ /set_time2 - 40000 ᴏʀ ᴀʙᴏᴠᴇ ɪɴ sᴇᴄᴏɴᴅ
+1. ɪғ ʏᴏᴜ ᴡᴀɴᴛ 1 ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ɪɴ ᴀ ᴅᴀʏ ᴛʜᴇɴ /set_time2 - 40000 ᴏʀ ᴀʙᴏᴠᴇ ɪɴ sᴇᴄᴏɴᴅ
 2. ɪғ ʏᴏᴜ ᴡᴀɴᴛ 2 ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ɪɴ ᴀ ᴅᴀʏ ᴛʜᴇɴ /set_time3 - 20000 ᴏʀ ᴀʙᴏᴠᴇ ɪɴ sᴇᴄᴏɴᴅ 
-3. ɪғ ʏᴏᴜ ᴡᴀɴᴛ 1 ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ɪɴ ᴀ ᴅᴀʏ ᴛʜᴇɴ ʙᴏᴛʜ ᴏғ ᴇǫᴜᴀʟ /set_time3 & /set_time2 - 14000</b>
+3. ɪғ ʏᴏᴜ ᴡᴀɴᴛ 1 ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ɪɴ ᴀ ᴅᴀʏ ᴛʜᴇɴ ʙᴏᴛʜ ᴏғ ᴇǫᴜᴀʟ /set_time3 & /set_time2 - 14000
 
 <u>coммand and υѕeѕ</u>
-<b>• /set_time2 - {seconds} sᴇᴛꜱ ᴛʜᴇ ᴅᴇʟᴀʏ ꜰᴏʀ ᴛʜᴇ ꜱᴇᴄᴏɴᴅ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴘʀᴏᴄᴇꜱꜱ ɪɴ ꜱᴇᴄᴏɴᴅꜱ.</b>
-ᴇxᴀᴍᴘʟᴇ: <code>/set_time2 20000</code>
+• /set_time2 - {seconds} sᴇᴛꜱ ᴛʜᴇ ᴅᴇʟᴀʏ ꜰᴏʀ ᴛʜᴇ ꜱᴇᴄᴏɴᴅ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴘʀᴏᴄᴇꜱꜱ ɪɴ ꜱᴇᴄᴏɴᴅꜱ.
+<b>ᴇxᴀᴍᴘʟᴇ:</b> <code>/set_time2 20000</code>
 
-<b>• /set_time3 - {seconds} sᴇᴛꜱ ᴛʜᴇ ᴅᴇʟᴀʏ ꜰᴏʀ ᴛʜᴇ ᴛʜɪʀᴅ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴘʀᴏᴄᴇꜱꜱ.</b>
-ᴇxᴀᴍᴘʟᴇ: <code>/set_time3 16000</code>"""
+• /set_time3 - {seconds} sᴇᴛꜱ ᴛʜᴇ ᴅᴇʟᴀʏ ꜰᴏʀ ᴛʜᴇ ᴛʜɪʀᴅ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴘʀᴏᴄᴇꜱꜱ.
+<b>ᴇxᴀᴍᴘʟᴇ:</b> <code>/set_time3 16000</code>"""
 
 
     VERIFY_ON_OFF_TEXT = """<b><u>Verify On/Off</u></b>
@@ -413,30 +413,32 @@ ____________________________
 # Command explanations for setting file captions
     SET_CAPTION_TEXT = """<b><u>Sᥱt Cᥙstom Fιᥣᥱ Cᥲρtιon</u></b>
 
-<b>• /set_caption - ᴄᴜsᴛᴏᴍɪᴢᴇ ᴛʜᴇ ᴄᴀᴘᴛɪᴏɴ ғᴏʀ ғɪʟᴇs sᴇɴᴛ ʙʏ ᴛʜᴇ ʙᴏᴛ.</b>
+• /set_caption - ᴄᴜsᴛᴏᴍɪᴢᴇ ᴛʜᴇ ᴄᴀᴘᴛɪᴏɴ ғᴏʀ ғɪʟᴇs sᴇɴᴛ ʙʏ ᴛʜᴇ ʙᴏᴛ.
 
-ᴇxᴀᴍᴘʟᴇ: <code>/set_caption <b><i>{file_name} » {file_size} › [Top10ner movie](https://t.me/top10ner_0)</i></b></code>"""
+<b>ᴇxᴀᴍᴘʟᴇ:</b> <code>/set_caption <b><i>{file_name} » {file_size} › [Top10ner movie](https://t.me/top10ner_0)</i></b></code>"""
 
 # Command explanations for setting IMDb templates
     SET_TEMPLATE_TEXT = """<b><u>Sᥱt IMDb Tᥱmρᥣᥲtᥱ</u></b>
 
-<b>• /set_template - sᴇᴛs ᴀ ᴄᴏᴜsᴛᴏᴍ ᴛᴇᴍᴘʟᴀᴛᴇ ғᴏʀ ɪᴍᴅʙ ɪɴғᴏ.</b>
+• /set_template - sᴇᴛs ᴀ ᴄᴏᴜsᴛᴏᴍ ᴛᴇᴍᴘʟᴀᴛᴇ ғᴏʀ ɪᴍᴅʙ ɪɴғᴏ.
 
 ᴇxᴀᴍᴘʟᴇ ᴛᴇᴍᴘʟᴀᴛᴇ: <a href="https://telegra.ph/Set-IMDb-Template-Caption-10-22">ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>"""
 
 # Command explanations for setting tutorials
     SET_TUTORIAL_TEXT = """<b><u>Sᥱt Vᥱrιfιᥴᥲtιon Tᥙtorιᥲᥣ</u></b>
 
-<b>• /set_tutorial - sᴇᴛ ʏᴏᴜʀ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ ʟɪɴᴋ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀs.</b>
+• /set_tutorial - sᴇᴛ ʏᴏᴜʀ ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ ʟɪɴᴋ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀs.
+• /set_tutorial2 - sᴇᴛ ʏᴏᴜʀ 2nd ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ ʟɪɴᴋ.
+• /set_tutorial3 - sᴇᴛ ʏᴏᴜʀ 3rd ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ ʟɪɴᴋ.
 
-ᴇxᴀᴍᴘʟᴇ: <code>/set_tutorial https://t.me/how_to_download_movi/5</code>"""
+<b>ᴇxᴀᴍᴘʟᴇ:</b> <code>/set_tutorial https://t.me/how_to_download_movi/5</code>"""
 
 # Command explanations for setting a log channel
     SET_LOG_CHANNEL_TEXT = """<b><u>Log Chᥲnnᥱᥣ Sᥱtᥙρ</u></b>
 
-<b>• /set_log - {log channel id} sᴇᴛ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴜsᴇʀs ᴀᴄᴛɪᴠɪᴛɪᴇs. ᴇɴsᴜʀᴇ ᴛʜᴇ ʙᴏᴛ ɪs ᴀɴ ᴀᴅᴍɪɴ.</b>
+• /set_log - {log channel id} sᴇᴛ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴜsᴇʀs ᴀᴄᴛɪᴠɪᴛɪᴇs. ᴇɴsᴜʀᴇ ᴛʜᴇ ʙᴏᴛ ɪs ᴀɴ ᴀᴅᴍɪɴ.
 
-ᴇxᴀᴍᴘʟᴇ: <code>/set_log -1878998680</code>"""
+<b>ᴇxᴀᴍᴘʟᴇ:</b> <code>/set_log -1878998680</code>"""
     
 
 # General info and additional details command
