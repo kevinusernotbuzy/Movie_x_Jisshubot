@@ -307,7 +307,7 @@ async def start(client:Client, message):
         if settings.get("is_verify", IS_VERIFY) and not user_verified or is_second_shortener or is_third_shortener:
             # Show "Searching" message
             searching_msg = await m.reply_text("<code>ʟᴏᴀᴅɪɴɢ....</code>", parse_mode=enums.ParseMode.HTML)
-            await asyncio.sleep(2)  # Add a short delay for better user experience
+            await asyncio.sleep(1)  # Add a short delay for better user experience
             verify_id = ''.join(random.choices(string.ascii_uppercase + string.digits, k=7))
             await db.create_verify_id(user_id, verify_id)
             temp.CHAT[user_id] = grp_id
