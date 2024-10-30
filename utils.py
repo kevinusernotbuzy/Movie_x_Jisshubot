@@ -202,25 +202,30 @@ def list_to_str(k):
         return ', '.join(str(item) for item in k)
 
 
-async def get_shortlink(link, grp_id, is_second_shortener=False, is_third_shortener=False , pm_mode=False):
-    if not pm_mode:
-        settings = await get_settings(grp_id)
-    else:
-        settings = SETTINGS
+async def get_shortlink(link, grp_id, is_second_shortener=False, is_third_shortener=False, pm_mode=False):
+    # Retrieve settings based on the mode
+    settings = await get_settings(grp_id) if not pm_mode else SETTINGS
+
+    # Determine which API and shortener site to use based on the parameters
     if IS_VERIFY:
-        if is_third_shortener:             
+        if is_third_shortener:
             api, site = settings['api_three'], settings['shortner_three']
+        elif is_second_shortener:
+            api, site = settings['api_two'], settings['shortner_two']
         else:
-            if is_second_shortener:
-                api, site = settings['api_two'], settings['shortner_two']
-            else:
-                api, site = settings['api'], settings['shortner']
+            api, site = settings['api'], settings['shortner']
+        
+        # Initialize Shortzy with the selected API and site
         shortzy = Shortzy(api, site)
         try:
+            # Attempt to shorten the link
             link = await shortzy.convert(link)
         except Exception as e:
+            # Fallback to quick link if conversion fails
             link = await shortzy.get_quick_link(link)
+    
     return link
+
 
 def get_file_id(message: "Message") -> Any:
     media_types = (
