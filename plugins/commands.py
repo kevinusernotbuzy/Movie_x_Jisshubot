@@ -667,7 +667,7 @@ async def save_caption(client, message):
         return await message.reply_text('<b>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ</b>')
     chat_type = message.chat.type
     if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        return await message.reply_text("<b>ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...</b>")
+        return await message.reply_text("<b>Oᴏᴘs! ʙᴀʙʏ 💔\nᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ᴡᴏʀᴋ ɪɴ ɢʀᴏᴜᴘs</b>")
     try:
         caption = message.text.split(" ", 1)[1]
     except:
@@ -684,7 +684,7 @@ async def save_tutorial(client, message):
     title = message.chat.title
     chat_type = message.chat.type
     if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        return await message.reply_text("<b>ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...</b>")
+        return await message.reply_text("<b>Oᴏᴘs! ʙᴀʙʏ 💔\nᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ᴡᴏʀᴋ ɪɴ ɢʀᴏᴜᴘs</b>")
     if not await is_check_admin(client, grp_id, message.from_user.id):
         return await message.reply_text('<b>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ</b>')
     try:
@@ -751,13 +751,13 @@ async def set_shortner(c, m):
     grp_id = m.chat.id
     chat_type = m.chat.type
     if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        return await m.reply_text("<b>ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...</b>")
+        return await m.reply_text("<b>Oᴏᴘs! ʙᴀʙʏ 💔\nᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ᴡᴏʀᴋ ɪɴ ɢʀᴏᴜᴘs</b>")
     if not await is_check_admin(c, grp_id, m.from_user.id):
         return await m.reply_text('<b>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ</b>')        
     if len(m.text.split()) == 1:
         await m.reply("<b>Use this command like this - \n\n`/set_shortner publicearn.com 73864ab32816f09a175150af803b888652d28dbd`</b>")
         return        
-    sts = await m.reply("<b>♻️ ᴄʜᴇᴄᴋɪɴɢ...</b>")
+    sts = await m.reply("<b>⚙️ ᴘʀᴏᴄᴇssɪɴɢ...</b>")
     await asyncio.sleep(1.2)
     await sts.delete()
     try:
@@ -785,13 +785,13 @@ async def set_shortner_2(c, m):
     grp_id = m.chat.id
     chat_type = m.chat.type
     if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        return await m.reply_text("<b>ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...</b>")
+        return await m.reply_text("<b>Oᴏᴘs! ʙᴀʙʏ 💔\nᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ᴡᴏʀᴋ ɪɴ ɢʀᴏᴜᴘs</b>")
     if not await is_check_admin(c, grp_id, m.from_user.id):
         return await m.reply_text('<b>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ</b>')
     if len(m.text.split()) == 1:
         await m.reply("<b>Use this command like this - \n\n`/set_shortner2 publicearn.com 73864ab32816f09a175150af803b888652d28dbd`</b>")
         return
-    sts = await m.reply("<b>♻️ ᴄʜᴇᴄᴋɪɴɢ...</b>")
+    sts = await m.reply("<b>⚙️ ᴘʀᴏᴄᴇssɪɴɢ...</b>")
     await asyncio.sleep(1.2)
     await sts.delete()
     try:
@@ -818,10 +818,10 @@ async def set_shortner_2(c, m):
 async def set_shortner_3(c, m):
     chat_type = m.chat.type
     if chat_type == enums.ChatType.PRIVATE:
-        return await m.reply_text("<b>Use this command in Your group ! Not in Private</b>")
+        return await m.reply_text("<b>Oᴏᴘs! ʙᴀʙʏ 💔\nᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ᴡᴏʀᴋ ɪɴ ɢʀᴏᴜᴘs</b>")
     if len(m.text.split()) == 1:
         return await m.reply("<b>Use this command like this - \n\n`/set_shortner publicearn.com 73864ab32816f09a175150af803b888652d28dbd`</b>")
-    sts = await m.reply("<b>♻️ ᴄʜᴇᴄᴋɪɴɢ...</b>")
+    sts = await m.reply("<b>⚙️ ᴘʀᴏᴄᴇssɪɴɢ...</b>")
     await sts.delete()
     userid = m.from_user.id if m.from_user else None
     if not userid:
@@ -866,12 +866,12 @@ async def set_log(client, message):
     if len(message.text.split()) == 1:
         await message.reply("<b><u>ɪɴᴠᴀɪʟᴅ ꜰᴏʀᴍᴀᴛ!!</u>\n\nᴜsᴇ ʟɪᴋᴇ ᴛʜɪs -\n`/log -100xxxxxxxx`</b>")
         return
-    sts = await message.reply("<b>♻️ ᴄʜᴇᴄᴋɪɴɢ...</b>")
+    sts = await message.reply("<b>⚙️ ᴘʀᴏᴄᴇssɪɴɢ...</b>")
     await asyncio.sleep(1.2)
     await sts.delete()
     chat_type = message.chat.type
     if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        return await message.reply_text("<b>ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...</b>")
+        return await message.reply_text("<b>Oᴏᴘs! ʙᴀʙʏ 💔\nᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ᴡᴏʀᴋ ɪɴ ɢʀᴏᴜᴘs</b>")
     try:
         log = int(message.text.split(" ", 1)[1])
     except IndexError:
@@ -1153,13 +1153,13 @@ async def verifyon(bot, message):
 async def reset_group_command(client, message):
     grp_id = message.chat.id
     if not await is_check_admin(client, grp_id, message.from_user.id):
-        return await message.reply_text('<b>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ</b>')
-    sts = await message.reply("<b>♻️ ᴄʜᴇᴄᴋɪɴɢ...</b>")
+        return await message.reply_text('<b>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ ⚠️</b>')
+    sts = await message.reply("<b>🗑️ ᴅᴇʟᴇᴛɪɴɢ ᴇᴠᴇʀʏᴛʜɪɴɢ...</b>")
     await asyncio.sleep(1.2)
     await sts.delete()
     chat_type = message.chat.type
     if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        return await message.reply_text("<b>ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...</b>")
+        return await message.reply_text("<b>Oᴏᴘs! ʙᴀʙʏ 💔\nᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ᴡᴏʀᴋs ɪɴ ɢʀᴏᴜᴘs</b>")
     btn = [[
         InlineKeyboardButton('🚫 ᴄʟᴏsᴇ 🚫', callback_data='close_data')
     ]]
