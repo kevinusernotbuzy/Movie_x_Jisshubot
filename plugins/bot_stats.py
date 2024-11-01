@@ -27,7 +27,7 @@ async def save_group(bot, message):
             reply_markup=InlineKeyboardMarkup(btn)
             await bot.send_message(
                 chat_id=message.chat.id,
-                text=f"<b>ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ɪɴ {message.chat.title} ♥️🥀\n\n★ ᴅᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ᴡɪᴛʜ ᴅᴇʟᴇᴛᴇ & ɪɴᴠɪᴛᴇ ᴘᴇʀᴍɪssɪᴏɴ ⚠️\n★ ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴅᴏᴜʙᴛ ᴏʀ ǫᴜᴇʀʏ ʏᴏᴜ ᴄʟᴇᴀʀ ɪᴛ ᴜsɪɴɢ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴs ᴏʀ ᴄᴏɴᴛᴀᴄᴋ sᴜᴘᴘᴏʀᴛ.\n\nʏᴏᴜ ᴄᴀɴ ᴄᴏᴜᴛɪᴍɪᴢᴇ ᴛʜɪs ʙᴏᴛ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴡɪᴛʜ /setting</b>",
+                text=f"<b>ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ɪɴ {message.chat.title} ♥️🥀\n\n★ ᴅᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ᴡɪᴛʜ ᴅᴇʟᴇᴛᴇ & ɪɴᴠɪᴛᴇ ᴘᴇʀᴍɪssɪᴏɴ ⚠️\n★ ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴅᴏᴜʙᴛ ᴏʀ ǫᴜᴇʀʏ ʏᴏᴜ ᴄʟᴇᴀʀ ɪᴛ ᴜsɪɴɢ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴs ᴏʀ ᴄᴏɴᴛᴀᴄᴛ sᴜᴘᴘᴏʀᴛ.\n\nʏᴏᴜ ᴄᴀɴ ᴄᴏᴜᴛɪᴍɪᴢᴇ ᴛʜɪs ʙᴏᴛ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴡɪᴛʜ /settings</b>",
                 reply_markup=reply_markup
             )
 
