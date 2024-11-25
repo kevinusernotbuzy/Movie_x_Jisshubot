@@ -98,12 +98,13 @@ async def group_search(client, message):
 
         elif message.text.startswith("/"):
             return
-		
+	
         elif re.findall(r'https?://\S+|www\.\S+|t\.me/\S+', message.text):
             if await is_check_admin(client, message.chat.id, message.from_user.id):
                 return
             await message.delete()
-            warning_msg = await message.reply("⚠️ <b>ᴡᴀʀɴɪɴɢ: ᴜɴᴀᴜᴛʜᴏʀɪᴢᴇᴅ ʟɪɴᴋ ᴅᴇᴛᴇᴄᴛᴇᴅ!</b>\n\n<b><i>{message.from_user.mention} ʏᴏᴜʀ ᴍᴇꜱꜱᴀɢᴇ ʜᴀꜱ ʙᴇᴇɴ ʀᴇᴍᴏᴠᴇᴅ ᴀꜱ ꜱʜᴀʀɪɴɢ ᴇxᴛᴇʀɴᴀʟ ʟɪɴᴋꜱ ɪꜱ <u>ꜱᴛʀɪᴄᴛʟʏ ᴘʀᴏʜɪʙɪᴛᴇᴅ</u> ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ.</i></b>")
+            mentionx = f"<a href='tg://user?id={message.from_user.id}'>{message.from_user.first_name}</a>"
+            warning_msg = await message.reply("⚠️ <b>ᴡᴀʀɴɪɴɢ: ᴜɴᴀᴜᴛʜᴏʀɪᴢᴇᴅ ʟɪɴᴋ ᴅᴇᴛᴇᴄᴛᴇᴅ!</b>\n\n<b><i>{mentionx} ʏᴏᴜʀ ᴍᴇꜱꜱᴀɢᴇ ʜᴀꜱ ʙᴇᴇɴ ʀᴇᴍᴏᴠᴇᴅ ᴀꜱ ꜱʜᴀʀɪɴɢ ᴇxᴛᴇʀɴᴀʟ ʟɪɴᴋꜱ ɪꜱ <u>ꜱᴛʀɪᴄᴛʟʏ ᴘʀᴏʜɪʙɪᴛᴇᴅ</u> ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ.</i></b>")
             await asyncio.sleep(60)  # Wait for 1 minute (60 seconds)
             await warning_msg.delete()  # Delete the warning message after 1 minute
 
