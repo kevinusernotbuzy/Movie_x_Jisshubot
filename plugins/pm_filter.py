@@ -1571,73 +1571,46 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer(url=link)
         return
 
-
-
 async def ai_spell_check(wrong_name):
     async def search_movie(wrong_name):
-        try:
-            search_results = imdb.search_movie(wrong_name)
-            return [movie['title'] for movie in search_results]
-        except Exception as e:
-            print(f"Error during movie search: {e}")
-            return []
-
+        search_results = imdb.search_movie(wrong_name)
+        movie_list = [movie['title'] for movie in search_results]
+        return movie_list
     movie_list = await search_movie(wrong_name)
     if not movie_list:
-        return None
-
+        return
     for _ in range(5):
         closest_match = process.extractOne(wrong_name, movie_list)
         if not closest_match or closest_match[1] <= 80:
-            return None
+            return 
         movie = closest_match[0]
-        try:
-            files, offset, total_results = await get_search_results(movie)
-            if files:
-                return movie
-        except Exception as e:
-            print(f"Error during search results fetching: {e}")
+        files, offset, total_results = await get_search_results(movie)
+        if files:
+            return movie
         movie_list.remove(movie)
-    return None
-
-
-async def auto_filter(client, msg, spoll=False, pm_mode=False):
+    return
+async def auto_filter(client, msg, spoll=False , pm_mode = False):
     if not spoll:
         message = msg
         search = message.text
         chat_id = message.chat.id
-        settings = await get_settings(chat_id, pm_mode=pm_mode)
-
-        searching_msg = await msg.reply_text('🔍 Searching for {search}')
-        try:
-            files, offset, total_results = await get_search_results(search)
-        except Exception as e:
-            await searching_msg.edit(f"Error: {e}")
-            return
-
+        settings = await get_settings(chat_id , pm_mode=pm_mode)
+        searching_msg = await msg.reply_text(f'🔎 sᴇᴀʀᴄʜɪɴɢ {search}')
+        files, offset, total_results = await get_search_results(search)
         await searching_msg.delete()
-
         if not files:
-            if settings.get("spell_check", False):
-                ai_sts = await msg.reply_text('⚡ wait checking your spelling...')
-                try:
-                    is_misspelled = await ai_spell_check(search)
-                except Exception as e:
-                    await ai_sts.edit(f"Error in spell check: {e}")
-                    return
-
+            if settings["spell_check"]:
+                ai_sts = await msg.reply_text(f'⚡ ᴄʜᴇᴄᴋɪɴɢ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ...')
+                is_misspelled = await ai_spell_check(search)
                 if is_misspelled:
-                    await ai_sts.edit(
-                        f"⚡ AI suggested: <code>{is_misspelled}</code>\nNow searching for <code>{is_misspelled}</code>."
-                    )
+              #      await ai_sts.edit(f'<b><i>ʏᴏᴜʀ ꜱᴘᴇʟʟɪɴɢ ɪꜱ ᴡʀᴏɴɢ ɴᴏᴡ ᴅᴇᴠɪʟ ꜱᴇᴀʀᴄʜɪɴɢ ᴡɪᴛʜ ᴄᴏʀʀᴇᴄᴛ ꜱᴘᴇʟʟɪɴɢ - <code>{is_misspelled}</code></i></b>')
+                    await asyncio.sleep(2)
                     msg.text = is_misspelled
                     await ai_sts.delete()
                     return await auto_filter(client, msg)
-
                 await ai_sts.delete()
                 return await advantage_spell_chok(msg)
-            return
-	
+            return	
     else:
         settings = await get_settings(msg.message.chat.id , pm_mode=pm_mode)
         message = msg.message.reply_to_message  # msg will be callback query
