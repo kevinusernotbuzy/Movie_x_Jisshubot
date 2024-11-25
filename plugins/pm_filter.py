@@ -1572,54 +1572,72 @@ async def cb_handler(client: Client, query: CallbackQuery):
         return
 
 
+
 async def ai_spell_check(wrong_name):
     async def search_movie(wrong_name):
-        search_results = imdb.search_movie(wrong_name)
-        movie_list = [movie['title'] for movie in search_results]
-        return movie_list
+        try:
+            search_results = imdb.search_movie(wrong_name)
+            return [movie['title'] for movie in search_results]
+        except Exception as e:
+            print(f"Error during movie search: {e}")
+            return []
+
     movie_list = await search_movie(wrong_name)
     if not movie_list:
-        return
+        return None
+
     for _ in range(5):
         closest_match = process.extractOne(wrong_name, movie_list)
         if not closest_match or closest_match[1] <= 80:
-            return 
+            return None
         movie = closest_match[0]
-        files, offset, total_results = await get_search_results(movie)
-        if files:
-            return movie
+        try:
+            files, offset, total_results = await get_search_results(movie)
+            if files:
+                return movie
+        except Exception as e:
+            print(f"Error during search results fetching: {e}")
         movie_list.remove(movie)
-    return
-	
+    return None
+
+
 async def auto_filter(client, msg, spoll=False, pm_mode=False):
     if not spoll:
         message = msg
         search = message.text
         chat_id = message.chat.id
         settings = await get_settings(chat_id, pm_mode=pm_mode)
-        
-        #searching_msg = await msg.reply_text(f'🔍')   
-        files, offset, total_results = await get_search_results(search)
-        # Introduce a slight delay before deleting the searching messages
-        #await searching_msg.delete()            
-        
+
+        searching_msg = await msg.reply_text('🔍 Searching for {search}')
+        try:
+            files, offset, total_results = await get_search_results(search)
+        except Exception as e:
+            await searching_msg.edit(f"Error: {e}")
+            return
+
+        await searching_msg.delete()
+
         if not files:
-            if settings["spell_check"]:
-                #ai_sts = await msg.reply_text('<code><b>ᴄʜᴇᴄᴋɪɴɢ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ....</b></code>')
-                    
-                is_misspelled = await ai_spell_check(search)
-                
+            if settings.get("spell_check", False):
+                ai_sts = await msg.reply_text('⚡ wait checking your spelling...')
+                try:
+                    is_misspelled = await ai_spell_check(search)
+                except Exception as e:
+                    await ai_sts.edit(f"Error in spell check: {e}")
+                    return
+
                 if is_misspelled:
-                    #await ai_sts.edit(f'<b>⚡ ᴀɪ sᴜɢɢᴇsᴛᴇᴅ <code>{is_misspelled}</code></b>\nɴᴏᴡ sᴇᴀʀᴄʜɪɴɢ ғᴏʀ <code>{is_misspelled}</code>.')
-                    #await asyncio.sleep(1)
+                    await ai_sts.edit(
+                        f"⚡ AI suggested: <code>{is_misspelled}</code>\nNow searching for <code>{is_misspelled}</code>."
+                    )
                     msg.text = is_misspelled
-                    #await ai_sts.delete()
+                    await ai_sts.delete()
                     return await auto_filter(client, msg)
-                
-                #await ai_sts.delete()
+
+                await ai_sts.delete()
                 return await advantage_spell_chok(msg)
             return
-        
+	
     else:
         settings = await get_settings(msg.message.chat.id , pm_mode=pm_mode)
         message = msg.message.reply_to_message  # msg will be callback query
@@ -1810,7 +1828,7 @@ async def advantage_spell_chok(message):
     if not movies:
         google = search.replace(" ", "+")
         button = [[
-            InlineKeyboardButton("🔍 ᴄʜᴇᴄᴋ sᴘᴇʟʟɪɴɢ ᴏɴ ɢᴏᴏɢʟᴇ 🔍", url=f"https://www.google.com/search?q={google}")
+            InlineKeyboardButton("• ᴄʜᴇᴄᴋ ᴏɴ ɢᴏᴏɢʟᴇ •", url=f"https://www.google.com/search?q={google}")
         ]]
         k = await message.reply_photo(photo=random.choice(SPELL_IMG), caption=script.I_CUDNT.format(search), reply_markup=InlineKeyboardMarkup(button))
         await asyncio.sleep(120)
