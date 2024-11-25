@@ -1596,19 +1596,19 @@ async def auto_filter(client, msg, spoll=False, pm_mode=False):
         chat_id = message.chat.id
         settings = await get_settings(chat_id, pm_mode=pm_mode)
         
-        searching_msg = await msg.reply_text(f'<i>🔎 Searching...</i> {search}')   
+        searching_msg = await msg.reply_text(f'<i>🔎 sᴇᴀʀᴄʜɪɴɢ...</i> {search}')   
         files, offset, total_results = await get_search_results(search)
         # Introduce a slight delay before deleting the searching messages
         await searching_msg.delete()            
         
         if not files:
             if settings["spell_check"]:
-                ai_sts = await msg.reply_text('<code><b>ᴄʜᴇᴄᴋɪɴɢ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ....</b></code>')
+                ai_sts = await msg.reply_text('<code><b>ᴀɴᴀʟʏᴢɪɴɢ ᴀɴᴅ ⚡ ᴏᴘᴛɪᴍɪᴢɪɴɢ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ...</b></code>')
                     
                 is_misspelled = await ai_spell_check(search)
                 
                 if is_misspelled:
-                    await ai_sts.edit(f'<b>⚡ ᴀɪ sᴜɢɢᴇsᴛᴇᴅ <code>{is_misspelled}</code></b>\nɴᴏᴡ sᴇᴀʀᴄʜɪɴɢ ғᴏʀ <code>{is_misspelled}</code>.')
+                    await ai_sts.edit(f'<b>🐬 ᴏᴘᴛɪᴍɪᴢᴇᴅ ᴄᴏʀʀᴇᴄᴛɪᴏɴ:</b> <code>{is_misspelled}</code>\n<i> Now ʀᴇғɪɴɪɴɢ sᴇᴀʀᴄʜ wɪᴛʜ ᴛʜɪs ᴜᴘᴅᴀᴛᴇᴅ qᴜᴇʀʏ...</i>')
                     await asyncio.sleep(1)
                     msg.text = is_misspelled
                     await ai_sts.delete()
