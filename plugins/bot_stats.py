@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors.exceptions.bad_request_400 import MessageTooLong
-from info import ADMINS, LOG_CHANNEL, USERNAME
+from info import ADMINS, LOG_CHANNEL, USERNAME, ADDGRP_PIC
 from database.users_chats_db import db
 from database.ia_filterdb import Media, get_files_db_size
 from utils import get_size, temp
@@ -9,27 +9,74 @@ from Script import script
 from datetime import datetime
 import psutil
 import time
+import random
 
 @Client.on_message(filters.new_chat_members & filters.group)
 async def save_group(bot, message):
     check = [u.id for u in message.new_chat_members]
-    if temp.ME in check:
-        if (str(message.chat.id)).startswith("-100") and not await db.get_chat(message.chat.id):
-            total=await bot.get_chat_members_count(message.chat.id)
-            user = message.from_user.mention if message.from_user else "Dear" 
-            group_link = await message.chat.export_invite_link()
-            await bot.send_message(LOG_CHANNEL, script.NEW_GROUP_TXT.format(temp.B_LINK, message.chat.title, message.chat.id, message.chat.username, group_link, total, user), disable_web_page_preview=True)  
-            await db.add_chat(message.chat.id, message.chat.title)
-            btn = [[
-                InlineKeyboardButton('• sᴜᴘᴘᴏʀᴛ •', url=USERNAME),
-                InlineKeyboardButton('• ᴜᴘᴛᴀᴅᴇ •', url=f"https://t.me/noob_marcus")
-            ]]
-            reply_markup=InlineKeyboardMarkup(btn)
-            await bot.send_message(
-                chat_id=message.chat.id,
-                text=f"<b>ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ɪɴ {message.chat.title} ♥️🥀\n\n★ ᴅᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ᴡɪᴛʜ ᴅᴇʟᴇᴛᴇ & ɪɴᴠɪᴛᴇ ᴘᴇʀᴍɪssɪᴏɴ ⚠️\n★ ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴅᴏᴜʙᴛ ᴏʀ ǫᴜᴇʀʏ ʏᴏᴜ ᴄʟᴇᴀʀ ɪᴛ ᴜsɪɴɢ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴs ᴏʀ ᴄᴏɴᴛᴀᴄᴛ sᴜᴘᴘᴏʀᴛ.\n\nʏᴏᴜ ᴄᴀɴ ᴄᴏᴜᴛɪᴍɪᴢᴇ ᴛʜɪs ʙᴏᴛ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴡɪᴛʜ /settings</b>",
-                reply_markup=reply_markup
+    if temp.ME in check:  # Check if the bot is one of the new members
+        if str(message.chat.id).startswith("-100") and not await db.get_chat(message.chat.id):
+            total = await bot.get_chat_members_count(message.chat.id)
+            user = message.from_user.mention if message.from_user else "Dear"
+            
+            # Try to export invite link; handle permission issues
+            try:
+                group_link = await message.chat.export_invite_link()
+            except Exception as e:
+                group_link = "No Invite Link"  # Default text for permission issues
+
+            # Format the message for the log channel
+            log_message = script.NEW_GROUP_TXT.format(
+                temp.B_LINK,
+                message.chat.title,
+                message.chat.id,
+                message.chat.username or "No Username",
+                group_link,
+                total,
+                user
             )
+            
+            # Send the log message to the log channel
+            try:
+                await bot.send_message(LOG_CHANNEL, log_message, disable_web_page_preview=True)
+            except Exception as e:
+                print(f"Error sending message to log channel: {e}")
+
+            # Save group info in the database
+            try:
+                await db.add_chat(message.chat.id, message.chat.title)
+            except Exception as e:
+                print(f"Error saving group to the database: {e}")
+
+            # Select a random image from the list in ADD_GROUP_PIC
+            random_pic = random.choice(ADDGRP_PIC)
+
+            # Notify the group with a welcome message and a random picture
+            btn = [[
+                InlineKeyboardButton('• Support •', url=USERNAME),
+                InlineKeyboardButton('• Update •', url="https://t.me/noob_marcus")
+            ]]
+            reply_markup = InlineKeyboardMarkup(btn)
+            welcome_message = (
+                f"<b>ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ᴛᴏ {message.chat.title} ♥️🥀</b>\n\n"
+                f"⚠️ <i>ᴘʟᴇᴀsᴇ ᴍᴀᴋᴇ ᴍᴇ ᴀɴ ᴀᴅᴍɪɴ ᴡɪᴛʜ 'ᴅᴇʟᴇᴛᴇ' & 'ɪɴᴠɪᴛᴇ' ᴘᴇʀᴍɪssɪᴏɴs ғᴏʀ ᴏᴘᴛɪᴍᴀʟ ᴘᴇʀғᴏʀᴍᴀɴᴄᴇ.</i>\n\n"
+                f"<b>ʜᴀᴠᴇ ᴀɴʏ ǫᴜᴇsᴛɪᴏɴs? ᴜsᴇ ᴛʜᴇ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴs ᴏʀ ʀᴇᴀᴄʜ ᴏᴜᴛ ᴛᴏ sᴜᴘᴘᴏʀᴛ.</b>\n\n"
+                f"✨ <b>ᴄᴜsᴛᴏᴍɪᴢᴇ ᴛʜɪs ʙᴏᴛ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴜsɪɴɢ /settings ✨</b>"
+            )
+            try:
+                # Send the random image along with the welcome message
+                await bot.send_photo(
+                    chat_id=message.chat.id,
+                    photo=random_pic,  # Ensure the photo is a valid URL or file ID
+                    caption=welcome_message,
+                    reply_markup=reply_markup
+                )
+            except Exception as e:
+                print(f"Error sending welcome message with picture to group: {e}")
+
+
+                    
+
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
@@ -84,16 +131,32 @@ async def groups_list(bot, message):
             outfile.write(out)
         await message.reply_document('chats.txt', caption="<b>List of all groups</b>")
 
+
 @Client.on_message(filters.command('stats') & filters.user(ADMINS) & filters.incoming)
-async def get_ststs(bot, message):
-    users = await db.total_users_count()
-    groups = await db.total_chat_count()
-    size = get_size(await db.get_db_size())
-    free = get_size(536870912)
-    files = await Media.count_documents()
-    db2_size = get_size(await get_files_db_size())
-    db2_free = get_size(536870912)
-    uptime = time.strftime("%Hh %Mm %Ss", time.gmtime(time.time() - time.time()))
-    ram = psutil.virtual_memory().percent
-    cpu = psutil.cpu_percent()
-    await message.reply_text(script.STATUS_TXT.format(users, groups, size, free, files, db2_size, db2_free, uptime, ram, cpu))
+async def get_stats(bot, message):
+    # Show a temporary "Fetching stats..." message
+    fukx = await message.reply('⚡ Fetching stats...')
+    
+    try:
+        # Fetch required stats
+        users = await db.total_users_count()
+        groups = await db.total_chat_count()
+        size = get_size(await db.get_db_size())
+        free = get_size(536870912)
+        files = await Media.count_documents()
+        db2_size = get_size(await get_files_db_size())
+        db2_free = get_size(536870912)
+        uptime_seconds = int(time.time() - psutil.boot_time())  # Correct uptime calculation
+        uptime = time.strftime("%Hh %Mm %Ss", time.gmtime(uptime_seconds))
+        ram = psutil.virtual_memory().percent
+        cpu = psutil.cpu_percent()
+
+        # Edit the temporary message with the stats
+        await fukx.edit(
+            script.STATUS_TXT.format(
+                users, groups, size, free, files, db2_size, db2_free, uptime, ram, cpu
+            )
+        )
+    except Exception as e:
+        # If any error occurs, inform the user
+        await fukx.edit(f"❌ Failed to fetch stats: {e}")
