@@ -85,7 +85,7 @@ async def start(client:Client, message):
         ]]
         reply_markup=InlineKeyboardMarkup(btn)
         await m.reply_photo(
-            photo=(VERIFY_IMG),
+            photo=random.choice(VERIFY_PIC),
             caption=msg.format(message.from_user.mention, get_readable_time(TWO_VERIFY_GAP)),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
@@ -1069,7 +1069,7 @@ async def set_pm_search_off(client, message):
     
     await db.update_pm_search_status(bot_id, enable=False)
     await message.reply_text("<b><i>❌️ ᴘᴍ ꜱᴇᴀʀᴄʜ ᴅɪꜱᴀʙʟᴇᴅ, ꜰʀᴏᴍ ɴᴏᴡ ɴᴏ ᴏɴᴇ ᴄᴀɴ ᴀʙʟᴇ ᴛᴏ ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇ ɪɴ ʙᴏᴛ ᴘᴍ.</i></b>")
-    
+
 
 @Client.on_message(filters.private & filters.command("movie_update_on"))
 async def set_send_movie_on(client, message):
