@@ -1843,9 +1843,6 @@ async def auto_filter(client, msg, spoll=False, pm_mode=False):
                     pass
         return
 
-    except Exception as e:
-        print("Error in handling movie message:", e)
-	
 async def advantage_spell_chok(message):
     mv_id = message.id
     search = message.text
